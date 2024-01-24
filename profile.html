@@ -44,6 +44,18 @@
         <!-- header__nav -->
         <div class="nav-overlay"></div>
         <nav class="header__nav nav">
+          <a href="./my-account.html" class="header__account account-mob hidden" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 cr</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
           <!-- verification-message (.hide скрываем) -->
           <div class="verification-message nav-verifation">
             <div class="verification-message__content">
@@ -121,7 +133,8 @@
               </div>
             </div>
           </a>
-          <button type="button" class="btn-burger header__burger" aria-label="Open Menu"><span class="btn-burger__line"></span>
+          <button type="button" aria-label="Open Menu" class="burger header__burger">
+            <span class="burger__icon"></span>
           </button>
           <a href="#" class="header__signout">
             <span class="material-icons">logout</span>
@@ -158,18 +171,7 @@
 
     <main class="main">
       <div class="profile">
-        <!-- popup-like -->
-        <div class="popup-like show">
-          <div class="popup-like__body">
-            <div class="popup-like__close"></div>
-            <div class="popup-like__icon"><span class="material-icons">favorite</span>
-            </div>
-            <div class="page-ava">
-              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
-            </div>
-            <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
-          </div>
-        </div>
+
         <!-- verification-message (.show показываем / .hide скрываем) -->
         <div class="verification-message show">
           <div class="verification-message__content">
@@ -182,28 +184,28 @@
           <!-- profile-moboptions (show max-widh: 992px) -->
           <div class="profile-moboptions">
             <ul class="profile-moboptions__list">
-              <li class="profile-moboptions__item">
+              <li class="profile-moboptions__item item-mail">
                 <a href="#" class="profile-moboptions__btn active">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                   </svg>
                 </a>
               </li>
-              <li class="profile-moboptions__item">
+              <li class="profile-moboptions__item item-gift">
                 <a href="./send-gift.html" class="profile-moboptions__btn">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-gift"></use>
                   </svg>
                 </a>
               </li>
-              <li class="profile-moboptions__item modal-open" data-modal-open="modal-profileContacts">
+              <li class="profile-moboptions__item item-contacts modal-open" data-modal-open="modal-profileContacts">
                 <a href="#" class="profile-moboptions__btn">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-contacts"></use>
                   </svg>
                 </a>
               </li>
-              <li class="profile-moboptions__item">
+              <li class="profile-moboptions__item item-favorite">
                 <button type="button" class="profile-moboptions__btn btn-favorite"></button>
               </li>
             </ul>

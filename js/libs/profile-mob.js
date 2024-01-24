@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const profileMobOptions = document.querySelector(".profile-moboptions");
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 1) {
+    if (window.scrollY > 400) {
       profileMobOptions.classList.add("scrolled");
     } else {
       profileMobOptions.classList.remove("scrolled");
