@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="en" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -35,11 +35,11 @@
           <a href="./" class="header__logo logo">
             <img class="logo__img" loading="lazy" src="./img/logo.svg" width="129" height="32" alt="Apericor">
           </a>
-          <a href="" class="header__chat">
+          <button type="button" class="header__chat chat-open">
             <span class="noti-indicator noti-indicator--circle">1</span>
             <span class="header__chat-icon"></span>
             <span>Live chat</span>
-          </a>
+          </button>
         </div>
         <!-- header__nav -->
         <div class="nav-overlay"></div>
@@ -56,11 +56,38 @@
               </div>
             </div>
           </a>
-          <!-- verification-message (.hide скрываем) -->
-          <div class="verification-message nav-verifation">
-            <div class="verification-message__content">
-              <span class="material-icons verification-message__icon">verified</span>
-              <p class="verification-message__text">To get real time updates about singles, verify your email address. <a class="verification-message__link" href="#">Resend email verification</a>.</p>
+          <!-- mob-verif (.show показываем / .hide скрываем) появляется в меню мобильном -->
+          <div class="verif-msg mob-verif">
+            <div class="verif-msg__step verif-step1 active">
+              <div class="verif-msg__content">
+                <span class="material-icons verif-msg__icon">verified</span>
+                <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                  <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step2">
+              <div class=" verif-msg__content">
+                <span class="material-icons verif-msg__icon">mail</span>
+                <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                  / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                  address book to ensure delivery.
+                  <span class="verif-msg__link resend-email2">Resend Email</span> and
+                  <span class="verif-msg__link change-email">Change current email</span>
+                </p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step3">
+              <div class=" verif-msg__content">
+                <div class="box">
+                  <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                  <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+                </div>
+                <form action="#" class="verif-msg__form">
+                  <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                  <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
           <ul class="nav__menu menu">
@@ -114,11 +141,15 @@
                 <span class="menu__link-name">Help center</span>
               </a>
             </li>
+            <li class="menu__item signout-mob">
+              <a href="#" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-signout"></use>
+                </svg>
+                <span class="menu__link-name">Sign Out</span>
+              </a>
+            </li>
           </ul>
-          <a href="#" class="header__signout-mob">
-            <span class="material-icons">logout</span>
-            <span>Sign Out</span>
-          </a>
         </nav>
         <div class="header__right">
           <a href="./my-account.html" class="header__account" title="My Account">
@@ -171,12 +202,50 @@
 
     <main class="main">
       <div class="profile">
-
-        <!-- verification-message (.show показываем / .hide скрываем) -->
-        <div class="verification-message show">
-          <div class="verification-message__content">
-            <span class="material-icons verification-message__icon">verified</span>
-            <p class="verification-message__text">To get real time updates about singles, verify your email address. <a class="verification-message__link" href="#">Resend email verification</a>.</p>
+        <!-- popup-like -->
+        <div class="popup-like show">
+          <div class="popup-like__body">
+            <div class="popup-like__close"></div>
+            <div class="popup-like__icon"><span class="material-icons">favorite</span>
+            </div>
+            <div class="page-ava">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
+          </div>
+        </div>
+        <!-- verif-msg (.show показываем / .hide скрываем) -->
+        <div class="verif-msg show">
+          <div class="verif-msg__step verif-step1 active">
+            <div class="verif-msg__content">
+              <span class="material-icons verif-msg__icon">verified</span>
+              <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step2">
+            <div class=" verif-msg__content">
+              <span class="material-icons verif-msg__icon">mail</span>
+              <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                address book to ensure delivery.
+                <span class="verif-msg__link resend-email2">Resend Email</span> and
+                <span class="verif-msg__link change-email">Change current email</span>
+              </p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step3">
+            <div class=" verif-msg__content">
+              <div class="box">
+                <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+              </div>
+              <form action="#" class="verif-msg__form">
+                <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
 
@@ -316,7 +385,7 @@
                         <a href="./img/profile/profile-photo_4.jpg" class="fancybox" data-fancybox="profile-photos"></a>
                         <a href="./img/profile/profile-photo_5.jpg" class="fancybox" data-fancybox="profile-photos"></a>
                         <a href="./img/profile/profile-photo_6.jpg" class="fancybox" data-fancybox="profile-photos"></a>
-                        <a href="./img/profile/profile-photo_7.jpg" class="fancybox" data-fancybox="profile-photos"></a>
+                        <a href="./img/profile/profile-photo_1.jpg" class="fancybox" data-fancybox="profile-photos"></a>
                       </div>
                     </div>
                   </div>
@@ -351,7 +420,7 @@
                         <a href="./img/profile/profile-photo_4.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
                         <a href="./img/profile/profile-photo_5.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
                         <a href="./img/profile/profile-photo_6.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
-                        <a href="./img/profile/profile-photo_7.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
+                        <a href="./img/profile/profile-photo_1.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
                       </div>
                     </div>
                   </div>
@@ -385,60 +454,95 @@
                         <img src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
                       </div>
                       <!-- GalleryPrivate -->
-                      <div class="my-gallery" data-gallery="gallery-private">
+                      <div class="my-gallery gallery-private" data-gallery="gallery-private">
                         <div class="my-gallery__overlay">
-                          <!-- my-gallery__controls -->
                           <span class="my-gallery__close"><span class="material-icons">close</span></span>
+                          <!-- my-gallery__controls -->
                           <div class="my-gallery__prev"><span class="material-icons">arrow_back</span>
                           </div>
                           <div class="my-gallery__next"><span class="material-icons">arrow_forward</span>
                           </div>
-                          <!-- my-gallery__item -->
-                          <div class="my-gallery__item" data-item="photo-1">
-                            <div class="my-gallery__photo vert-photo">
-                              <!-- private-gallery -->
-                              <div class="private-gallery">
-                                <span class="material-icons private-gallery__icon">visibility_off</span>
-                                <h4 class="private-gallery__title">Private Photo</h4>
-                                <p class="private-gallery__text">Message this member to see their Private Photo.</p>
-                                <button type="button" class="btn private-gallery__btn">
-                                  <span class="material-icons">chat</span>
-                                  <div class="btn__label">Chat Now</div>
-                                </button>
+                          <div class="my-gallery__body">
+
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item" data-item="photo-1">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_1.jpg" alt="">
                               </div>
-                              <img src="./img/profile/profile-photo_1.jpg" alt="">
                             </div>
-                          </div>
-                          <!-- my-gallery__item -->
-                          <div class="my-gallery__item" data-item="photo-2">
-                            <div class="my-gallery__photo">
-                              <!-- private-gallery -->
-                              <div class="private-gallery">
-                                <span class="material-icons private-gallery__icon">visibility_off</span>
-                                <h4 class="private-gallery__title">Private Photo</h4>
-                                <p class="private-gallery__text">Message this member to see their Private Photo.</p>
-                                <button type="button" class="btn private-gallery__btn">
-                                  <span class="material-icons">chat</span>
-                                  <div class="btn__label">Chat Now</div>
-                                </button>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item" data-item="photo-2">
+                              <div class="my-gallery__photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_hor.jpg" alt="">
                               </div>
-                              <img src="./img/profile/profile-photo_hor.jpg" alt="">
                             </div>
-                          </div>
-                          <!-- my-gallery__item -->
-                          <div class="my-gallery__item vert-photo" data-item="photo-3">
-                            <div class="my-gallery__photo vert-photo">
-                              <!-- private-gallery -->
-                              <div class="private-gallery">
-                                <span class="material-icons private-gallery__icon">visibility_off</span>
-                                <h4 class="private-gallery__title">Private Photo</h4>
-                                <p class="private-gallery__text">Message this member to see their Private Photo.</p>
-                                <button type="button" class="btn private-gallery__btn">
-                                  <span class="material-icons">chat</span>
-                                  <div class="btn__label">Chat Now</div>
-                                </button>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item vert-photo" data-item="photo-3">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_3.jpg" alt="">
                               </div>
-                              <img src="./img/profile/profile-photo_3.jpg" alt="">
+                            </div>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item vert-photo" data-item="photo-4">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_3.jpg" alt="">
+                              </div>
+                            </div>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item vert-photo" data-item="photo-3">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_4.jpg" alt="">
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -521,19 +625,43 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- banner-chat -->
                 <div class="profile-banner banner-chat">
                   <div class="profile-banner__icon">
                     <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                   </div>
                   <div class="profile-banner__body">
-                    <h3 class="profile-banner__title">It’s time to communicate!</h3>
-                    <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
+                    <!-- после написания и отправки сообщения прячем .hidden -->
+                    <div class="profile-banner__head hidden">
+                      <h3 class="profile-banner__title">It’s time to communicate!</h3>
+                      <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
+                    </div>
+                    <!-- после написания и отправки сообщения показываем .active -->
+                    <div class="chat-history active">
+                      <div class="">
+                        <h3 class="profile-banner__title">Stay in touch!</h3>
+                        <p class="profile-banner__descr">The last message from your chat.</p>
+                      </div>
+                      <!-- chat-item--man -->
+                      <div class="chat-item chat-history__item chat-history__item--man">
+                        <div class="chat-item__wrapper">
+                          <div class="chat-item__body">
+                            <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                              normal distribution of letters, as opposed to using 'Content here.</p>
+                            <span class="readmore">Read More…</span>
+                          </div>
+                          <div class="chat-item__footer">
+                            <span class="chat-item__date">25.01.23 / 20:19</span>
+                            <!-- .unread / .read -->
+                            <span class="chat-item__status read"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <form action="#" class="chat-form">
                       <div class="form-field chat-form__field">
                         <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                        <button type="button" class="btn btn-sm btn-chat chat-form__btn">
+                        <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
                           <span class="material-icons btn-chat__icon">send</span>
                         </button>
                       </div>
@@ -852,17 +980,42 @@
                 </div>
 
                 <!-- banner-chat -->
-                <div class="profile-banner banner-chat mb-24">
+                <div class="profile-banner banner-chat">
                   <div class="profile-banner__icon">
                     <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                   </div>
                   <div class="profile-banner__body">
-                    <h3 class="profile-banner__title">It’s time to communicate!</h3>
-                    <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
+                    <!-- после написания и отправки сообщения прячем .hidden -->
+                    <div class="profile-banner__head hidden">
+                      <h3 class="profile-banner__title">It’s time to communicate!</h3>
+                      <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
+                    </div>
+                    <!-- после написания и отправки сообщения показываем .active -->
+                    <div class="chat-history active">
+                      <div class="">
+                        <h3 class="profile-banner__title">Stay in touch!</h3>
+                        <p class="profile-banner__descr">The last message from your chat.</p>
+                      </div>
+                      <!-- chat-item--man -->
+                      <div class="chat-item chat-history__item chat-history__item--man">
+                        <div class="chat-item__wrapper">
+                          <div class="chat-item__body">
+                            <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                              normal distribution of letters, as opposed to using 'Content here.</p>
+                            <span class="readmore">Read More…</span>
+                          </div>
+                          <div class="chat-item__footer">
+                            <span class="chat-item__date">25.01.23 / 20:19</span>
+                            <!-- .unread / .read -->
+                            <span class="chat-item__status read"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <form action="#" class="chat-form">
                       <div class="form-field chat-form__field">
                         <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                        <button type="button" class="btn btn-sm btn-chat chat-form__btn">
+                        <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
                           <span class="material-icons btn-chat__icon">send</span>
                         </button>
                       </div>
@@ -871,7 +1024,7 @@
                 </div>
 
                 <!-- profile-info -->
-                <div class="profile-info mb-32">
+                <div class="profile-info mb-32 mt-24">
                   <div class="profile-info__item">
                     <div class="profile-info__item-header">
                       <h4 class="profile-info__item-title">About Me</h4>
@@ -970,12 +1123,37 @@
                       <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                     </div>
                     <div class="profile-banner__body">
-                      <h3 class="profile-banner__title">It’s time to communicate!</h3>
-                      <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
+                      <!-- после написания и отправки сообщения прячем .hidden -->
+                      <div class="profile-banner__head hidden">
+                        <h3 class="profile-banner__title">It’s time to communicate!</h3>
+                        <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
+                      </div>
+                      <!-- после написания и отправки сообщения показываем .active -->
+                      <div class="chat-history active">
+                        <div class="">
+                          <h3 class="profile-banner__title">Stay in touch!</h3>
+                          <p class="profile-banner__descr">The last message from your chat.</p>
+                        </div>
+                        <!-- chat-item--man -->
+                        <div class="chat-item chat-history__item chat-history__item--man">
+                          <div class="chat-item__wrapper">
+                            <div class="chat-item__body">
+                              <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                                normal distribution of letters, as opposed to using 'Content here.</p>
+                              <span class="readmore">Read More…</span>
+                            </div>
+                            <div class="chat-item__footer">
+                              <span class="chat-item__date">25.01.23 / 20:19</span>
+                              <!-- .unread / .read -->
+                              <span class="chat-item__status read"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <form action="#" class="chat-form">
                         <div class="form-field chat-form__field">
                           <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                          <button type="button" class="btn btn-sm btn-chat chat-form__btn">
+                          <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
                             <span class="material-icons btn-chat__icon">send</span>
                           </button>
                         </div>
@@ -1474,6 +1652,147 @@
     </footer>
   </div>
 
+  <!----------- live-chat (показываем классом .active) ------------->
+  <div class="live-chat">
+    <div class="live-chat__close"><span class="material-icons">close</span>
+    </div>
+    <div class="live-chat__body">
+      <div class="today-date live-chat__date">
+        <strong>Today’s date:</strong>
+        <span class="today-date__info text-gray">12:41, 22 April</span>
+      </div>
+      <!-- chat-item--man -->
+      <div class="chat-item chat-item--man">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+              of letters, as opposed to using 'Content here.</p>
+            <span class="read-more active">Read More…</span>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">25.01.23 / 20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status read"></span>
+          </div>
+        </div>
+      </div>
+      <!-- chat-item chat-item--woman -->
+      <div class="chat-item chat-item--woman">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">Anastasia:</span> Hi Phill 🖐</p>
+            <span class="read-more">Read More…</span>
+            <a href="./img/profile/profile-photo_2.jpg" class="live-chat__photo fancybox" data-fancybox="profile-photos">
+              <img src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
+            </a>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">25.01.23 / 20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status read"></span>
+          </div>
+        </div>
+      </div>
+      <!-- chat-item--man -->
+      <div class="chat-item chat-item--man">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile">You:</span> It is a long established.</p>
+            <span class="read-more">Read More…</span>
+            <a href="./img/men-photo_hor.jpg" class="live-chat__photo photo-hor fancybox" data-fancybox="profile-photos">
+              <img src="./img/men-photo_hor.jpg" width="" height="" alt="">
+            </a>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status read"></span>
+          </div>
+        </div>
+      </div>
+      <!-- chat-item chat-item--woman -->
+      <div class="chat-item chat-item--woman">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">Anastasia:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+              normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for
+              'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).🥰🔥</p>
+            <span class="read-more active">Read More…</span>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">25.01.23 / 20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status unread"></span>
+          </div>
+        </div>
+      </div>
+      <!-- chat-item chat-item--woman -->
+      <div class="chat-item chat-item--woman">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">Anastasia:</span> Injected humour and the like).🥰🔥</p>
+            <span class="read-more">Read More…</span>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">25.01.23 / 20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status unread"></span>
+          </div>
+        </div>
+      </div>
+      <!-- chat-item chat-item--woman -->
+      <div class="chat-item chat-item--man">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">You:</span> It is a</p>
+            <span class="read-more">Read More…</span>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">25.01.23 / 20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status unread"></span>
+          </div>
+        </div>
+      </div>
+      <!-- chat-item chat-item--woman -->
+      <div class="chat-item chat-item--man">
+        <div class="chat-item__wrapper">
+          <div class="chat-item__body">
+            <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+              normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for
+              'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).🥰🔥</p>
+            <span class="read-more active">Read More…</span>
+          </div>
+          <div class="chat-item__footer">
+            <span class="chat-item__date">25.01.23 / 20:19</span>
+            <!-- .unread / .read -->
+            <span class="chat-item__status unread"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="live-chat__footer">
+      <div class="live-chat__options">
+        <button type="button" class="btn-chatsmile" id="smile-livechat"></button>
+        <div class="add-photo">
+          <input type="file" id="photoInput" class="add-photo__input" accept="image/jpeg, image/png">
+          <label for="photoInput" class="add-photo__label">
+            <div class="add-photo__icon"><span class="material-icons">add_a_photo</span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <form action="#" class="chat-form live-chat__form">
+        <div class="form-field chat-form__field">
+          <textarea name="chat-message" class="form-field__textarea live-chat__textarea" placeholder="Type your message here..."></textarea>
+          <button type="submit" class="btn btn-sm btn-chat chat-form__btn">
+            <span class="material-icons btn-chat__icon">send</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Modal Report -->
   <div class="modal modal-form modal-report" data-modal="modal-reportProfile">
     <div class="modal__overlay">
@@ -1577,7 +1896,7 @@
       <div class="modal__content">
         <div class="modal__close"></div>
         <div class="modal__header text-center">
-          <h3 class="modal__title">Interview</h3>
+          <h3 class="modal__title">Ask your question to <strong class="color-pink">Anastasia</strong></h3>
           <p class="modal__descr">Find your question in our database or choose from the popular ones.</p>
         </div>
         <div class="modal-interview__search">
@@ -1690,6 +2009,8 @@
   <script defer src="./js/main.min.js"></script>
   <script defer src="./js/libs/profile-mob.js"></script>
   <script defer src="./js/libs/my-gallery.js"></script>
+  <script defer src="./js/libs/live-chat.js"></script>
+  <script defer src="./js/libs/vanillaEmojiPicker.js"></script>
 </body>
 
 </html>
