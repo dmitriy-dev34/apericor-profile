@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
   <link rel="icon" type="image/png" href="./favicon/favicon.png">
-  <title>Apericor — personal-account</title>
+  <title>Apericor</title>
   <!-- Fonts -->
   <link rel="preload" href="./fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/lato-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,21 +38,22 @@
     <!----------- Footer ------------->
     <footer class="footer">
       <div class="footer__top">
-        <div class="container footer__container">
+        <div class="container footer__container footer__top-container">
           <a href="./" class="footer__logo logo">
             <img class="logo__img" loading="lazy" src="./img/logo-light.svg" width="129" height="32" alt="Apericor">
           </a>
           <nav class="footer__nav">
+            <button type="button" aria-label="open-menu" class="footer__toggle"></button>
             <ul class="footer__menu">
-              <li><a href="#">About Us</a>
+              <li class="footer__menu-item item-help"><a href="#">Help Center</a>
               </li>
-              <li><a href="#">Terms and Conditions</a>
+              <li class="footer__menu-item"><a href="#">About Us</a>
               </li>
-              <li><a href="#">Contacts US</a>
+              <li class="footer__menu-item"><a href="#">Terms and Conditions</a>
               </li>
-              <li><a href="#">Privacy Policy</a>
+              <li class="footer__menu-item"><a href="#">Contacts US</a>
               </li>
-              <li><a href="#">Help Center</a>
+              <li class="footer__menu-item"><a href="#">Privacy Policy</a>
               </li>
             </ul>
           </nav>
