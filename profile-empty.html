@@ -322,6 +322,7 @@
                     <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                   </div>
                   <div class="profile-banner__body">
+                    <!-- после написания и отправки сообщения прячем .hidden -->
                     <div class="profile-banner__head">
                       <h3 class="profile-banner__title">It’s time to communicate!</h3>
                       <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
@@ -338,7 +339,11 @@
                           <div class="chat-item__body">
                             <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
                               normal distribution of letters, as opposed to using 'Content here.</p>
-                            <span class="readmore">Read More…</span>
+                            <span class="readmore blue">
+                                                            <svg class="my-svg readmore__icon">
+                                                                <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                            </svg>
+                                                        </span>
                           </div>
                           <div class="chat-item__footer">
                             <span class="chat-item__date">25.01.23 / 20:19</span>

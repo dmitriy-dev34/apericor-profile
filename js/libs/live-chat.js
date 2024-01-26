@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const liveChat = document.querySelector(".live-chat");
   const liveChatClose = document.querySelector(".live-chat__close");
+  const chatOpenBtns = document.querySelectorAll(".chat-open");
+  const privatGallery = document.querySelector(".gallery-private");
+  const historyItem = document.querySelectorAll(".chat-history__item");
+  const emojiContainer = document.querySelector(".fg-emoji-container");
 
   // закрытие чата по крестику
   liveChatClose.addEventListener("click", function () {
@@ -13,9 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Открытия чата по кнопкам чата
-  const chatOpenBtns = document.querySelectorAll(".chat-open");
-  const privatGallery = document.querySelector(".gallery-private");
-
   chatOpenBtns.forEach((button) => {
     button.addEventListener("click", () => {
       liveChat.classList.add("active");
@@ -28,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Открытия чата по истории в баннере
-  const historyItem = document.querySelectorAll(".chat-history__item");
-
   historyItem.forEach((item) => {
     item.addEventListener("click", () => {
       liveChat.classList.add("active");
@@ -39,39 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "hidden";
     });
   });
-
-  // Закрытие чата при клике вне его области
-  function closeChat(e) {
-    const isChatElement =
-      liveChat.contains(e.target) || liveChatClose.contains(e.target);
-    const isChatOpenButton = Array.from(chatOpenBtns).some((button) =>
-      button.contains(e.target)
-    );
-    const isHistoryItem = Array.from(historyItem).some((item) =>
-      item.contains(e.target)
-    );
-
-    const isEmojiWidget = Array.from(historyItem).some((item) =>
-      item.contains(e.target)
-    );
-
-    if (
-      !isChatElement &&
-      !isChatOpenButton &&
-      !isHistoryItem &&
-      !isEmojiWidget &&
-      liveChat.classList.contains("active")
-    ) {
-      liveChat.classList.remove("active");
-      document.body.style.overflow = "";
-      document.body.style.width = "";
-    }
-  }
-
-  liveChat.addEventListener("click", (e) => closeChat(e));
-
-  // Закрытие чата при клике вне его области
-  document.addEventListener("click", (e) => closeChat(e));
 
   // EmojiPicker для liveChat
   const emojiPickerLiveChat = new EmojiPicker({
