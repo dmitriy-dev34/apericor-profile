@@ -202,32 +202,78 @@
 
     <main class="main">
       <div class="profile">
+        <!-- popup-like (показывается и скрывается классом show) -->
+        <div class="popup-like">
+          <div class="popup-like__body">
+            <div class="popup-like__close"></div>
+            <div class="popup-like__icon"><span class="material-icons">favorite</span>
+            </div>
+            <div class="page-ava">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
+          </div>
+        </div>
+        <!-- verif-msg (.show показываем / .hide скрываем) -->
+        <div class="verif-msg show">
+          <div class="verif-msg__step verif-step1 active">
+            <div class="verif-msg__content">
+              <span class="material-icons verif-msg__icon">verified</span>
+              <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step2">
+            <div class=" verif-msg__content">
+              <span class="material-icons verif-msg__icon">mail</span>
+              <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                address book to ensure delivery.
+                <span class="verif-msg__link resend-email2">Resend Email</span> and
+                <span class="verif-msg__link change-email">Change current email</span>
+              </p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step3">
+            <div class=" verif-msg__content">
+              <div class="box">
+                <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+              </div>
+              <form action="#" class="verif-msg__form">
+                <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
         <div class="mob-profilephotos">
           <!-- profile-moboptions (show max-widh: 992px) -->
           <div class="profile-moboptions">
             <ul class="profile-moboptions__list">
-              <li class="profile-moboptions__item">
+              <li class="profile-moboptions__item item-mail">
                 <a href="#" class="profile-moboptions__btn active">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                   </svg>
                 </a>
               </li>
-              <li class="profile-moboptions__item">
+              <li class="profile-moboptions__item item-gift">
                 <a href="./send-gift.html" class="profile-moboptions__btn">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-gift"></use>
                   </svg>
                 </a>
               </li>
-              <li class="profile-moboptions__item modal-open" data-modal-open="modal-profileContacts">
+              <li class="profile-moboptions__item item-contacts modal-open" data-modal-open="modal-profileContacts">
                 <a href="#" class="profile-moboptions__btn">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-contacts"></use>
                   </svg>
                 </a>
               </li>
-              <li class="profile-moboptions__item">
+              <li class="profile-moboptions__item item-favorite">
                 <button type="button" class="profile-moboptions__btn btn-favorite"></button>
               </li>
             </ul>
