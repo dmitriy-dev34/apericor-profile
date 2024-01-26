@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const liveChat = document.querySelector(".live-chat");
   const liveChatClose = document.querySelector(".live-chat__close");
 
-  // закрытие чата
+  // закрытие чата по крестику
   liveChatClose.addEventListener("click", function () {
     liveChat.classList.remove("active");
   });
