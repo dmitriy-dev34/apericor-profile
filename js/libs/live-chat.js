@@ -51,10 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
       item.contains(e.target)
     );
 
+    const isEmojiWidget = Array.from(historyItem).some((item) =>
+      item.contains(e.target)
+    );
+
     if (
       !isChatElement &&
       !isChatOpenButton &&
       !isHistoryItem &&
+      !isEmojiWidget &&
       liveChat.classList.contains("active")
     ) {
       liveChat.classList.remove("active");
