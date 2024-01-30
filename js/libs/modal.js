@@ -63,5 +63,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /* ------------------- Закрытие модалки по кнопке .modal-cancel -------------------- */
+  const modalCancelBtns = document.querySelectorAll(".modal-cancel");
+
+  modalCancelBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalsDelete = document.querySelectorAll(".modal-delete");
+      modalsDelete.forEach((modal) => {
+        modal.classList.remove("active");
+      });
+      document.body.style.overflow = "";
+      document.body.style.width = "";
+    });
+  });
+
+  /* ------------------- Modal Report to Modal Block -------------------- */
+  const reportBlock = document.querySelector(".report-block");
+  const modalReport = document.querySelector(".modal-report");
+  const modalBlock = document.querySelector(".modal-block");
+
+  if (reportBlock && modalReport && modalBlock) {
+    reportBlock.addEventListener("click", function () {
+      modalReport.classList.remove("active");
+      document.body.style.overflow = "";
+      document.body.style.width = "";
+
+      modalBlock.classList.add("active");
+      document.body.style.width = `calc(100vw - ${
+        window.innerWidth - document.documentElement.clientWidth
+      }px)`;
+
+      document.body.style.overflow = "hidden";
+    });
+  }
+
   //!! End Scripts
 });

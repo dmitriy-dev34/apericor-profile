@@ -253,7 +253,7 @@
           <div class="profile-moboptions">
             <ul class="profile-moboptions__list">
               <li class="profile-moboptions__item item-mail">
-                <a href="#" class="profile-moboptions__btn active">
+                <a href="./send-mail.html" class="profile-moboptions__btn active">
                   <svg class="my-svg profile-moboptions__icon">
                     <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                   </svg>
@@ -423,7 +423,7 @@
               <div class="profile__header mb-32">
                 <ul class="profile__options">
                   <li class="profile__options-item">
-                    <a href="#" class="profile__options-btn active">
+                    <a href="./send-mail.html" class="profile__options-btn active">
                       <svg class="my-svg profile__options-icon">
                         <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                       </svg>
@@ -1143,9 +1143,9 @@
           <span class="modal-report__block-text">Hides you from each other.</span>
         </div>
         <div class="modal-report__block">
-          <a href="#" class="modal-report__link">
-            <span>Block</span>
-            <span class="material-icons">navigate_next</span>
+          <a href="#" class="modal-report__link report-block">
+            <span class="color-red">Block</span>
+            <span class="material-icons color-red">navigate_next</span>
           </a>
         </div>
         <div class="modal-report__block">
@@ -1155,6 +1155,53 @@
           </a>
           <span class="modal-report__block-text">This person violated the community guidelines. You will be able to block them afterwards.</span>
         </div>
+      </div>
+    </div>
+  </div>
+  <!----------- Modal block-profile ------------->
+  <div class="modal modal-form modal-block" data-modal="block-profile">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <div class="modal__profile-photo">
+            <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="80" height="80" alt="">
+          </div>
+          <h3 class="modal__title">Block <span class="color-red">Alexsandra</span>, 23</h3>
+          <p class="modal__descr">Are you sure to block this lady?</p>
+        </div>
+        <form action="#" class="form form-block">
+          <div class="form-field">
+            <label for="blockMessage" class="form-label">State the reason:</label>
+            <textarea id="blockMessage" name="block-message" class="form-field__textarea" placeholder="Describe the reason for the blockage"></textarea>
+          </div>
+          <ul class="list-reset form-block__list">
+            <li>
+              <label class="check form-block__check">
+                <input class="check__input" type="checkbox" name="param-name">
+                <span class="check__box"></span>
+                <span class="check__label">Show this reason to Elena</span>
+              </label>
+            </li>
+            <li>
+              <label class="check form-block__check">
+                <input class="check__input" type="checkbox" name="param-name">
+                <span class="check__box"></span>
+                <span class="check__label">Block all letters</span>
+              </label>
+            </li>
+            <li>
+              <label class="check form-block__check">
+                <input class="check__input" type="checkbox" name="param-name">
+                <span class="check__box"></span>
+                <span class="check__label">Block chat</span>
+              </label>
+            </li>
+          </ul>
+          <button type="submit" class="btn btn-error form__btn">Block <span>Alexandra, 23</span>
+          </button>
+        </form>
+
       </div>
     </div>
   </div>

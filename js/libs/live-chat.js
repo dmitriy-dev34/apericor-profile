@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
     closeButton: true,
     position: "topLeft",
-    // specialButtons: green
   });
 
   //!! End Scripts
