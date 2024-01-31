@@ -28,7 +28,9 @@
   <button type="button" id="btnScrollTop" title="ScrollUp"></button>
 
   <a href="#mailArea" class="btn btn-circle btn-scroll" id="btn-scrollMailArea">
-    <span class="material-icons">send</span>
+    <svg class="my-svg btn-scroll__icon">
+      <use xlink:href="img/svg-sprite.svg#ic-send-mail"></use>
+    </svg>
   </a>
 
   <div class="page__wrapper">
@@ -823,6 +825,140 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+  <!----------- Modal Photos ------------->
+  <div class="modal modal-photos" data-modal="modal-photos">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header">
+          <h3 class="modal__title">Messaging <span>Select photo</span></h3>
+          <p class="modal__descr">Click on a photo to add it to your letter.</p>
+        </div>
+
+        <div class="tabs page-tabs modal-photos__nav">
+          <div class="page-tabs__header">
+            <div class="tabs__triger page-tabs__item active" data-tab="#tabContent-1">All photos</div>
+            <div class="tabs__triger page-tabs__item" data-tab="#tabContent-2">Albums</div>
+          </div>
+          <div class="tabs__content">
+            <!-- All Photos -->
+            <div class="tabs__content-item active" id="tabContent-1">
+              <div class="modal-photos__grid">
+                <!-- upload-photo -->
+                <div class="upload-file upload-photo">
+                  <input type="file" id="fileInput" class="upload-file__input" accept="image/*">
+                  <label for="fileInput" id="fileInputLabel" class="upload-file__label">
+                    <div class="upload-file__icon"><span class="material-icons">upload</span>
+                    </div>
+                    <span class="upload-file__text">jpg, png <br> max 4MB size</span>
+                  </label>
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_4.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_5.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_4.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_5.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo photo-empty"></div>
+              </div>
+              <div class="pagination pagination-blue">
+                <div class="pagination__items">
+                  <a href="#" class="pagination__link pagination__prev"><span class="material-icons">arrow_back_ios</span></a>
+                  <a href="#" class="pagination__link active">1</a>
+                  <a href="#" class="pagination__link">2</a>
+                  <a href="#" class="pagination__link">3</a>
+                  <a href="#" class="pagination__link pagination__more">…</a>
+                  <a href="#" class="pagination__link pagination__next"><span class="material-icons">arrow_forward_ios</span></a>
+                </div>
+              </div>
+            </div>
+            <!-- Albums -->
+            <div class="tabs__content-item" id="tabContent-2">
+              <div class="albums-nav mt-16">
+                <a href="#" class="albums-nav__item active">Travel</a>
+                <a href="#" class="albums-nav__item">Album 2</a>
+                <a href="#" class="albums-nav__item">Album 3</a>
+                <a href="#" class="albums-nav__item">Album 4</a>
+                <a href="#" class="albums-nav__item">Album 5</a>
+                <a href="#" class="albums-nav__item">Album 6</a>
+                <a href="#" class="albums-nav__item">Album 7</a>
+                <a href="#" class="albums-nav__item">Album 8</a>
+              </div>
+
+              <div class="modal-photos__grid">
+                <!-- upload-photo -->
+                <div class="upload-file upload-photo">
+                  <input type="file" id="fileInputPhoto" class="upload-file__input" accept="image/*">
+                  <label for="fileInputPhoto" class="upload-file__label">
+                    <div class="upload-file__icon"><span class="material-icons">upload</span>
+                    </div>
+                    <span class="upload-file__text">jpg, png <br> max 4MB size</span>
+                  </label>
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo">
+                  <img src="img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                </div>
+                <div class="modal-photos__photo photo-empty"></div>
+              </div>
+              <div class="pagination pagination-blue">
+                <div class="pagination__items">
+                  <a href="#" class="pagination__link pagination__prev"><span class="material-icons">arrow_back_ios</span></a>
+                  <a href="#" class="pagination__link active">1</a>
+                  <a href="#" class="pagination__link">2</a>
+                  <a href="#" class="pagination__link">3</a>
+                  <a href="#" class="pagination__link pagination__more">…</a>
+                  <a href="#" class="pagination__link pagination__next"><span class="material-icons">arrow_forward_ios</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-photos__footer">
+          <a href="./photo-manager.html" class="btn btn-stroke btn-sm go-photomanager">
+            <span>Photo manager</span>
+            <span class="material-icons btn-icon">keyboard_arrow_right</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
