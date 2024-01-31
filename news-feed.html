@@ -87,7 +87,7 @@
           </div>
           <ul class="nav__menu menu">
             <li class="menu__item">
-              <a href="./news-feed.html" class="menu__link">
+              <a href="./news-feed.html" class="menu__link active">
                 <svg class="my-svg menu__icon">
                   <use xlink:href="img/svg-sprite.svg#ic-news"></use>
                 </svg>
@@ -95,7 +95,7 @@
               </a>
             </li>
             <li class="menu__item">
-              <a href="./mail.html" class="menu__link active">
+              <a href="./mail.html" class="menu__link">
                 <svg class="my-svg menu__icon">
                   <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                 </svg>
@@ -170,7 +170,7 @@
     </header>
 
     <main class="main">
-      <div class="mail">
+      <div class="page-newsfeed">
         <!-- popup-like (показывается и скрывается классом show) -->
         <div class="popup-like">
           <div class="popup-like__body">
@@ -218,178 +218,178 @@
           </div>
         </div>
 
-        <!-- page-nav -->
-        <nav class="page-nav">
-          <div class="container page-nav__container">
-            <ul class="page-nav__list">
-              <li class="page-nav__item">
-                <a href="./mail.html" class="page-nav__link">
-                  <span class="page-nav__link-name">Inbox</span>
-                  <span class="noti-indicator">125</span>
-                </a>
-              </li>
-              <li class="page-nav__item">
-                <a href="./mail-favorites.html" class="page-nav__link">
-                  <span class="page-nav__link-name">Favorites</span>
-                  <span class="noti-indicator">2</span>
-                </a>
-              </li>
-              <li class="page-nav__item">
-                <a href="./mail-archive.html" class="page-nav__link active">
-                  <span class="page-nav__link-name">Archive</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
         <div class="page-padding container">
-          <div class="correspond">
-            <div class="correspond__options">
-              <div class="correspond__option correspond-sort">
-                <button type="button" class="btn dropdown-trigger correspond-sort__btn">
-                  <span class="material-icons">swap_vert</span>
-                </button>
-                <div class="dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">New first</li>
-                    <li class="dropdown__item">Old first</li>
-                    <li class="dropdown__item">Unread first</li>
-                    <li class="dropdown__item">Sort by Inbox</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="correspond__option correspond-delete">
-                <button type="button" class="btn dropdown-trigger correspond-delete__btn">
-                  <span class="material-icons">delete</span>
-                </button>
-                <div class="dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item modal-open" data-modal-open="modal-deleteCorrespondence">Delete selected</li>
-                    <li class="dropdown__item modal-open" data-modal-open="modal-deleteAllCorrespondence">Delete All</li>
-                  </ul>
-                </div>
-              </div>
+          <div class="page-newsfeed__header mb-32">
+            <h2 class="page-title">New Feed</h2>
+            <div class="page-newsfeed__nav">
+              <a href="#" class="page-newsfeed__nav-item active">Suggested</a>
+              <a href="#" class="page-newsfeed__nav-item">My following</a>
+            </div>
+          </div>
 
-            </div>
-            <div class="correspond__block">
-              <h4 class="correspond__block-title mb-16">Archive сorrespondence: <span class="color-red">2</span></h4>
-              <div class="correspond__list">
-                <div class="correspond-item correspond-item--archive">
-                  <div class="profile__photo">
-                    <div class="profile-status status-online"></div>
-                    <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                    <div class="profile__photo-empty photo-empty sm hide">
-                      <div class="photo-empty__center">
-                        <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_women.svg" width="128" height="128" alt="">
-                        <span class="photo-empty__label">No photo</span>
-                      </div>
-                    </div>
+          <div class="page-newsfeed__grid">
+            <!-- news-feed__item -->
+            <div class="news-feed__item">
+              <div class="news-feed__item-header">
+                <div class="news-feed__profile">
+                  <div class="page-ava news-feed__profile-ava">
+                    <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
                   </div>
-                  <div class="correspond-item__right">
-                    <div class="correspond-item__right-top">
-                      <div class="correspond-item__header">
-                        <div class="letter-item__info correspond-item__data">
-                          <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25</div>
-                        </div>
-                        <label class="check correspond-item__check">
-                          <input class="check__input" type="checkbox" name="param-name">
-                          <span class="check__box"></span>
-                          <span class="check__label"></span>
-                        </label>
-                      </div>
-                      <div class="correspond-item__body">
-                        <div class="correspond-item__profile">
-                          <span class="correspond-item__profile-name">Anastasia, 23</span>
-                          <div class="correspond-item__profile-id">ID: <span class="text-gray">546140</span>
-                          </div>
-                        </div>
-                        <div class="profile__location flex align-center">
-                          <span class="material-icons profile__location-icon">location_on</span>
-                          <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
-                        <span>Read</span>
-                        <span class="material-icons">navigate_next</span>
-                      </a>
-                      <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
-                        <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
-                          <span class="material-icons">delete</span>
-                        </button>
-                      </div>
-                    </div>
+                  <div class="news-feed__profile-body">
+                    <span class="news-feed__profile-name">Anastasia</span>
+                    <span class="news-feed__date tex-gray">5 minutes ago</span>
                   </div>
                 </div>
-                <div class="correspond-item correspond-item--archive">
-                  <div class="profile__photo">
-                    <div class="profile-status status-online"></div>
-                    <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                    <div class="profile__photo-empty photo-empty sm hide">
-                      <div class="photo-empty__center">
-                        <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_women.svg" width="128" height="128" alt="">
-                        <span class="photo-empty__label">No photo</span>
-                      </div>
-                    </div>
+                <button type="button" class="btn-favorite news-feed__favorite">
+                  <span class="btn-favorite__label">16</span>
+                </button>
+              </div>
+              <div class="news-feed__item-body">
+                <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                <div class="news-feed__media items-two">
+                  <a href="./img/profile/profile-photo_2.jpg" class="media-item fancybox" data-fancybox="gallery">
+                    <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                  </a>
+                  <a href="./img/profile/profile-photo_3.jpg" class="media-item fancybox" data-fancybox="gallery">
+                    <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- news-feed__item -->
+            <div class="news-feed__item">
+              <div class="news-feed__item-header">
+                <div class="news-feed__profile">
+                  <div class="page-ava news-feed__profile-ava">
+                    <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
                   </div>
-                  <div class="correspond-item__right">
-                    <div class="correspond-item__right-top">
-                      <div class="correspond-item__header">
-                        <div class="letter-item__info correspond-item__data">
-                          <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25</div>
-                        </div>
-                        <label class="check correspond-item__check">
-                          <input class="check__input" type="checkbox" name="param-name">
-                          <span class="check__box"></span>
-                          <span class="check__label"></span>
-                        </label>
-                      </div>
-                      <div class="correspond-item__body">
-                        <div class="correspond-item__profile">
-                          <span class="correspond-item__profile-name">Anastasia, 23</span>
-                          <div class="correspond-item__profile-id">ID: <span class="text-gray">546140</span>
-                          </div>
-                        </div>
-                        <div class="profile__location flex align-center">
-                          <span class="material-icons profile__location-icon">location_on</span>
-                          <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
-                        <span>Read</span>
-                        <span class="material-icons">navigate_next</span>
-                      </a>
-                      <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
-                        <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
-                          <span class="material-icons">delete</span>
-                        </button>
-                      </div>
-                    </div>
+                  <div class="news-feed__profile-body">
+                    <span class="news-feed__profile-name">Anastasia</span>
+                    <span class="news-feed__date tex-gray">5 minutes ago</span>
+                  </div>
+                </div>
+                <button type="button" class="btn-favorite news-feed__favorite">
+                  <span class="btn-favorite__label">16</span>
+                </button>
+              </div>
+              <div class="news-feed__item-body">
+                <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                <div class="news-feed__media vertical-center vertical" style="background-image: url(./img/profile/profile-photo_4.jpg);">
+                  <a href="./img/profile/profile-photo_4.jpg" class="media-item item-vertical fancybox" data-fancybox="fancy-img1">
+                    <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_4.jpg" width="" height="" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- news-feed__item -->
+            <div class="news-feed__item">
+              <div class="news-feed__item-header">
+                <div class="news-feed__profile">
+                  <div class="page-ava news-feed__profile-ava">
+                    <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                  </div>
+                  <div class="news-feed__profile-body">
+                    <span class="news-feed__profile-name">Anastasia</span>
+                    <span class="news-feed__date tex-gray">5 minutes ago</span>
+                  </div>
+                </div>
+                <button type="button" class="btn-favorite news-feed__favorite">
+                  <span class="btn-favorite__label">16</span>
+                </button>
+              </div>
+              <div class="news-feed__item-body">
+                <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                <div class="news-feed__media">
+                  <a href="./img/profile/profile-photo_hor.jpg" class="media-item item-horizontal fancybox" data-fancybox="fancy-img2">
+                    <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_hor.jpg" width="" height="" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- news-feed__item -->
+            <div class="news-feed__item">
+              <div class="news-feed__item-header">
+                <div class="news-feed__profile">
+                  <div class="page-ava news-feed__profile-ava">
+                    <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                  </div>
+                  <div class="news-feed__profile-body">
+                    <span class="news-feed__profile-name">Anastasia</span>
+                    <span class="news-feed__date tex-gray">5 minutes ago</span>
+                  </div>
+                </div>
+                <button type="button" class="btn-favorite news-feed__favorite">
+                  <span class="btn-favorite__label">16</span>
+                </button>
+              </div>
+              <div class="news-feed__item-body">
+                <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                <div class="news-feed__media news-feed__media-video">
+                  <div class="video-item video-vertical">
+                    <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                      <source src="./video/profile-video.mp4" type="video/mp4">
+                    </video>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="pagination pagination-blue">
-              <div class="pagination__items">
-                <a href="#" class="pagination__link pagination__prev"><span class="material-icons">arrow_back_ios</span></a>
-                <a href="#" class="pagination__link active">1</a>
-                <a href="#" class="pagination__link">2</a>
-                <a href="#" class="pagination__link">3</a>
-                <a href="#" class="pagination__link pagination__more">…</a>
-                <a href="#" class="pagination__link pagination__next"><span class="material-icons">arrow_forward_ios</span></a>
+            <!-- news-feed__item -->
+            <div class="news-feed__item">
+              <div class="news-feed__item-header">
+                <div class="news-feed__profile">
+                  <div class="page-ava news-feed__profile-ava">
+                    <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                  </div>
+                  <div class="news-feed__profile-body">
+                    <span class="news-feed__profile-name">Anastasia</span>
+                    <span class="news-feed__date tex-gray">5 minutes ago</span>
+                  </div>
+                </div>
+                <button type="button" class="btn-favorite news-feed__favorite">
+                  <span class="btn-favorite__label">16</span>
+                </button>
+              </div>
+              <div class="news-feed__item-body">
+                <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                <div class="news-feed__media vertical-center vertical-center" style="background-image: url(./video/profile-video_poster.png);">
+                  <div class="video-item news-feed__item-video media-item">
+                    <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                      <source src="./video/profile-video.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- news-feed__item -->
+            <div class="news-feed__item">
+              <div class="news-feed__item-header">
+                <div class="news-feed__profile">
+                  <div class="page-ava news-feed__profile-ava">
+                    <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                  </div>
+                  <div class="news-feed__profile-body">
+                    <span class="news-feed__profile-name">Anastasia</span>
+                    <span class="news-feed__date tex-gray">5 minutes ago</span>
+                  </div>
+                </div>
+                <button type="button" class="btn-favorite news-feed__favorite">
+                  <span class="btn-favorite__label">16</span>
+                </button>
+              </div>
+              <div class="news-feed__item-body">
+                <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                <div class="news-feed__media vertical-center" style="background-image: url(./img/profile/profile-photo_5.jpg);">
+                  <a href="./img/profile/profile-photo_5.jpg" class="media-item fancybox" data-fancybox="fancy-img3">
+                    <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_5.jpg" width="" height="" alt="">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
     </main>
 
     <!----------- Footer ------------->
@@ -453,196 +453,6 @@
     </footer>
   </div>
 
-  <!-- Modal Report -->
-  <div class="modal modal-form modal-report" data-modal="modal-reportProfile">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal-report__text">
-          <p>At OkCupid, we want everyone to have a safe space to connect. Thank you for reporting violations of our <a href="#">Community Guidelines</a>.</p>
-        </div>
-        <span class="textbold-7">Keep in mind:</span>
-        <ul class="modal-report__list">
-          <li>Your identity will not be shared with the person you are blocking or reporting.</li>
-          <li>Reporting could result in the person getting banned from OkCupid.</li>
-          <li>If you or someone you know is in immediate danger, please contact your local authorities.</li>
-        </ul>
-        <div class="modal-report__block">
-          <a href="#" class="modal-report__link">
-            <span>VISIT OUR RESOURCES PAGE</span>
-            <span class="material-icons">navigate_next</span>
-          </a>
-          <span class="modal-report__block-text">Hides you from each other.</span>
-        </div>
-        <div class="modal-report__block">
-          <a href="#" class="modal-report__link report-block">
-            <span class="color-red">Block</span>
-            <span class="material-icons color-red">navigate_next</span>
-          </a>
-        </div>
-        <div class="modal-report__block">
-          <a href="#" class="modal-report__link">
-            <span>Report</span>
-            <span class="material-icons">navigate_next</span>
-          </a>
-          <span class="modal-report__block-text">This person violated the community guidelines. You will be able to block them afterwards.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!----------- Modal block-profile ------------->
-  <div class="modal modal-form modal-block" data-modal="block-profile">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <div class="modal__profile-photo">
-            <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="80" height="80" alt="">
-          </div>
-          <h3 class="modal__title">Block <span class="color-red">Alexsandra</span>, 23</h3>
-          <p class="modal__descr">Are you sure to block this lady?</p>
-        </div>
-        <form action="#" class="form form-block">
-          <div class="form-field">
-            <label for="blockMessage" class="form-label">State the reason:</label>
-            <textarea id="blockMessage" name="block-message" class="form-field__textarea" placeholder="Describe the reason for the blockage"></textarea>
-          </div>
-          <ul class="list-reset form-block__list">
-            <li>
-              <label class="check form-block__check">
-                <input class="check__input" type="checkbox" name="param-name">
-                <span class="check__box"></span>
-                <span class="check__label">Show this reason to Elena</span>
-              </label>
-            </li>
-            <li>
-              <label class="check form-block__check">
-                <input class="check__input" type="checkbox" name="param-name">
-                <span class="check__box"></span>
-                <span class="check__label">Block all letters</span>
-              </label>
-            </li>
-            <li>
-              <label class="check form-block__check">
-                <input class="check__input" type="checkbox" name="param-name">
-                <span class="check__box"></span>
-                <span class="check__label">Block chat</span>
-              </label>
-            </li>
-          </ul>
-          <button type="submit" class="btn btn-error form__btn">Block <span>Alexandra, 23</span>
-          </button>
-        </form>
-
-      </div>
-    </div>
-  </div>
-  <!----------- Modal delete-correspondence ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteCorrespondence">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the selected correspondence?</h3>
-        </div>
-        <div class="modal__btns">
-          <button type="button" class="btn btn-blue modal-cancel">No</button>
-          <button type="button" class="btn btn-error btn-delete">Yes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!----------- Modal delete all correspondence ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteAllCorrespondence">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the all correspondence?</h3>
-        </div>
-        <div class="modal__btns">
-          <button type="button" class="btn btn-blue modal-cancel">No</button>
-          <button type="button" class="btn btn-error btn-delete">Yes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!----------- Modal delete-letter ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteLetter">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the letter?</h3>
-        </div>
-        <div class="modal__btns">
-          <button type="button" class="btn btn-blue modal-cancel">No</button>
-          <button type="button" class="btn btn-error btn-delete">Yes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Profile Contacts -->
-  <div class="modal modal-form modal-profile-contacts" data-modal="modal-profileContacts">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <!-- показываем классом .show -->
-        <div class="modal-profile-contacts__block show">
-          <div class="modal__header text-center">
-            <div class="modal-profile-contacts__photo">
-              <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="112" height="112" alt="">
-            </div>
-            <h3 class="modal__title">Contacts info</h3>
-            <p class="modal__descr">You are requesting a contact information of <span class="strong color-pink">Anastasia</span>
-            </p>
-          </div>
-          <div class="modal-profile-contacts__body text-center">
-            <h4 class="textbold-6 mb-4">This request costs <span class="strong color-green">200 credits</span></h4>
-            <p>Before that, you need to write at least 15 letters. You have sent no letters so far.</p>
-            <a href="#" class="btn modal__btn">OK</a>
-          </div>
-        </div>
-        <!-- показываем классом .show, а у верхнего убираем show при показе контактов -->
-        <div class="modal-profile-contacts__block">
-          <div class="modal__header text-center">
-            <div class="modal-profile-contacts__photo">
-              <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="112" height="112" alt="">
-            </div>
-            <h3 class="modal__title">Success!</h3>
-            <p class="modal__descr">Contact information of<span class="strong color-pink">Anastasia</span>
-            </p>
-          </div>
-          <div class="modal-profile-contacts__body">
-            <ul class="modal-profile-contacts__list">
-              <li>
-                <span class="material-icons">search</span>
-                <span><strong>ID:</strong> 546140</span>
-              </li>
-              <li>
-                <span class="material-icons">person</span>
-                <span><strong>Name:</strong> Anastasia</span>
-              </li>
-              <li>
-                <span class="material-icons">location_on</span>
-                <span><strong>Country / City:</strong> Ukraine, Odessa</span>
-              </li>
-              <li>
-                <span class="material-icons">phone</span>
-                <span><strong>Phone:</strong> <a href="tel:+380636494634">+380636494634</a></span>
-              </li>
-              <li>
-                <span class="material-icons">mail</span>
-                <span><strong>E-mail address:</strong> <a href="mailto:anastasia_odessa@gmail.com">anastasia_odessa@gmail.com</a></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
   <!-- Libs JS -->
   <script defer src="./js/libs/jquery3.7.1.js"></script>
   <script defer src="./js/libs/jquery.fancybox.min.js"></script>
@@ -652,26 +462,6 @@
   <script defer src="./js/libs/modal.js"></script>
   <!-- Scripts JS -->
   <script defer src="./js/main.min.js"></script>
-  <script defer src="./js/libs/dropdown.js"></script>
-
-  <script>
-    // Выбор .corespond-item
-    		document.addEventListener("DOMContentLoaded", function () {
-    			const checkboxes = document.querySelectorAll(".correspond-item input[type='checkbox']");
-    
-    			checkboxes.forEach((checkbox) => {
-    				checkbox.addEventListener("change", function () {
-    					const correspondItem = this.closest(".correspond-item");
-    
-    					if (this.checked) {
-    						correspondItem.classList.add("selected");
-    					} else {
-    						correspondItem.classList.remove("selected");
-    					}
-    				});
-    			});
-    		});
-  </script>
 </body>
 
 </html>
