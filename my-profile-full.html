@@ -191,17 +191,11 @@
           </svg>
           <span class="mob-nav__item-name">Posts</span>
         </li>
-        <li class="mob-nav__item chat-open" id="item-chat">
-          <svg class="my-svg mob-nav__icon">
-            <use xlink:href="img/svg-sprite.svg#ic-chat"></use>
-          </svg>
-          <span class="mob-nav__item-name">Chat</span>
-        </li>
       </ul>
     </nav>
 
     <main class="main">
-      <div class="profile">
+      <div class="profile my-profile">
         <!-- popup-like (показывается и скрывается классом show) -->
         <div class="popup-like">
           <div class="popup-like__body">
@@ -248,95 +242,14 @@
             </div>
           </div>
         </div>
+
         <div class="mob-profilephotos">
-          <!-- profile-moboptions (show max-widh: 992px) -->
-          <div class="profile-moboptions">
-            <ul class="profile-moboptions__list">
-              <li class="profile-moboptions__item item-mail">
-                <a href="./send-mail.html" class="profile-moboptions__btn active">
-                  <svg class="my-svg profile-moboptions__icon">
-                    <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="profile-moboptions__item item-gift">
-                <a href="./send-gift.html" class="profile-moboptions__btn">
-                  <svg class="my-svg profile-moboptions__icon">
-                    <use xlink:href="img/svg-sprite.svg#ic-gift"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="profile-moboptions__item item-contacts modal-open" data-modal-open="modal-profileContacts">
-                <a href="#" class="profile-moboptions__btn">
-                  <svg class="my-svg profile-moboptions__icon">
-                    <use xlink:href="img/svg-sprite.svg#ic-contacts"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="profile-moboptions__item item-favorite">
-                <button type="button" class="profile-moboptions__btn btn-favorite"></button>
-              </li>
-            </ul>
-          </div>
-
-          <!-- если нет фоток, то скрываем profile-slider-inner rлассом hidden и показываем photo-empty убрав класс hidden -->
-          <div class="photo-empty">
+          <!-- если нет фоток, то убираем profile__photo-img и показываем photo-empty убрав класс hidden -->
+          <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" alt="">
+          <div class="photo-empty hidden">
             <div class="photo-empty__center">
-              <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
+              <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_man.svg" width="128" height="128" alt="">
               <span class="photo-empty__label">No photo</span>
-            </div>
-          </div>
-
-          <!-- Mob profile-slider (show max-widh: 992px) -->
-          <div class="profile-slider-inner hidden">
-            <div class="swiper-container profile-slider">
-              <div class="swiper-wrapper">
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="mob-photo mob-photo--vert" style="background-image: url(./img/profile/profile-photo_1.jpg);">
-                    <div class="mob-photo__img">
-                      <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="" height="" alt="">
-                    </div>
-                  </div>
-                </div>
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="mob-photo mob-photo--vert" style="background-image: url(./img/profile/profile-photo_2.jpg);">
-                    <div class="mob-photo__img">
-                      <img loading="lazy" src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
-                    </div>
-                  </div>
-                </div>
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="mob-photo mob-photo--vert" style="background-image: url(./img/profile/profile-photo_3.jpg);">
-                    <div class="mob-photo__img">
-                      <img loading="lazy" src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
-                    </div>
-                  </div>
-                </div>
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="mob-photo mob-photo--hor">
-                    <div class="mob-photo__img">
-                      <img loading="lazy" src="./img/profile/profile-photo_hor.jpg" width="" height="" alt="">
-                    </div>
-                  </div>
-                </div>
-                <!-- slide -->
-                <div class="swiper-slide">
-                  <div class="swiper-slide">
-                    <div class="mob-slide" style="background-image: url(./img/profile/profile-photo_1.jpg);">
-                      <p class="mob-slide__text">To view the entire album, click on the button below.</p>
-                      <a href="./profile-photos.html" class="btn mob-slide__btn">
-                        <span class="btn__label">View all photos</span>
-                        <span class="material-icons btn-icon">arrow_forward</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -347,14 +260,18 @@
             <div class="profile__left">
               <!-- profile__photo -->
               <div class="profile__photo">
-                <div class="profile-status status-online"></div>
                 <div class="profile__status">
-                  <span class="profile__status-text">I recently read that women have 🥰</span>
+                  <div class="profile__status-text edit-status">
+                    <input type="text" class="edit-status__input" value="I'm free, I'm looking for acquaintances:)">
+                    <div class="edit-status__save">
+                      <span class="material-icons color-pink">check_circle</span>
+                    </div>
+                  </div>
                 </div>
-                <img class="profile__photo-img hidden" loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                <div class="profile__photo-empty photo-empty">
+                <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt="">
+                <div class="profile__photo-empty photo-empty hide">
                   <div class="photo-empty__center">
-                    <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
+                    <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_man.svg" width="128" height="128" alt="">
                     <span class="photo-empty__label">No photo</span>
                   </div>
                 </div>
@@ -362,6 +279,268 @@
 
               <!-- profile__media -->
               <div class="profile__media">
+                <div class="profile__photos mb-16">
+                  <!-- photos -->
+                  <div class="left-block">
+                    <h4 class="textbold-5 left-block__title">Photos <span>(10 photos)</span></h4>
+                    <div class="left-block__grid">
+                      <a href="./img/profile/profile-photo_1.jpg" class="profile__photo-item fancybox" data-fancybox="profile-photos">
+                        <img src="./img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                      </a>
+                      <a href="./img/profile/profile-photo_2.jpg" class="profile__photo-item fancybox" data-fancybox="profile-photos">
+                        <img src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                      </a>
+                      <a href="./img/profile/profile-photo_3.jpg" class="profile__photo-item fancybox" data-fancybox="profile-photos">
+                        <div class="photos-more">
+                          <span class="photos-more__number">+4</span>
+                          <span class="photos-more__text">photos</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                      </a>
+                      <div class="hidden">
+                        <a href="./img/profile/profile-photo_4.jpg" class="fancybox" data-fancybox="profile-photos"></a>
+                        <a href="./img/profile/profile-photo_5.jpg" class="fancybox" data-fancybox="profile-photos"></a>
+                        <a href="./img/profile/profile-photo_6.jpg" class="fancybox" data-fancybox="profile-photos"></a>
+                        <a href="./img/profile/profile-photo_1.jpg" class="fancybox" data-fancybox="profile-photos"></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- private photos (unlock) -->
+                  <div class="left-block">
+                    <h4 class="textbold-5 left-block__title">Private photos <span>(7 photos)</span></h4>
+                    <div class="left-block__grid">
+                      <a href="./img/profile/profile-photo_1.jpg" class="profile__photo-item fancybox" data-fancybox="gallery-privateUnlock">
+                        <div class="private-blur">
+                          <span class="material-icons private-blur__icon">visibility_off</span>
+                          <span class="private-blur__text">Private</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                      </a>
+                      <a href="./img/profile/profile-photo_2.jpg" class="profile__photo-item fancybox" data-fancybox="gallery-privateUnlock">
+                        <div class="private-blur">
+                          <span class="material-icons private-blur__icon">visibility_off</span>
+                          <span class="private-blur__text">Private</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                      </a>
+                      <a href="./img/profile/profile-photo_3.jpg" class="profile__photo-item fancybox" data-fancybox="gallery-privateUnlock">
+                        <div class="photos-more blur">
+                          <span class="photos-more__number">+4</span>
+                          <span class="photos-more__text">photos</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                      </a>
+                      <!-- hidden photos -->
+                      <div class="hidden">
+                        <a href="./img/profile/profile-photo_4.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
+                        <a href="./img/profile/profile-photo_5.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
+                        <a href="./img/profile/profile-photo_6.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
+                        <a href="./img/profile/profile-photo_1.jpg" class="fancybox" data-fancybox="gallery-privateUnlock"></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- private photos (lock) -->
+                  <div class="left-block">
+                    <h4 class="textbold-5 left-block__title">Private photos <span>(7 photos)</span></h4>
+                    <div class="left-block__grid">
+                      <!-- profile__photo-item -->
+                      <div class="profile__photo-item private-photo open-gallery" id="photo-1" data-gallery-open="gallery-private">
+                        <div class="private-blur">
+                          <span class="material-icons private-blur__icon">visibility_off</span>
+                          <span class="private-blur__text">Private</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_1.jpg" width="" height="" alt="">
+                      </div>
+                      <!-- profile__photo-item -->
+                      <div class="profile__photo-item private-photo open-gallery" id="photo-2" data-gallery-open="gallery-private">
+                        <div class="private-blur">
+                          <span class="material-icons private-blur__icon">visibility_off</span>
+                          <span class="private-blur__text">Private</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_hor.jpg" width="" height="" alt="">
+                      </div>
+                      <!-- profile__photo-item -->
+                      <div class="profile__photo-item private-photo open-gallery" id="photo-3" data-gallery-open="gallery-private">
+                        <div class="private-blur">
+                          <span class="photos-more__number">+4</span>
+                          <span class="photos-more__text">photos</span>
+                        </div>
+                        <img src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                      </div>
+                      <!-- GalleryPrivate -->
+                      <div class="my-gallery gallery-private" data-gallery="gallery-private">
+                        <div class="my-gallery__overlay">
+                          <span class="my-gallery__close"><span class="material-icons">close</span></span>
+                          <!-- my-gallery__controls -->
+                          <div class="my-gallery__prev"><span class="material-icons">arrow_back</span>
+                          </div>
+                          <div class="my-gallery__next"><span class="material-icons">arrow_forward</span>
+                          </div>
+                          <div class="my-gallery__body">
+
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item" data-item="photo-1">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_1.jpg" alt="">
+                              </div>
+                            </div>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item" data-item="photo-2">
+                              <div class="my-gallery__photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_hor.jpg" alt="">
+                              </div>
+                            </div>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item vert-photo" data-item="photo-3">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_3.jpg" alt="">
+                              </div>
+                            </div>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item vert-photo" data-item="photo-4">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_3.jpg" alt="">
+                              </div>
+                            </div>
+                            <!-- my-gallery__item -->
+                            <div class="my-gallery__item vert-photo" data-item="photo-3">
+                              <div class="my-gallery__photo vert-photo">
+                                <!-- private-gallery -->
+                                <div class="private-gallery">
+                                  <span class="material-icons private-gallery__icon">visibility_off</span>
+                                  <h4 class="private-gallery__title">Private Photo</h4>
+                                  <p class="private-gallery__text">Message this member to see their Private Photo.</p>
+                                  <button type="button" class="btn private-gallery__btn chat-open">
+                                    <span class="material-icons">chat</span>
+                                    <div class="btn__label">Chat Now</div>
+                                  </button>
+                                </div>
+                                <img src="./img/profile/profile-photo_4.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- profile__videos -->
+                <div class="left-block profile__videos mb-16">
+                  <h4 class="textbold-5 left-block__title">Videos <span>(8 videos)</span></h4>
+                  <span class="show-videos">All videos</span>
+                  <div class="profile__videos-grid">
+                    <div class="video-item">
+                      <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                        <source src="./video/profile-video.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="video-item">
+                      <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                        <source src="./video/profile-video.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="video-item">
+                      <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                        <source src="./video/profile-video.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="video-item">
+                      <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                        <source src="./video/profile-video.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="profile__more-videos">
+                    <div class="profile__videos-grid">
+                      <div class="video-item">
+                        <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                          <source src="./video/profile-video.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-item">
+                        <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                          <source src="./video/profile-video.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-item">
+                        <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                          <source src="./video/profile-video.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-item">
+                        <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                          <source src="./video/profile-video.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                    <div class="pagination pagination-blue">
+                      <div class="pagination__items">
+                        <a href="#" class="pagination__link pagination__prev"><span class="material-icons">arrow_back_ios</span></a>
+                        <a href="#" class="pagination__link active">1</a>
+                        <a href="#" class="pagination__link">2</a>
+                        <a href="#" class="pagination__link">3</a>
+                        <a href="#" class="pagination__link pagination__more">…</a>
+                        <a href="#" class="pagination__link pagination__next"><span class="material-icons">arrow_forward_ios</span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- profile__videos one-video -->
+                <div class="left-block profile__videos mb-16">
+                  <h4 class="textbold-5 left-block__title">Videos</h4>
+                  <div class="left-block__videos">
+                    <div class="video-item">
+                      <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                        <source src="./video/profile-video.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
                 <!-- banner-chat -->
                 <div class="profile-banner banner-chat">
                   <div class="profile-banner__icon">
@@ -369,12 +548,12 @@
                   </div>
                   <div class="profile-banner__body">
                     <!-- после написания и отправки сообщения прячем .hidden -->
-                    <div class="profile-banner__head">
+                    <div class="profile-banner__head hidden">
                       <h3 class="profile-banner__title">It’s time to communicate!</h3>
                       <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
                     </div>
                     <!-- после написания и отправки сообщения показываем .active -->
-                    <div class="chat-history hidden">
+                    <div class="chat-history active">
                       <div class="">
                         <h3 class="profile-banner__title">Stay in touch!</h3>
                         <p class="profile-banner__descr">The last message from your chat.</p>
@@ -413,59 +592,237 @@
 
               <!-- profile__interview -->
               <div class="profile__interview active">
+                <div class="left-block active mb-16">
+                  <h4 class="textbold-5 left-block__title">Interview</h4>
+                  <div class="profile-info">
+                    <div class="profile-info__item line-blue mt-b24">
+                      <div class="profile-info__item-header">
+                        <h4 class="profile-info__item-title">By clicking on the «Write an abstract» button, you personally create a unique text?</h4>
+                      </div>
+                      <div class="profile-info__item-body">
+                        <p class="profile-info__item-text text-info clamp-text">I love cooking, I take care of my house and create loving athmosphere for my daughter and my future husband. I would share my hobbies with my loved one with pleasure! I have many plans for life, and I want to share them with you!</p>
+                        <span class="read-more blue active">
+                                                    <svg class="my-svg read-more__icon">
+                                                        <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                    </svg>
+                                                </span>
+                      </div>
+                    </div>
+                    <div class="profile-info__item line-blue mt-b24">
+                      <div class="profile-info__item-header">
+                        <h4 class="profile-info__item-title">By clicking on the «Write an abstract» button?</h4>
+                      </div>
+                      <div class="profile-info__item-body">
+                        <p class="profile-info__item-text text-info clamp-text">The Yandex.Abstracts service is intended for students and schoolchildren, designers and journalists, creators of scientific applications and reports — for everyone who treats the text as a number of characters.</p>
+                        <span class="read-more blue active">
+                                                    <svg class="my-svg read-more__icon">
+                                                        <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                    </svg>
+                                                </span>
+                      </div>
+                    </div>
+                    <div class="profile-info__item line-blue mt-b24">
+                      <div class="profile-info__item-header">
+                        <h4 class="profile-info__item-title">By clicking on the «Write an abstract» button, you personally?</h4>
+                      </div>
+                      <div class="profile-info__item-body">
+                        <p class="profile-info__item-text text-info clamp-text">The Yandex.Abstracts service is intended.</p>
+                        <span class="read-more blue">
+                                                    <svg class="my-svg read-more__icon">
+                                                        <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                    </svg>
+                                                </span>
+                      </div>
+                    </div>
+                    <div class="profile-info__item line-blue">
+                      <div class="profile-info__item-header">
+                        <h4 class="profile-info__item-title">You personally create a unique text?</h4>
+                      </div>
+                      <div class="profile-info__item-body">
+                        <p class="profile-info__item-text text-info clamp-text">The Yandex.Abstracts service is intended for students and schoolchildren, designers and journalists, creators of scientific applications and reports — for everyone.</p>
+                        <span class="read-more blue active">
+                                                    <svg class="my-svg read-more__icon">
+                                                        <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                    </svg>
+                                                </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-blue profile__interview-btn modal-open" data-modal-open="modal-interview">Ask your question</button>
+                </div>
+              </div>
 
+              <!-- profile__populars-ladies -->
+              <div class="left-block profile__populars-ladies">
+                <h4 class="textbold-5 left-block__title">Other populars ladies</h4>
+                <div class="swiper-inner">
+                  <div class="swiper-container slider-profiles-two">
+                    <div class="swiper-wrapper">
+                      <!-- slide -->
+                      <div class="swiper-slide">
+                        <!-- profile-item -->
+                        <a href="#" class="profile-item">
+                          <div class="profile-status status-online"></div>
+                          <div class="profile-item__photo">
+                            <img loading="lazy" src="./img/profiles/profile_1.jpg" width="" height="" alt="">
+                          </div>
+                          <div class="profile-item__info">
+                            <!-- new /block -->
+                            <span class="profile-item__status new">New</span>
+                            <span class="profile-item__name">Alexsandra, 46</span>
+                            <span class="profile-item__loc">
+            <span class="material-icons">location_on</span>
+                            <span class="profile-item__city">Kyiv</span>
+                            </span>
+                          </div>
+                          <div class="profile-item__favorite">
+                            <!-- <span class="material-icons yes-favorite">favorite</span> -->
+                            <span class="material-icons no-favorite">favorite_border</span>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- slide -->
+                      <div class="swiper-slide">
+                        <!-- profile-item -->
+                        <a href="#" class="profile-item">
+                          <div class="profile-status status-online"></div>
+                          <div class="profile-item__photo">
+                            <img loading="lazy" src="./img/profiles/profile_1.jpg" width="" height="" alt="">
+                          </div>
+                          <div class="profile-item__info">
+                            <!-- new /block -->
+                            <span class="profile-item__status new">New</span>
+                            <span class="profile-item__name">Alexsandra, 46</span>
+                            <span class="profile-item__loc">
+            <span class="material-icons">location_on</span>
+                            <span class="profile-item__city">Kyiv</span>
+                            </span>
+                          </div>
+                          <div class="profile-item__favorite">
+                            <!-- <span class="material-icons yes-favorite">favorite</span> -->
+                            <span class="material-icons no-favorite">favorite_border</span>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- slide -->
+                      <div class="swiper-slide">
+                        <!-- profile-item -->
+                        <a href="#" class="profile-item">
+                          <div class="profile-status status-online"></div>
+                          <div class="profile-item__photo">
+                            <img loading="lazy" src="./img/profiles/profile_1.jpg" width="" height="" alt="">
+                          </div>
+                          <div class="profile-item__info">
+                            <!-- new /block -->
+                            <span class="profile-item__status new">New</span>
+                            <span class="profile-item__name">Alexsandra, 46</span>
+                            <span class="profile-item__loc">
+            <span class="material-icons">location_on</span>
+                            <span class="profile-item__city">Kyiv</span>
+                            </span>
+                          </div>
+                          <div class="profile-item__favorite">
+                            <!-- <span class="material-icons yes-favorite">favorite</span> -->
+                            <span class="material-icons no-favorite">favorite_border</span>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- slide -->
+                      <div class="swiper-slide">
+                        <!-- profile-item -->
+                        <a href="#" class="profile-item">
+                          <div class="profile-status status-online"></div>
+                          <div class="profile-item__photo">
+                            <img loading="lazy" src="./img/profiles/profile_1.jpg" width="" height="" alt="">
+                          </div>
+                          <div class="profile-item__info">
+                            <!-- new /block -->
+                            <span class="profile-item__status new">New</span>
+                            <span class="profile-item__name">Alexsandra, 46</span>
+                            <span class="profile-item__loc">
+            <span class="material-icons">location_on</span>
+                            <span class="profile-item__city">Kyiv</span>
+                            </span>
+                          </div>
+                          <div class="profile-item__favorite">
+                            <!-- <span class="material-icons yes-favorite">favorite</span> -->
+                            <span class="material-icons no-favorite">favorite_border</span>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- slide -->
+                      <div class="swiper-slide">
+                        <!-- profile-item -->
+                        <a href="#" class="profile-item">
+                          <div class="profile-status status-online"></div>
+                          <div class="profile-item__photo">
+                            <img loading="lazy" src="./img/profiles/profile_1.jpg" width="" height="" alt="">
+                          </div>
+                          <div class="profile-item__info">
+                            <!-- new /block -->
+                            <span class="profile-item__status new">New</span>
+                            <span class="profile-item__name">Alexsandra, 46</span>
+                            <span class="profile-item__loc">
+            <span class="material-icons">location_on</span>
+                            <span class="profile-item__city">Kyiv</span>
+                            </span>
+                          </div>
+                          <div class="profile-item__favorite">
+                            <!-- <span class="material-icons yes-favorite">favorite</span> -->
+                            <span class="material-icons no-favorite">favorite_border</span>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- slide -->
+                      <div class="swiper-slide">
+                        <!-- profile-item -->
+                        <a href="#" class="profile-item">
+                          <div class="profile-status status-online"></div>
+                          <div class="profile-item__photo">
+                            <img loading="lazy" src="./img/profiles/profile_1.jpg" width="" height="" alt="">
+                          </div>
+                          <div class="profile-item__info">
+                            <!-- new /block -->
+                            <span class="profile-item__status new">New</span>
+                            <span class="profile-item__name">Alexsandra, 46</span>
+                            <span class="profile-item__loc">
+            <span class="material-icons">location_on</span>
+                            <span class="profile-item__city">Kyiv</span>
+                            </span>
+                          </div>
+                          <div class="profile-item__favorite">
+                            <!-- <span class="material-icons yes-favorite">favorite</span> -->
+                            <span class="material-icons no-favorite">favorite_border</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-prev">
+                      <span class="material-icons">navigate_next</span>
+                    </div>
+                    <div class="swiper-next">
+                      <span class="material-icons">navigate_next</span>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <!--! profile__right -->
             <div class="profile__right">
-              <!-- profile__header -->
-              <div class="profile__header mb-32">
-                <ul class="profile__options">
-                  <li class="profile__options-item">
-                    <a href="./send-mail.html" class="profile__options-btn active">
-                      <svg class="my-svg profile__options-icon">
-                        <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
-                      </svg>
-                      <span class="profile__options-label">Mail Me</span>
-                    </a>
-                  </li>
-                  <li class="profile__options-item">
-                    <a href="./send-gift.html" class="profile__options-btn">
-                      <svg class="my-svg profile__options-icon">
-                        <use xlink:href="img/svg-sprite.svg#ic-gift"></use>
-                      </svg>
-                      <span class="profile__options-label">Send Gift</span>
-                    </a>
-                  </li>
-                  <li class="profile__options-item modal-open" data-modal-open="modal-profileContacts">
-                    <a href="#" class="profile__options-btn">
-                      <svg class="my-svg profile__options-icon">
-                        <use xlink:href="img/svg-sprite.svg#ic-contacts"></use>
-                      </svg>
-                      <span class="profile__options-label">Contacts Me</span>
-                    </a>
-                  </li>
-                </ul>
-                <!-- добавление происходит c помощью класса active -->
-                <button type="button" class="btn-favorite profile__favorite active">
-                  <span class="btn-favorite__label">Add Favorite</span>
-                </button>
-              </div>
-
               <!-- profile__top-info -->
               <div class="profile__top-info mb-24">
                 <div class="left">
-                  <h2 class="profile__name">Anastasia, <span>23</span></h2>
+                  <h2 class="profile__name">Jerome, <span>25</span></h2>
                   <div class="profile__location flex align-center">
                     <span class="material-icons profile__location-icon">location_on</span>
-                    <span><span class="color-pink strong">from Ukraine</span> / Dnepropetrovsk</span>
+                    <span><span class="color-pink strong">from USA</span> / New York</span>
                   </div>
                 </div>
                 <div class="right flex align-center">
-                  <div class="profile-id mr-8">ID: <span class="text-gray">546140</span>
+                  <div class="profile-id">ID: <span class="text-gray">546140</span>
                   </div>
-                  <button type="button" class="profile-report modal-open" data-modal-open="modal-reportProfile"></button>
                 </div>
               </div>
 
@@ -475,9 +832,45 @@
                 <ul class="tags-list profile__tags">
                   <li class="tags-list__item">New friends</li>
                   <li class="tags-list__item">Short-term dating</li>
-                  <li class="tags-list__item">Long-term dating</li>
-                  <li class="tags-list__item">Hookups</li>
                 </ul>
+                <div class="edit-looking">
+                  <button type="button" class="edit-btn btn-plus" id="edit-looking">
+                    <span class="material-icons edit-btn__icon">add</span>
+                  </button>
+                  <div class="dropdown dropdown-opt active">
+                    <ul class="dropdown-opt__list">
+                      <li class="dropdown-opt__item">
+                        <label class="check">
+                          <input class="check__input" type="checkbox" name="looking-option-1" checked>
+                          <span class="check__box"></span>
+                          <span class="check__label">New friends</span>
+                        </label>
+                      </li>
+                      <li class="dropdown-opt__item">
+                        <label class="check">
+                          <input class="check__input" type="checkbox" name="looking-option-2" checked>
+                          <span class="check__box"></span>
+                          <span class="check__label">Short-term dating</span>
+                        </label>
+                      </li>
+                      <li class="dropdown-opt__item">
+                        <label class="check">
+                          <input class="check__input" type="checkbox" name="looking-option-3">
+                          <span class="check__box"></span>
+                          <span class="check__label">Long-term dating</span>
+                        </label>
+                      </li>
+                      <li class="dropdown-opt__item">
+                        <label class="check">
+                          <input class="check__input" type="checkbox" name="looking-option-4">
+                          <span class="check__box"></span>
+                          <span class="check__label">Hookups</span>
+                        </label>
+                      </li>
+                    </ul>
+                    <button type="button" class="btn btn-sm dropdown-opt__btn">Save</button>
+                  </div>
+                </div>
               </div>
 
               <!-- profile__main-info -->
@@ -530,12 +923,13 @@
                     <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                   </div>
                   <div class="profile-banner__body">
-                    <div class="profile-banner__head">
+                    <!-- после написания и отправки сообщения прячем .hidden -->
+                    <div class="profile-banner__head hidden">
                       <h3 class="profile-banner__title">It’s time to communicate!</h3>
                       <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
                     </div>
                     <!-- после написания и отправки сообщения показываем .active -->
-                    <div class="chat-history hidden">
+                    <div class="chat-history active">
                       <div class="">
                         <h3 class="profile-banner__title">Stay in touch!</h3>
                         <p class="profile-banner__descr">The last message from your chat.</p>
@@ -546,7 +940,11 @@
                           <div class="chat-item__body">
                             <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
                               normal distribution of letters, as opposed to using 'Content here.</p>
-                            <span class="readmore">Read More…</span>
+                            <span class="readmore blue">
+                                                            <svg class="my-svg readmore__icon">
+                                                                <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                            </svg>
+                                                        </span>
                           </div>
                           <div class="chat-item__footer">
                             <span class="chat-item__date">25.01.23 / 20:19</span>
@@ -568,26 +966,125 @@
                 </div>
 
                 <!-- profile-info -->
-                <div class="profile-info mb-32">
-
+                <div class="profile-info mb-32 mt-24">
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">About Me</h4>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <!-- Если текста больше 3-х строк то .read-more добавляется класс .active -->
+                      <p class="profile-info__item-text text-info clamp-text">I like art very much. I like to make pictures and I also like when someone makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving. I like cooking, traveling,
+                        reading and learning new cultures. I like to make pictures and I also like when someone makes. makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving.
+                        I like cooking, traveling, reading and learning new cultures. I like to make pictures and I also like when someone makes.</p>
+                      <span class="read-more pink active">
+                                                <svg class="my-svg read-more__icon">
+                                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                </svg>
+                                            </span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Interests</h4>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <p class="profile-info__item-text text-info clamp-text">I like art very much. I like to make pictures and I also like when someone makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving.</p>
+                      <span class="read-more pink">
+                                                <svg class="my-svg read-more__icon">
+                                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                </svg>
+                                            </span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Ideal Relationship</h4>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <p class="profile-info__item-text text-info clamp-text">I like art very much. I like to make pictures and I also like when someone makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving. I like cooking, traveling,
+                        reading and learning new cultures. I like to make pictures and I also like when someone makes. makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving.
+                        I like cooking, traveling, reading and learning new cultures. I like to make pictures and I also like when someone makes.</p>
+                      <span class="read-more pink active">
+                                                <svg class="my-svg read-more__icon">
+                                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                </svg>
+                                            </span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- profile__posts -->
               <div class="profile__posts">
                 <div class="news-feed">
+                  <!-- news-feed__item -->
+                  <div class="news-feed__item">
+                    <div class="news-feed__item-header">
+                      <div class="news-feed__profile">
+                        <div class="page-ava news-feed__profile-ava">
+                          <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                        </div>
+                        <div class="news-feed__profile-body">
+                          <span class="news-feed__profile-name">Anastasia</span>
+                          <span class="news-feed__date tex-gray">5 minutes ago</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-favorite news-feed__favorite">
+                        <span class="btn-favorite__label">16</span>
+                      </button>
+                    </div>
+                    <div class="news-feed__item-body">
+                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                      <div class="news-feed__media items-two">
+                        <a href="./img/profile/profile-photo_2.jpg" class="media-item fancybox" data-fancybox="gallery">
+                          <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                        </a>
+                        <a href="./img/profile/profile-photo_3.jpg" class="media-item fancybox" data-fancybox="gallery">
+                          <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_3.jpg" width="" height="" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- news-feed__item -->
+                  <div class="news-feed__item">
+                    <div class="news-feed__item-header">
+                      <div class="news-feed__profile">
+                        <div class="page-ava news-feed__profile-ava">
+                          <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                        </div>
+                        <div class="news-feed__profile-body">
+                          <span class="news-feed__profile-name">Anastasia</span>
+                          <span class="news-feed__date tex-gray">5 minutes ago</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-favorite news-feed__favorite">
+                        <span class="btn-favorite__label">16</span>
+                      </button>
+                    </div>
+                    <div class="news-feed__item-body">
+                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                      <div class="news-feed__media vertical-center vertical" style="background-image: url(./img/profile/profile-photo_4.jpg);">
+                        <a href="./img/profile/profile-photo_4.jpg" class="media-item item-vertical fancybox" data-fancybox="fancy-img1">
+                          <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_4.jpg" width="" height="" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
                   <!-- banner-chat -->
                   <div class="profile-banner banner-chat">
                     <div class="profile-banner__icon">
                       <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                     </div>
                     <div class="profile-banner__body">
-                      <div class="profile-banner__head">
+                      <!-- после написания и отправки сообщения прячем .hidden -->
+                      <div class="profile-banner__head hidden">
                         <h3 class="profile-banner__title">It’s time to communicate!</h3>
                         <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
                       </div>
                       <!-- после написания и отправки сообщения показываем .active -->
-                      <div class="chat-history hidden">
+                      <div class="chat-history active">
                         <div class="">
                           <h3 class="profile-banner__title">Stay in touch!</h3>
                           <p class="profile-banner__descr">The last message from your chat.</p>
@@ -598,7 +1095,11 @@
                             <div class="chat-item__body">
                               <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
                                 normal distribution of letters, as opposed to using 'Content here.</p>
-                              <span class="readmore">Read More…</span>
+                              <span class="readmore blue">
+                                                                <svg class="my-svg readmore__icon">
+                                                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                                </svg>
+                                                            </span>
                             </div>
                             <div class="chat-item__footer">
                               <span class="chat-item__date">25.01.23 / 20:19</span>
@@ -618,6 +1119,33 @@
                       </form>
                     </div>
                   </div>
+
+                  <!-- news-feed__item -->
+                  <div class="news-feed__item">
+                    <div class="news-feed__item-header">
+                      <div class="news-feed__profile">
+                        <div class="page-ava news-feed__profile-ava">
+                          <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                        </div>
+                        <div class="news-feed__profile-body">
+                          <span class="news-feed__profile-name">Anastasia</span>
+                          <span class="news-feed__date tex-gray">5 minutes ago</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-favorite news-feed__favorite">
+                        <span class="btn-favorite__label">16</span>
+                      </button>
+                    </div>
+                    <div class="news-feed__item-body">
+                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                      <div class="news-feed__media">
+                        <a href="./img/profile/profile-photo_hor.jpg" class="media-item item-horizontal fancybox" data-fancybox="fancy-img2">
+                          <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_hor.jpg" width="" height="" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
                   <!-- profile-banner -->
                   <div class="profile-banner banner-gift">
                     <div class="banner-gift__left">
@@ -633,6 +1161,106 @@
                       <span class="btn__label">Chose presents</span>
                       <span class="material-icons btn-icon">arrow_forward</span>
                     </a>
+                  </div>
+
+                  <!-- news-feed__item -->
+                  <div class="news-feed__item">
+                    <div class="news-feed__item-header">
+                      <div class="news-feed__profile">
+                        <div class="page-ava news-feed__profile-ava">
+                          <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                        </div>
+                        <div class="news-feed__profile-body">
+                          <span class="news-feed__profile-name">Anastasia</span>
+                          <span class="news-feed__date tex-gray">5 minutes ago</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-favorite news-feed__favorite">
+                        <span class="btn-favorite__label">16</span>
+                      </button>
+                    </div>
+                    <div class="news-feed__item-body">
+                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                      <div class="news-feed__media news-feed__media-video">
+                        <div class="video-item video-vertical">
+                          <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                            <source src="./video/profile-video.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- news-feed__item -->
+                  <div class="news-feed__item">
+                    <div class="news-feed__item-header">
+                      <div class="news-feed__profile">
+                        <div class="page-ava news-feed__profile-ava">
+                          <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                        </div>
+                        <div class="news-feed__profile-body">
+                          <span class="news-feed__profile-name">Anastasia</span>
+                          <span class="news-feed__date tex-gray">5 minutes ago</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-favorite news-feed__favorite">
+                        <span class="btn-favorite__label">16</span>
+                      </button>
+                    </div>
+                    <div class="news-feed__item-body">
+                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                      <div class="news-feed__media vertical-center vertical-center" style="background-image: url(./video/profile-video_poster.png);">
+                        <div class="video-item news-feed__item-video media-item">
+                          <video controls poster="./video/profile-video_poster.png" preload="none" muted>
+                            <source src="./video/profile-video.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- news-feed__item -->
+                  <div class="news-feed__item">
+                    <div class="news-feed__item-header">
+                      <div class="news-feed__profile">
+                        <div class="page-ava news-feed__profile-ava">
+                          <img loading="lazy" src="./img/profile-photo.jpg" width="48" height="48" alt="">
+                        </div>
+                        <div class="news-feed__profile-body">
+                          <span class="news-feed__profile-name">Anastasia</span>
+                          <span class="news-feed__date tex-gray">5 minutes ago</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-favorite news-feed__favorite">
+                        <span class="btn-favorite__label">16</span>
+                      </button>
+                    </div>
+                    <div class="news-feed__item-body">
+                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
+                      <div class="news-feed__media vertical-center" style="background-image: url(./img/profile/profile-photo_5.jpg);">
+                        <a href="./img/profile/profile-photo_5.jpg" class="media-item fancybox" data-fancybox="fancy-img3">
+                          <img class="news-feed__item-img" loading="lazy" src="./img/profile/profile-photo_5.jpg" width="" height="" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-stroke news-feed__more">See More</button>
+
+                  <!-- banner-comunications -->
+                  <div class="profile-banner banner-comunications">
+                    <h3 class="profile-banner__title">Should Anastasia catch your attention, feel free to initiate a conversation with her.</h3>
+
+                    <div class="banner-comunications__btns">
+                      <a href="#" class="btn mail-link">
+                        <span class="material-icons btn-icon ">mail</span>
+                        <span class="btn__label">Send mail</span>
+                      </a>
+                      <a href="#chatBanner" class="btn chat-link">
+                        <span class="material-icons btn-icon">chat</span>
+                        <span class="btn__label">Chat now</span>
+                      </a>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -877,7 +1505,7 @@
                   </div>
                 </div>
                 <div class="swiper-prev">
-                  <span class="material-icons">navigate_next</span>
+                  <span class="material-icons">arrow_back_ios</span>
                 </div>
                 <div class="swiper-next">
                   <span class="material-icons">navigate_next</span>
