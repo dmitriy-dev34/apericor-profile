@@ -247,7 +247,7 @@
           <div class="correspond">
             <div class="correspond__options">
               <div class="correspond__option correspond-sort">
-                <button type="button" class="btn dropdown-trigger correspond-sort__btn">
+                <button type="button" class="btn mail-option correspond-sort__btn">
                   <span class="material-icons">swap_vert</span>
                 </button>
                 <div class="dropdown">
@@ -260,7 +260,7 @@
                 </div>
               </div>
               <div class="correspond__option correspond-delete">
-                <button type="button" class="btn dropdown-trigger correspond-delete__btn">
+                <button type="button" class="btn mail-option correspond-delete__btn">
                   <span class="material-icons">delete</span>
                 </button>
                 <div class="dropdown">
@@ -809,26 +809,7 @@
   <script defer src="./js/libs/modal.js"></script>
   <!-- Scripts JS -->
   <script defer src="./js/main.min.js"></script>
-  <script defer src="./js/libs/dropdown.js"></script>
-
-  <script>
-    // Выбор .corespond-item
-    		document.addEventListener("DOMContentLoaded", function () {
-    			const checkboxes = document.querySelectorAll(".correspond-item input[type='checkbox']");
-    
-    			checkboxes.forEach((checkbox) => {
-    				checkbox.addEventListener("change", function () {
-    					const correspondItem = this.closest(".correspond-item");
-    
-    					if (this.checked) {
-    						correspondItem.classList.add("selected");
-    					} else {
-    						correspondItem.classList.remove("selected");
-    					}
-    				});
-    			});
-    		});
-  </script>
+  <script defer src="./js/libs/mail.js"></script>
 </body>
 
 </html>

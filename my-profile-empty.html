@@ -246,8 +246,8 @@
         <!-- Главное фото профиля на мобильных (max-widh: 992px) -->
         <div class="mob-profilephotos">
           <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
-          <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo-hor.jpg" alt="">
-          <div class="upload-file upload-photo hidden">
+          <!-- <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo-hor.jpg" alt=""> -->
+          <div class="upload-file upload-photo">
             <input type="file" id="fileInputPhotoMob" class="upload-file__input" accept="image/*">
             <label for="fileInputPhotoMob" class="upload-file__label">
               <div class="upload-file__icon"><span class="material-icons">upload</span>
@@ -270,8 +270,8 @@
                   </div>
                 </div>
                 <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
-                <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt="">
-                <div class="upload-file upload-photo hidden">
+                <!-- <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt=""> -->
+                <div class="upload-file upload-photo">
                   <input type="file" id="PhotoMainMob" class="upload-file__input" accept="image/*">
                   <label for="PhotoMainMob" class="upload-file__label">
                     <div class="upload-file__icon"><span class="material-icons">upload</span>
@@ -286,7 +286,7 @@
                 <div class="profile__photos mb-16">
                   <!-- photos -->
                   <div class="left-block">
-                    <h4 class="textbold-5 left-block__title">Photos <span>(1 photo)</span></h4>
+                    <h4 class="textbold-5 left-block__title">Photos <span>(0 photo)</span></h4>
                     <div class="left-block__grid">
                       <div class="upload-file upload-photo sm">
                         <input type="file" id="PhotoMain" class="upload-file__input" accept="image/*">
@@ -296,9 +296,7 @@
                           <span class="upload-file__text">jpg, png <br> max 4MB size</span>
                         </label>
                       </div>
-                      <a href="./img/my-profile_photo.jpg" class="profile__photo-item fancybox" data-fancybox="">
-                        <img src="./img/my-profile_photo.jpg" width="" height="" alt="">
-                      </a>
+                      <a href="#" class="profile__photo-item photo-empty"></a>
                       <a href="#" class="profile__photo-item photo-empty"></a>
                     </div>
                     <div class="left-block__footer">
@@ -345,11 +343,6 @@
                         </div>
                         <span class="upload-file__text">mp4, mov, avi <br> max 4MB size</span>
                       </label>
-                    </div>
-                    <div class="video-item">
-                      <video controls poster="./video/profile-video_poster.png" preload="none" muted>
-                        <source src="./video/profile-video.mp4" type="video/mp4">
-                      </video>
                     </div>
                   </div>
                   <div class="profile__more-videos">
@@ -420,7 +413,7 @@
                         <h4 class="profile-info__item-title">By clicking on the «Write an abstract» button, you personally?</h4>
                       </div>
                       <div class="profile-info__item-body">
-                        <p class="profile-info__item-text text-info clamp-text">The Yandex.Abstracts service is intended.</p>
+                        <p class="profile-info__item-text text-info clamp-text text-gray">To respond, click on the edit button above</p>
                         <span class="read-more blue">
                                                     <svg class="my-svg read-more__icon">
                                                         <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
@@ -433,8 +426,8 @@
                         <h4 class="profile-info__item-title">You personally create a unique text?</h4>
                       </div>
                       <div class="profile-info__item-body">
-                        <p class="profile-info__item-text text-info clamp-text">The Yandex.Abstracts service is intended for students and schoolchildren, designers and journalists, creators of scientific applications and reports — for everyone.</p>
-                        <span class="read-more blue active">
+                        <p class="profile-info__item-text text-info clamp-text text-gray">To respond, click on the edit button above</p>
+                        <span class="read-more blue">
                                                     <svg class="my-svg read-more__icon">
                                                         <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
                                                     </svg>
@@ -474,14 +467,14 @@
                     <ul class="dropdown-opt__list">
                       <li class="dropdown-opt__item">
                         <label class="check dropdown-opt__check">
-                          <input class="check__input dropdown-opt__input" type="checkbox" name="looking-option-1" checked>
+                          <input class="check__input dropdown-opt__input" type="checkbox" name="looking-option-1">
                           <span class="check__box"></span>
                           <span class="check__label">New friends</span>
                         </label>
                       </li>
                       <li class="dropdown-opt__item">
                         <label class="check dropdown-opt__check">
-                          <input class="check__input dropdown-opt__input" type="checkbox" name="looking-option-2" checked>
+                          <input class="check__input dropdown-opt__input" type="checkbox" name="looking-option-2">
                           <span class="check__box"></span>
                           <span class="check__label">Short-term dating</span>
                         </label>
@@ -505,8 +498,8 @@
                   </div>
                 </div>
                 <ul class="tags-list profile__tags">
-                  <li class="tags-list__item">New friends</li>
-                  <li class="tags-list__item">Short-term dating</li>
+                  <!-- <li class="tags-list__item">New friends</li> -->
+                  <!-- <li class="tags-list__item">Short-term dating</li> -->
                 </ul>
               </div>
 
@@ -534,7 +527,8 @@
                   </div>
                   <div class="tabs__content">
                     <div class="tabs__content-item" style="display: block;">
-                      <ul class="tags-list profile-specific__tags">
+                      <!-- crhsn блок классом hidden -->
+                      <ul class="tags-list profile-specific__tags hidden">
                         <li class="tags-list__item">
                           <strong>Birthday:</strong> 12 September <span class="material-icons specific-delete">close</span>
                         </li>
@@ -596,10 +590,8 @@
                     </div>
                     <div class="profile-info__item-body">
                       <!-- Если текста больше 3-х строк то .read-more добавляется класс .active -->
-                      <p class="profile-info__item-text text-info clamp-text">I like art very much. I like to make pictures and I also like when someone makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving. I like cooking, traveling,
-                        reading and learning new cultures. I like to make pictures and I also like when someone makes. makes pictures of me. I am fond of sports and activities. I have a motto. Healthy mind in a healthy body and Life is consent moving.
-                        I like cooking, traveling, reading and learning new cultures. I like to make pictures and I also like when someone makes.</p>
-                      <span class="read-more pink active">
+                      <p class="profile-info__item-text text-info clamp-text text-gray">Your text here…</p>
+                      <span class="read-more pink">
                                                 <svg class="my-svg read-more__icon">
                                                     <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
                                                 </svg>
@@ -669,52 +661,7 @@
                 </form>
                 <div class="news-feed">
                   <!-- news-feed__item -->
-                  <div class="news-feed__item">
-                    <div class="news-feed__item-header">
-                      <div class="news-feed__profile">
-                        <div class="page-ava news-feed__profile-ava">
-                          <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
-                        </div>
-                        <div class="news-feed__profile-body">
-                          <span class="news-feed__profile-name">You</span>
-                          <span class="news-feed__date tex-gray">5 minutes ago</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="news-feed__item-body">
-                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
-                      <div class="news-feed__media items-two">
-                        <a href="./img/my-profile_photo.jpg" class="media-item fancybox" data-fancybox="gallery">
-                          <img class="news-feed__item-img" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
-                        </a>
-                        <a href="./img/my-profile_photo.jpg" class="media-item fancybox" data-fancybox="gallery">
-                          <img class="news-feed__item-img" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
                   <!-- news-feed__item -->
-                  <div class="news-feed__item">
-                    <div class="news-feed__item-header">
-                      <div class="news-feed__profile">
-                        <div class="page-ava news-feed__profile-ava">
-                          <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
-                        </div>
-                        <div class="news-feed__profile-body">
-                          <span class="news-feed__profile-name">You</span>
-                          <span class="news-feed__date tex-gray">5 minutes ago</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="news-feed__item-body">
-                      <p class="news-feed__item-text">There is only one happiness in life — to love and be loved.</p>
-                      <div class="news-feed__media vertical-center vertical" style="background-image: url(./img/my-profile_photo.jpg);">
-                        <a href="./img/my-profile_photo.jpg" class="media-item item-vertical fancybox" data-fancybox="fancy-img1">
-                          <img class="news-feed__item-img" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
                   <!-- <button type="button" class="btn btn-stroke news-feed__more">See More</button> -->
                 </div>
               </div>

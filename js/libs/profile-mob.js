@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   //! Start Scripts
 
-  /* ------------------- Modal -------------------- */
+  /* ------------------- mob-nav -------------------- */
   const navMob = document.querySelector(".mob-nav");
 
   // mob-nav скрываем / показываем при скроле
@@ -91,13 +91,15 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ------------------- profile-moboptions -------------------- */
   const profileMobOptions = document.querySelector(".profile-moboptions");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 400) {
-      profileMobOptions.classList.add("scrolled");
-    } else {
-      profileMobOptions.classList.remove("scrolled");
-    }
-  });
+  if (profileMobOptions) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 400) {
+        profileMobOptions.classList.add("scrolled");
+      } else {
+        profileMobOptions.classList.remove("scrolled");
+      }
+    });
+  }
 
   //!! End Scripts
 });
