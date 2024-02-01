@@ -35,3 +35,11 @@ https://dmitriy-dev34.github.io/apericor-profile/mail-archive.html
 # News Feed
 
 https://dmitriy-dev34.github.io/apericor-profile/news-feed.html
+
+# My Profile - частично заполненный
+
+https://dmitriy-dev34.github.io/apericor-profile/my-profile-full.html
+
+# My Profile - пустой
+
+https://dmitriy-dev34.github.io/apericor-profile/my-profile-empty.html
