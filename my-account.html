@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+  <link rel="icon" type="image/png" href="./favicon/favicon.png">
+  <title>Apericor</title>
+  <!-- Fonts -->
+  <link rel="preload" href="./fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-black.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- CSS -->
+  <!-- Materials Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/libscss/datepicker.css">
+  <link rel="stylesheet" href="./css/libscss/jquery.fancybox.css">
+  <link rel="stylesheet" href="./css/libscss/swiper-bundle.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="page__body">
+  <button type="button" id="btnScrollTop" title="ScrollUp"></button>
+
+  <div class="page__wrapper">
+    <!----------- Header Page ------------->
+    <header class="header header-page">
+      <div class="container header__container">
+        <div class="header__left">
+          <a href="./" class="header__logo logo">
+            <img class="logo__img" loading="lazy" src="./img/logo.svg" width="129" height="32" alt="Apericor">
+          </a>
+        </div>
+        <!-- header__nav -->
+        <div class="nav-overlay"></div>
+        <nav class="header__nav nav">
+          <a href="./my-account.html" class="header__account account-mob hidden" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 y.o</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
+          <!-- mob-verif (.show показываем / .hide скрываем) появляется в меню мобильном -->
+          <div class="verif-msg mob-verif">
+            <div class="verif-msg__step verif-step1 active">
+              <div class="verif-msg__content">
+                <span class="material-icons verif-msg__icon">verified</span>
+                <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                  <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step2">
+              <div class=" verif-msg__content">
+                <span class="material-icons verif-msg__icon">mail</span>
+                <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                  / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                  address book to ensure delivery.
+                  <span class="verif-msg__link resend-email2">Resend Email</span> and
+                  <span class="verif-msg__link change-email">Change current email</span>
+                </p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step3">
+              <div class=" verif-msg__content">
+                <div class="box">
+                  <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                  <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+                </div>
+                <form action="#" class="verif-msg__form">
+                  <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                  <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <ul class="nav__menu menu">
+            <li class="menu__item">
+              <a href="./news-feed.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-news"></use>
+                </svg>
+                <span class="menu__link-name">News feed</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./mail.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
+                </svg>
+                <span class="menu__link-name">Mail</span>
+                <span class="noti-indicator">221</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./discover.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-discover"></use>
+                </svg>
+                <span class="menu__link-name">Discover</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./favorites.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-favorite_yes"></use>
+                </svg>
+                <span class="menu__link-name">Favorites</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./support.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-support"></use>
+                </svg>
+                <span class="menu__link-name">Support</span>
+                <span class="noti-indicator">12</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./help-center.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-help"></use>
+                </svg>
+                <span class="menu__link-name">Help center</span>
+              </a>
+            </li>
+            <li class="menu__item signout-mob">
+              <a href="#" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-signout"></use>
+                </svg>
+                <span class="menu__link-name">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <a href="./my-account.html" class="header__account" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 y.o</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
+          <button type="button" aria-label="Open Menu" class="burger header__burger">
+            <span class="burger__icon"></span>
+          </button>
+          <a href="#" class="header__signout">
+            <span class="material-icons">logout</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="profile my-profile my-account">
+        <!-- popup-like (показывается и скрывается классом show) -->
+        <div class="popup-like">
+          <div class="popup-like__body">
+            <div class="popup-like__close"></div>
+            <div class="popup-like__icon"><span class="material-icons">favorite</span>
+            </div>
+            <div class="page-ava">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
+          </div>
+        </div>
+        <!-- verif-msg (.show показываем / .hide скрываем) -->
+        <div class="verif-msg show">
+          <div class="verif-msg__step verif-step1 active">
+            <div class="verif-msg__content">
+              <span class="material-icons verif-msg__icon">verified</span>
+              <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step2">
+            <div class=" verif-msg__content">
+              <span class="material-icons verif-msg__icon">mail</span>
+              <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                address book to ensure delivery.
+                <span class="verif-msg__link resend-email2">Resend Email</span> and
+                <span class="verif-msg__link change-email">Change current email</span>
+              </p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step3">
+            <div class=" verif-msg__content">
+              <div class="box">
+                <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+              </div>
+              <form action="#" class="verif-msg__form">
+                <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Главное фото профиля на мобильных (max-widh: 992px) -->
+        <div class="mob-profilephotos">
+          <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
+          <!-- <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo-hor.jpg" alt=""> -->
+          <div class="upload-file upload-photo">
+            <input type="file" id="fileInputPhotoMob" class="upload-file__input" accept="image/*">
+            <label for="fileInputPhotoMob" class="upload-file__label">
+              <div class="upload-file__icon"><span class="material-icons">upload</span>
+              </div>
+              <span class="upload-file__text">jpg, png <br> max 4MB size</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="page-padding container">
+          <div class="profile__body">
+            <!--! profile__left -->
+            <div class="profile__left">
+              <!-- profile__photo -->
+              <div class="profile__photo">
+                <div class="profile__status">
+                  <div class="profile__status-text edit-status">
+                    <input type="text" class="edit-status__input" value="I'm free, I'm looking for acquaintances:)" disabled>
+                    <span class="material-icons edit-status__btn">edit</span>
+                  </div>
+                </div>
+                <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
+                <!-- <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt=""> -->
+                <div class="upload-file upload-photo">
+                  <input type="file" id="PhotoMainMob" class="upload-file__input" accept="image/*">
+                  <label for="PhotoMainMob" class="upload-file__label">
+                    <div class="upload-file__icon"><span class="material-icons">upload</span>
+                    </div>
+                    <span class="upload-file__text">jpg, png <br> max 4MB size</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!--! profile__right -->
+            <div class="profile__right">
+              <!-- account-balance -->
+              <div class="account-balance mb-32">
+                <div class="account-balance__info">
+                  <div class="account-balance__title">Balance: <span>440 credits</span>
+                  </div>
+                  <div class="account-balance__transactions">
+                    <svg class="my-svg account-balance__transactions-icon">
+                      <use xlink:href="img/svg-sprite.svg#ic-transactions"></use>
+                    </svg>
+                    <a href="#" class="account-balance__transactions-link">My Transactions</a>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-sm account-balance__btn">
+                  <svg class="my-svg account-balance__btn-icon">
+                    <use xlink:href="img/svg-sprite.svg#ic-balance"></use>
+                  </svg>
+                  <span class="account-balance__btn-label">By credits</span>
+                </a>
+              </div>
+
+              <div class="my-account__settings">
+                <div class="my-account__settings-header">
+                  <h2 class="page-title my-account__title">My account settings</h2>
+                  <p class="my-account__descr">Here you can quickly change your account information</p>
+                </div>
+                <!-- profile-info -->
+                <div class="profile-info mb-32">
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Your ID:</h4>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <span class="profile-info__item-text text-gray">546140</span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Your first name:</h4>
+                      <button type="button" class="edit-btn btn-edit modal-open" data-modal-open="modal-editFirstName">
+                        <span class="material-icons edit-btn__icon">edit</span>
+                      </button>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <span class="profile-info__item-text text-gray">Jerome</span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Gender:</h4>
+                      <button type="button" class="edit-btn btn-edit modal-open" data-modal-open="modal-editGender">
+                        <span class="material-icons edit-btn__icon">edit</span>
+                      </button>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <span class="profile-info__item-text text-gray">Female</span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Country:</h4>
+                      <button type="button" class="edit-btn btn-edit modal-open" data-modal-open="modal-editCountry">
+                        <span class="material-icons edit-btn__icon">edit</span>
+                      </button>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <span class="profile-info__item-text text-gray">USA</span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">City:</h4>
+                      <button type="button" class="edit-btn btn-edit modal-open" data-modal-open="modal-editCity">
+                        <span class="material-icons edit-btn__icon">edit</span>
+                      </button>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <span class="profile-info__item-text text-gray">New York</span>
+                    </div>
+                  </div>
+                  <div class="profile-info__item">
+                    <div class="profile-info__item-header">
+                      <h4 class="profile-info__item-title">Password:</h4>
+                      <button type="button" class="edit-btn btn-edit modal-open" data-modal-open="modal-editPassword">
+                        <span class="material-icons edit-btn__icon">edit</span>
+                      </button>
+                    </div>
+                    <div class="profile-info__item-body">
+                      <!-- если заполняет, то при сохраненении у .profile-info__item-text убираем класс text-gray и вставляем новый текст  -->
+                      <span class="profile-info__item-text text-gray">Enter new password</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-account__settings-footer">
+                  <a href="./my-profile-full.html" class="btn btn-stroke">
+                    <span>Edit/Fill my profile</span>
+                    <span class="material-icons">edit</span>
+                  </a>
+                  <a href="./profile.html" class="btn btn-stroke">
+                    <span>Preview my profile</span>
+                    <span class="material-icons">visibility</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- account-settings -->
+          <div class="account-settings">
+            <div class="account-settings__item modal-open" data-modal-open="modal-editEmailSettings">
+              <img loading="lazy" class="account-settings__item-icon" src="./img/icons/ic_ac-settings_1.svg" width="" height="" alt="">
+              <div class="account-settings__item-body">
+                <h3 class="account-settings__item-title">E-mail notification settings</h3>
+                <p class="account-settings__item-descr">Choose notifications you would like to receive.</p>
+              </div>
+              <span class="material-icons account-settings__item-plus">add</span>
+            </div>
+            <div class="account-settings__item modal-open" data-modal-open="modal-editEmailAccount">
+              <img loading="lazy" class="account-settings__item-icon" src="./img/icons/ic_ac-settings_2.svg" width="" height="" alt="">
+              <div class="account-settings__item-body">
+                <h3 class="account-settings__item-title">Change e-mail address</h3>
+                <p class="account-settings__item-descr">Here you can quickly change your account information.</p>
+              </div>
+              <span class="material-icons account-settings__item-plus">add</span>
+            </div>
+            <div class="account-settings__item modal-open" data-modal-open="modal-editMyprivacy">
+              <img loading="lazy" class="account-settings__item-icon" src="./img/icons/ic_ac-settings_3.svg" width="" height="" alt="">
+              <div class="account-settings__item-body">
+                <h3 class="account-settings__item-title">My privacy</h3>
+                <p class="account-settings__item-descr">Privacy settings for your profile.</p>
+              </div>
+              <span class="material-icons account-settings__item-plus">add</span>
+            </div>
+            <a href="./profiles-blacklist.html" class="account-settings__item">
+              <img loading="lazy" class="account-settings__item-icon" src="./img/icons/ic_ac-settings_4.svg" width="" height="" alt="">
+              <div class="account-settings__item-body">
+                <h3 class="account-settings__item-title">Black List</h3>
+                <p class="account-settings__item-descr">The following list contains the users you have added to the blacklist.</p>
+              </div>
+              <span class="material-icons account-settings__item-plus">add</span>
+            </a>
+            <a href="./gifts-status.html" class="account-settings__item">
+              <img loading="lazy" class="account-settings__item-icon" src="./img/icons/ic_ac-settings_5.svg" width="" height="" alt="">
+              <div class="account-settings__item-body">
+                <h3 class="account-settings__item-title">Gift delivery status</h3>
+                <p class="account-settings__item-descr">The following list contains the users you have added to the blacklist.</p>
+              </div>
+              <span class="material-icons account-settings__item-plus">add</span>
+            </a>
+            <div class="account-settings__item modal-open" data-modal-open="modal-suspend">
+              <img loading="lazy" class="account-settings__item-icon" src="./img/icons/ic_ac-settings_6.svg" width="" height="" alt="">
+              <div class="account-settings__item-body">
+                <h3 class="account-settings__item-title">Suspend your profile</h3>
+                <p class="account-settings__item-descr">Need a break? You could hide or delete your account.</p>
+              </div>
+              <span class="material-icons account-settings__item-plus">add</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!----------- Footer ------------->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container footer__container footer__top-container">
+          <a href="./" class="footer__logo logo">
+            <img class="logo__img" loading="lazy" src="./img/logo-light.svg" width="129" height="32" alt="Apericor">
+          </a>
+          <nav class="footer__nav">
+            <button type="button" aria-label="open-menu" class="footer__toggle"></button>
+            <ul class="footer__menu">
+              <li class="footer__menu-item item-help"><a href="#">Help Center</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">About Us</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">Terms and Conditions</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">Contacts US</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="" class="footer__social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.99609 22V13.0547H7V9.5H9.99609V6.69922C9.99609 3.65625 11.8555 2 14.5703 2C15.8711 2 16.9883 2.09766 17.3125 2.14062V5.32031H15.4297C13.9531 5.32031 13.668 6.02344 13.668 7.05078V9.5H17L16.543 13.0547H13.668V22" fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="" class="footer__social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.9442 8.29744C19.9569 8.48603 19.9569 8.67467 19.9569 8.86326C19.9569 14.6156 15.8326 21.2437 8.29444 21.2437C5.97209 21.2437 3.81473 20.5297 2 19.2903C2.32996 19.3307 2.64719 19.3442 2.98985 19.3442C4.90607 19.3442 6.67006 18.6572 8.0787 17.4851C6.27666 17.4447 4.7665 16.1918 4.24618 14.4675C4.50001 14.5078 4.7538 14.5348 5.02032 14.5348C5.38833 14.5348 5.75638 14.4809 6.099 14.3866C4.22083 13.9825 2.81215 12.2312 2.81215 10.1161V10.0622C3.35782 10.3856 3.99239 10.5876 4.66493 10.6146C3.56087 9.83318 2.83754 8.49951 2.83754 6.99067C2.83754 6.18239 3.04055 5.44145 3.3959 4.79481C5.41369 7.43525 8.44671 9.15959 11.8477 9.34822C11.7843 9.0249 11.7462 8.68814 11.7462 8.35134C11.7462 5.95337 13.5736 4 15.8452 4C17.0254 4 18.0914 4.52539 18.8401 5.37411C19.7665 5.18551 20.6548 4.82176 21.4416 4.32332C21.137 5.33372 20.4898 6.18243 19.6396 6.72126C20.4645 6.627 21.264 6.38446 22 6.0477C21.4417 6.90985 20.7437 7.67771 19.9442 8.29744V8.29744Z"
+                  fill="currentColor" />
+                </svg>
+
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="" class="footer__social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3333 12C15.3333 11.0799 15.0078 10.2943 14.3568 9.64323C13.7057 8.99219 12.9201 8.66667 12 8.66667C11.0799 8.66667 10.2943 8.99219 9.64323 9.64323C8.99219 10.2943 8.66667 11.0799 8.66667 12C8.66667 12.9201 8.99219 13.7057 9.64323 14.3568C10.2943 15.0078 11.0799 15.3333 12 15.3333C12.9201 15.3333 13.7057 15.0078 14.3568 14.3568C15.0078 13.7057 15.3333 12.9201 15.3333 12ZM17.1302 12C17.1302 13.4236 16.6311 14.6345 15.6328 15.6328C14.6345 16.6311 13.4236 17.1302 12 17.1302C10.5764 17.1302 9.36545 16.6311 8.36719 15.6328C7.36892 14.6345 6.86979 13.4236 6.86979 12C6.86979 10.5764 7.36892 9.36545 8.36719 8.36719C9.36545 7.36892 10.5764 6.86979 12 6.86979C13.4236 6.86979 14.6345 7.36892 15.6328 8.36719C16.6311 9.36545 17.1302 10.5764 17.1302 12ZM18.5365 6.66146C18.5365 6.99132 18.4193 7.27344 18.1849 7.50781C17.9505 7.74219 17.6684 7.85937 17.3385 7.85937C17.0087 7.85937 16.7266 7.74219 16.4922 7.50781C16.2578 7.27344 16.1406 6.99132 16.1406 6.66146C16.1406 6.3316 16.2578 6.04948 16.4922 5.8151C16.7266 5.58073 17.0087 5.46354 17.3385 5.46354C17.6684 5.46354 17.9505 5.58073 18.1849 5.8151C18.4193 6.04948 18.5365 6.3316 18.5365 6.66146ZM12 3.79687C11.9392 3.79687 11.6072 3.7947 11.0039 3.79036C10.4006 3.78602 9.94271 3.78602 9.63021 3.79036C9.31771 3.7947 8.89887 3.80773 8.3737 3.82943C7.84852 3.85113 7.40148 3.89453 7.03255 3.95964C6.66363 4.02474 6.3533 4.10503 6.10156 4.20052C5.66753 4.37413 5.28559 4.62587 4.95573 4.95573C4.62587 5.28559 4.37413 5.66753 4.20052 6.10156C4.10503 6.3533 4.02474 6.66363 3.95964 7.03255C3.89453 7.40148 3.85113 7.84852 3.82943 8.3737C3.80773 8.89887 3.7947 9.31771 3.79036 9.63021C3.78602 9.94271 3.78602 10.4006 3.79036 11.0039C3.7947 11.6072 3.79687 11.9392 3.79687 12C3.79687 12.0608 3.7947 12.3928 3.79036 12.9961C3.78602 13.5994 3.78602 14.0573 3.79036 14.3698C3.7947 14.6823 3.80773 15.1011 3.82943 15.6263C3.85113 16.1515 3.89453 16.5985 3.95964 16.9674C4.02474 17.3364 4.10503 17.6467 4.20052 17.8984C4.37413 18.3325 4.62587 18.7144 4.95573 19.0443C5.28559 19.3741 5.66753 19.6259 6.10156 19.7995C6.3533 19.895 6.66363 19.9753 7.03255 20.0404C7.40148 20.1055 7.84852 20.1489 8.3737 20.1706C8.89887 20.1923 9.31771 20.2053 9.63021 20.2096C9.94271 20.214 10.4006 20.214 11.0039 20.2096C11.6072 20.2053 11.9392 20.2031 12 20.2031C12.0608 20.2031 12.3928 20.2053 12.9961 20.2096C13.5994 20.214 14.0573 20.214 14.3698 20.2096C14.6823 20.2053 15.1011 20.1923 15.6263 20.1706C16.1515 20.1489 16.5985 20.1055 16.9674 20.0404C17.3364 19.9753 17.6467 19.895 17.8984 19.7995C18.3325 19.6259 18.7144 19.3741 19.0443 19.0443C19.3741 18.7144 19.6259 18.3325 19.7995 17.8984C19.895 17.6467 19.9753 17.3364 20.0404 16.9674C20.1055 16.5985 20.1489 16.1515 20.1706 15.6263C20.1923 15.1011 20.2053 14.6823 20.2096 14.3698C20.214 14.0573 20.214 13.5994 20.2096 12.9961C20.2053 12.3928 20.2031 12.0608 20.2031 12C20.2031 11.9392 20.2053 11.6072 20.2096 11.0039C20.214 10.4006 20.214 9.94271 20.2096 9.63021C20.2053 9.31771 20.1923 8.89887 20.1706 8.3737C20.1489 7.84852 20.1055 7.40148 20.0404 7.03255C19.9753 6.66363 19.895 6.3533 19.7995 6.10156C19.6259 5.66753 19.3741 5.28559 19.0443 4.95573C18.7144 4.62587 18.3325 4.37413 17.8984 4.20052C17.6467 4.10503 17.3364 4.02474 16.9674 3.95964C16.5985 3.89453 16.1515 3.85113 15.6263 3.82943C15.1011 3.80773 14.6823 3.7947 14.3698 3.79036C14.0573 3.78602 13.5994 3.78602 12.9961 3.79036C12.3928 3.7947 12.0608 3.79687 12 3.79687ZM22 12C22 13.9878 21.9783 15.3637 21.9349 16.1276C21.8481 17.9332 21.3099 19.3307 20.3203 20.3203C19.3307 21.3099 17.9332 21.8481 16.1276 21.9349C15.3637 21.9783 13.9878 22 12 22C10.0122 22 8.63628 21.9783 7.8724 21.9349C6.06684 21.8481 4.66927 21.3099 3.67969 20.3203C2.6901 19.3307 2.15191 17.9332 2.0651 16.1276C2.0217 15.3637 2 13.9878 2 12C2 10.0122 2.0217 8.63628 2.0651 7.8724C2.15191 6.06684 2.6901 4.66927 3.67969 3.67969C4.66927 2.6901 6.06684 2.15191 7.8724 2.0651C8.63628 2.0217 10.0122 2 12 2C13.9878 2 15.3637 2.0217 16.1276 2.0651C17.9332 2.15191 19.3307 2.6901 20.3203 3.67969C21.3099 4.66927 21.8481 6.06684 21.9349 7.8724C21.9783 8.63628 22 10.0122 22 12Z"
+                  fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__container">
+          <div class="footer__img">
+            <img loading="lazy" src="./img/footer-img.png" width="161" height="32" alt="">
+          </div>
+          <p class="footer__copyright">© Aperiсor. All rights reserved 2024.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modals Edit MyAccount -->
+  <!-- modal-editGender -->
+  <div class="modal modal-form modal-account" data-modal="modal-editGender">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <h3 class="modal__title">Change my gender</h3>
+        </div>
+        <form action="#" class="form-account">
+          <div class="select form-account__select mb-16">
+            <div class="form-label">Select your gender:</div>
+            <div class="select__trigger">
+              <div class="select__label"></div>
+              <span class="select__selected" name="param">Female</span>
+            </div>
+            <ul class="select__options">
+              <li class="select__option selected">Female</li>
+              <li class="select__option">Male</li>
+            </ul>
+          </div>
+          <button type="button" class="btn modal__btn">Save new gender</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editCity -->
+  <div class="modal modal-form modal-account" data-modal="modal-editCity">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <h3 class="modal__title">Change my city</h3>
+        </div>
+        <form action="#" class="form-account">
+          <input type="text" class="form-field__input mb-16" placeholder="Enter your new city" autocomplete="off">
+          <button type="button" class="btn modal__btn">Save my new city</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editFirstName -->
+  <div class="modal modal-form modal-account" data-modal="modal-editFirstName">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <h3 class="modal__title">Change my first name</h3>
+        </div>
+        <form action="#" class="form-account">
+          <input type="text" class="form-field__input mb-16" placeholder="Enter new your first name" autocomplete="off">
+          <button type="button" class="btn modal__btn">Save new first name</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editCountry -->
+  <div class="modal modal-form modal-account" data-modal="modal-editCountry">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <h3 class="modal__title">Change my country</h3>
+        </div>
+        <form action="#" class="form-account">
+          <input type="text" class="form-field__input mb-16" placeholder="Enter your new country" autocomplete="off">
+          <button type="button" class="btn modal__btn">Save my new country</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editFirstName -->
+  <div class="modal modal-form modal-account" data-modal="modal-editPassword">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <h3 class="modal__title">Change my password</h3>
+        </div>
+        <form action="#" class="form-account">
+          <input type="password" class="form-field__input mb-4" placeholder="Enter old your password" autocomplete="off">
+          <div class="forgot-password">
+            <a href="#" class="forgot-password__link">Forgot your password?</a>
+          </div>
+          <!-- input password -->
+          <div class="form-field form-field__icon mb-16">
+            <input type="password" class="form-field__input input-password" placeholder="Enter new password" autocomplete="off" required>
+            <span class="password-icon"></span>
+          </div>
+          <!-- input password-confirm -->
+          <div class="form-field form-field__icon mb-16">
+            <input type="password" class="form-field__input input-password" placeholder="Confirm your password*" autocomplete="off" required>
+            <span class="password-icon"></span>
+          </div>
+          <p class="strong mb-8">To make your account more secure, we suggest you use:</p>
+          <ul class="list-reset text-gray mb-24">
+            <li class="mb-4">— All least 8 characters</li>
+            <li class="mb-4">— All least one upper-case letter</li>
+            <li class="mb-4">— All least one lower-case letter</li>
+            <li class="mb-4">— All least one number</li>
+          </ul>
+          <button type="button" class="btn modal__btn">Save new password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editEmailSettings -->
+  <div class="modal modal-account modal-emailsettings" data-modal="modal-editEmailSettings">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal-account__header">
+          <img loading="lazy" src="./img/icons/ic_ac-settings_1.svg" width="40" height="40" alt="">
+          <div class="modal-account__header-body">
+            <h3 class="modal-account__header-title">E-mail notification settings</h3>
+            <p class="modal-account__header-descr">Choose notifications you would like to receive.</p>
+          </div>
+        </div>
+        <div class="email-options mb-24">
+          <label class="toogle email-option">
+            <input type="checkbox" name="option-1" class="toogle__input">
+            <span class="toogle__switch"></span>
+            <div class="toogle__label form-label">New message in chat</div>
+          </label>
+          <label class="toogle email-option">
+            <input type="checkbox" name="option-2" class="toogle__input">
+            <span class="toogle__switch"></span>
+            <div class="toogle__label form-label">New email from favorite user</div>
+          </label>
+          <label class="toogle email-option">
+            <input type="checkbox" name="option-3" class="toogle__input">
+            <span class="toogle__switch"></span>
+            <div class="toogle__label form-label">News feed</div>
+          </label>
+          <label class="toogle email-option">
+            <input type="checkbox" name="option-4" class="toogle__input">
+            <span class="toogle__switch"></span>
+            <div class="toogle__label form-label">New email from user</div>
+          </label>
+          <label class="toogle email-option">
+            <input type="checkbox" name="option-5" class="toogle__input">
+            <span class="toogle__switch"></span>
+            <div class="toogle__label form-label">Discounts and special promos</div>
+          </label>
+          <label class="toogle email-option">
+            <input type="checkbox" name="option-6" class="toogle__input">
+            <span class="toogle__switch"></span>
+            <div class="toogle__label form-label">Discounts and special promos</div>
+          </label>
+        </div>
+        <form action="#" class="form-account">
+          <div class="select mb-16">
+            <div class="form-label">Mailing Frequency:</div>
+            <div class="select__trigger">
+              <div class="select__label"></div>
+              <span class="select__selected" name="param">Instantly</span>
+            </div>
+            <ul class="select__options">
+              <li class="select__option selected">Instantly</li>
+              <li class="select__option">Option</li>
+              <li class="select__option">Option</li>
+              <li class="select__option">Option</li>
+            </ul>
+          </div>
+          <button type="button" class="btn modal__btn">Save e-mail settings</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editEmailAccount -->
+  <div class="modal modal-form modal-account" data-modal="modal-editEmailAccount">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal-account__header">
+          <img loading="lazy" src="./img/icons/ic_ac-settings_2.svg" width="40" height="40" alt="">
+          <div class="modal-account__header-body">
+            <h3 class="modal-account__header-title">Change e-mail address</h3>
+            <p class="modal-account__header-descr">Here you can quickly change your account information.</p>
+          </div>
+        </div>
+        <form action="#" class="form-account">
+          <input type="email" class="form-field__input mb-16" placeholder="Enter new e-mail address" autocomplete="off">
+          <button type="button" class="btn modal__btn">Save new e-mail address</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-editMyprivacy -->
+  <div class="modal modal-account modal-myprivacy" data-modal="modal-editMyprivacy">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal-account__header">
+          <img loading="lazy" src="./img/icons/ic_ac-settings_3.svg" width="40" height="40" alt="">
+          <div class="modal-account__header-body">
+            <h3 class="modal-account__header-title">My privacy</h3>
+            <p class="modal-account__header-descr">Privacy settings for your profile.</p>
+          </div>
+        </div>
+        <div class="myprivacy-settings">
+          <div class="myprivacy-settings__header">
+            <span class="myprivacy-settings__header-item text-left">Parameters</span>
+            <span class="myprivacy-settings__header-item">Open to any</span>
+            <span class="myprivacy-settings__header-item">Closed to any</span>
+            <span class="myprivacy-settings__header-item">Only for favorites</span>
+          </div>
+          <div class="myprivacy-settings__row">
+            <span class="myprivacy-settings__param param-name">Birthday</span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+          </div>
+          <div class="myprivacy-settings__row">
+            <span class="myprivacy-settings__param param-name">Religion</span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+          </div>
+          <div class="myprivacy-settings__row">
+            <span class="myprivacy-settings__param param-name">Children</span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+          </div>
+          <div class="myprivacy-settings__row">
+            <span class="myprivacy-settings__param param-name">Do I want children</span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+          </div>
+          <div class="myprivacy-settings__row">
+            <span class="myprivacy-settings__param param-name">Marital status</span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+          </div>
+          <div class="myprivacy-settings__row">
+            <span class="myprivacy-settings__param param-name">Education</span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+            <span class="myprivacy-settings__param">
+                        <label class="check myprivacy-settings__check">
+                            <input class="check__input" type="checkbox" name="option">
+                            <span class="check__box"></span>
+            </label>
+            </span>
+          </div>
+        </div>
+        <button type="button" class="btn modal__btn">Save e-mail settings</button>
+      </div>
+    </div>
+  </div>
+  <!-- modal-Sucpend -->
+  <div class="modal modal-form modal-suspend" data-modal="modal-suspend">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <!-- suspend-dialog -->
+        <div class="modal-suspend__step active" id="accountSuspend">
+          <div class="modal__header text-center">
+            <div class="modal__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.9999 34L17.9999 40M23.9999 34L29.9999 40M23.9999 34V24M23.9999 34V42M23.9999 24V14M23.9999 24L15.3396 18.9999M23.9999 24L32.6601 28.9998M23.9999 24L15.3396 28.9998M23.9999 24L32.6601 18.9999M23.9999 14L17.9999 8M23.9999 14L29.9999 8M23.9999 14V6M15.3396 18.9999L7.14349 21.196M15.3396 18.9999L13.1435 10.8037M15.3396 18.9999L8.41155 15M32.6601 28.9998L34.8563 37.196M32.6601 28.9998L40.8563 26.8038M32.6601 28.9998L39.5885 33M15.3396 28.9998L13.1435 37.196M15.3396 28.9998L7.14349 26.8038M15.3396 28.9998L8.41155 33M32.6601 18.9999L40.8563 21.196M32.6601 18.9999L34.8563 10.8037M32.6601 18.9999L39.5885 15"
+                stroke="#2BAEEC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="modal__title">You’re about to suspend <br> your profile.</h3>
+          </div>
+          <ul class="modal-suspend__list">
+            <li>This means that your profile will no longer appear on the site and you’ll stop receiving email alerts or emails from our partners.</li>
+            <li>However, your full profile details will be saved. Suspending your account does not cancel the automatic renewal of your subscription.</li>
+            <li>You can reactivate your profile at any time simply by logging back in to the site in the usual way, or by clicking in an email we sent you.</li>
+            <li>The suspension of your profile doesn’t cancel the automatic renewal of your subscription.</li>
+          </ul>
+          <button type="button" class="btn btn-blue modal__btn mb-16" id="accountSuspendBtn">Suspend my account</button>
+          <p class="text-gray text-center">To delete your account, <span id="link-accountDelete">click here</span>
+          </p>
+        </div>
+        <!-- suspend-success -->
+        <div class="modal-suspend__step" id="accountSuspendSuccess">
+          <div class="modal__header text-center">
+            <div class="modal__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.9999 34L17.9999 40M23.9999 34L29.9999 40M23.9999 34V24M23.9999 34V42M23.9999 24V14M23.9999 24L15.3396 18.9999M23.9999 24L32.6601 28.9998M23.9999 24L15.3396 28.9998M23.9999 24L32.6601 18.9999M23.9999 14L17.9999 8M23.9999 14L29.9999 8M23.9999 14V6M15.3396 18.9999L7.14349 21.196M15.3396 18.9999L13.1435 10.8037M15.3396 18.9999L8.41155 15M32.6601 28.9998L34.8563 37.196M32.6601 28.9998L40.8563 26.8038M32.6601 28.9998L39.5885 33M15.3396 28.9998L13.1435 37.196M15.3396 28.9998L7.14349 26.8038M15.3396 28.9998L8.41155 33M32.6601 18.9999L40.8563 21.196M32.6601 18.9999L34.8563 10.8037M32.6601 18.9999L39.5885 15"
+                stroke="#2BAEEC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="modal__title">You’re about to suspend your account!</h3>
+            <p class="modal__descr">Your account has been suspended. You can go back and activate it at any time.</p>
+          </div>
+          <button type="button" class="btn btn-blue modal__btn modal-ok">OK</button>
+        </div>
+
+        <div class="modal-suspend__step account-delete" id="accountDelete">
+          <div class="modal__header text-center">
+            <div class="modal__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4051 33.2907C30.9359 34.0847 30.6667 35.0109 30.6667 36C30.6667 38.9455 33.0545 41.3333 36 41.3333C36.9891 41.3333 37.9153 41.0641 38.7093 40.5949L31.4051 33.2907ZM33.2907 31.4051L40.5949 38.7093C41.0641 37.9153 41.3333 36.9891 41.3333 36C41.3333 33.0545 38.9455 30.6667 36 30.6667C35.0109 30.6667 34.0847 30.9359 33.2907 31.4051ZM29.0703 40C28.3896 38.8233 28 37.4572 28 36C28 31.5817 31.5817 28 36 28C40.4183 28 44 31.5817 44 36C44 40.4183 40.4183 44 36 44C34.2549 44 32.6403 43.4412 31.3254 42.4929C31.1311 42.6035 30.9063 42.6667 30.6667 42.6667H11.2354C10.9997 42.6667 10.7642 42.651 10.5305 42.6199C7.61086 42.2306 5.55957 39.5481 5.94887 36.6285L6.439 32.9524C6.65574 31.3269 7.84277 29.9983 9.43377 29.6005L15.6766 28.0398C16.391 27.8612 17.1149 28.2956 17.2935 29.01C17.4721 29.7243 17.0378 30.4483 16.3234 30.6269L10.0805 32.1876C9.5502 32.3202 9.15452 32.763 9.08228 33.3049L8.59214 36.9809C8.39749 38.4407 9.42314 39.782 10.883 39.9766C10.9998 39.9922 11.1175 40 11.2354 40H29.0703ZM29.1181 11.2257L28.3388 10.836C28.1325 10.733 27.8877 10.7437 27.6913 10.8645C26.4609 11.6215 25.2304 12 24 12C22.7696 12 21.5391 11.6215 20.3087 10.8645C20.1123 10.7437 19.8675 10.7329 19.6612 10.8361L18.8829 11.2252C18.4229 12.1855 18.2277 13.286 18.379 14.4203L19.2834 21.2039C19.5986 23.5679 21.6151 25.3333 24 25.3333C26.3849 25.3333 28.4014 23.5679 28.7166 21.2039L29.6211 14.4203C29.6542 14.1718 29.6708 13.9215 29.6708 13.6708C29.6708 12.7952 29.4724 11.966 29.1181 11.2257ZM24 5.33334C28.6047 5.33334 32.3375 9.06615 32.3375 13.6708C32.3375 14.0393 32.313 14.4074 32.2643 14.7727L31.3599 21.5563C30.868 25.2451 27.7214 28 24 28C20.2786 28 17.132 25.2451 16.6402 21.5563L15.7357 14.7727C15.1271 10.2084 18.3338 6.01504 22.8981 5.40647C23.2634 5.35777 23.6315 5.33334 24 5.33334Z"
+                fill="#CA4040" />
+              </svg>
+            </div>
+            <h3 class="modal__title">Deactivate your account!</h3>
+            <p class="modal__descr">Please, tell us why you want to deactivate your profile.</p>
+          </div>
+          <form action="#" class="form-deleteac">
+            <div class="form-field">
+              <label for="aboutTextarea" class="form-label">Describe the reason:</label>
+              <textarea name="about-text" id="aboutTextarea" class="form-field__textarea" placeholder="Type your message here..."></textarea>
+            </div>
+            <button type="button" class="btn modal__btn delete-account__btn" id="accountDeleteBtn">Deactivate my account</button>
+          </form>
+          <p class="text-gray text-center mt-16"><span id="link-accountSuspend">Suspend your profile</span>
+          </p>
+        </div>
+        <!-- suspend-success -->
+        <div class="modal-suspend__step account-delete" id="account-deleteSuccess">
+          <div class="modal__header text-center">
+            <div class="modal__icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4051 33.2907C30.9359 34.0847 30.6667 35.0109 30.6667 36C30.6667 38.9455 33.0545 41.3333 36 41.3333C36.9891 41.3333 37.9153 41.0641 38.7093 40.5949L31.4051 33.2907ZM33.2907 31.4051L40.5949 38.7093C41.0641 37.9153 41.3333 36.9891 41.3333 36C41.3333 33.0545 38.9455 30.6667 36 30.6667C35.0109 30.6667 34.0847 30.9359 33.2907 31.4051ZM29.0703 40C28.3896 38.8233 28 37.4572 28 36C28 31.5817 31.5817 28 36 28C40.4183 28 44 31.5817 44 36C44 40.4183 40.4183 44 36 44C34.2549 44 32.6403 43.4412 31.3254 42.4929C31.1311 42.6035 30.9063 42.6667 30.6667 42.6667H11.2354C10.9997 42.6667 10.7642 42.651 10.5305 42.6199C7.61086 42.2306 5.55957 39.5481 5.94887 36.6285L6.439 32.9524C6.65574 31.3269 7.84277 29.9983 9.43377 29.6005L15.6766 28.0398C16.391 27.8612 17.1149 28.2956 17.2935 29.01C17.4721 29.7243 17.0378 30.4483 16.3234 30.6269L10.0805 32.1876C9.5502 32.3202 9.15452 32.763 9.08228 33.3049L8.59214 36.9809C8.39749 38.4407 9.42314 39.782 10.883 39.9766C10.9998 39.9922 11.1175 40 11.2354 40H29.0703ZM29.1181 11.2257L28.3388 10.836C28.1325 10.733 27.8877 10.7437 27.6913 10.8645C26.4609 11.6215 25.2304 12 24 12C22.7696 12 21.5391 11.6215 20.3087 10.8645C20.1123 10.7437 19.8675 10.7329 19.6612 10.8361L18.8829 11.2252C18.4229 12.1855 18.2277 13.286 18.379 14.4203L19.2834 21.2039C19.5986 23.5679 21.6151 25.3333 24 25.3333C26.3849 25.3333 28.4014 23.5679 28.7166 21.2039L29.6211 14.4203C29.6542 14.1718 29.6708 13.9215 29.6708 13.6708C29.6708 12.7952 29.4724 11.966 29.1181 11.2257ZM24 5.33334C28.6047 5.33334 32.3375 9.06615 32.3375 13.6708C32.3375 14.0393 32.313 14.4074 32.2643 14.7727L31.3599 21.5563C30.868 25.2451 27.7214 28 24 28C20.2786 28 17.132 25.2451 16.6402 21.5563L15.7357 14.7727C15.1271 10.2084 18.3338 6.01504 22.8981 5.40647C23.2634 5.35777 23.6315 5.33334 24 5.33334Z"
+                fill="#CA4040" />
+              </svg>
+            </div>
+            <h3 class="modal__title">Your account has been deleted!</h3>
+            <p class="modal__descr">We are very sorry that you deleted your account. We will be glad to see you again.</p>
+          </div>
+          <button type="button" class="btn modal__btn delete-account modal-ok">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----------- JS ------------->
+  <!-- Libs JS -->
+  <script defer src="./js/libs/jquery3.7.1.js"></script>
+  <script defer src="./js/libs/jquery.fancybox.min.js"></script>
+  <script defer src="./js/libs/swiper-bundle.min.js"></script>
+  <script defer src="./js/libs/datepicker.js"></script>
+  <script defer src="./js/libs/datepicker.en.js"></script>
+  <script defer src="./js/libs/modal.js"></script>
+  <!-- Scripts JS -->
+  <script defer src="./js/main.min.js"></script>
+  <script defer src="./js/libs/my-account.js"></script>
+</body>
+
+</html>

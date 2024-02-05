@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.innerWidth - document.documentElement.clientWidth
       }px)`;
     }
-    body.style.overflow = "hidden";
+    body.classList.add("lock-scroll");
   }
 
   function closeModal(e) {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target.classList.contains("modal__overlay")
     ) {
       e.target.closest(".modal").classList.remove("active");
-      body.style.overflow = "";
+      body.classList.remove("lock-scroll");
       body.style.width = "";
     }
   }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modals.forEach((modal) => {
       if (e.key === "Escape" && modal.classList.contains("active")) {
         modal.classList.remove("active");
-        body.style.overflow = "";
+        body.classList.remove("lock-scroll");
         body.style.width = "";
       }
     });
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalsDelete.forEach((modal) => {
         modal.classList.remove("active");
       });
-      document.body.style.overflow = "";
+      body.classList.remove("lock-scroll");
       document.body.style.width = "";
     });
   });
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (reportBlock && modalReport && modalBlock) {
     reportBlock.addEventListener("click", function () {
       modalReport.classList.remove("active");
-      document.body.style.overflow = "";
+      body.classList.remove("lock-scroll");
       document.body.style.width = "";
 
       modalBlock.classList.add("active");
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.innerWidth - document.documentElement.clientWidth
       }px)`;
 
-      document.body.style.overflow = "hidden";
+      body.classList.add("lock-scroll");
     });
   }
 

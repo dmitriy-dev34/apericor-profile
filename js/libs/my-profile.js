@@ -110,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     trigger: [
       {
         selector: "#smile-newspost",
-        // insertInto: ".form-post__field-input",
         insertInto: [".form-post__field-input"],
       },
     ],

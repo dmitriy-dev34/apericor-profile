@@ -399,10 +399,10 @@
                         </div>
                       </div>
                     </div>
-                    <form action="#" class="chat-form">
-                      <div class="form-field chat-form__field">
-                        <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                        <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
+                    <form action="#" class="form-chat">
+                      <div class="form-field form-chat__field">
+                        <input type="text" name="chat-message" class="form-field__input form-chat__input" id="bannerChatInput2" placeholder="Type your message here..." autocomplete="off">
+                        <button type="submit" class="btn btn-sm btn-chat form-chat__btn chat-open">
                           <span class="material-icons btn-chat__icon">send</span>
                         </button>
                       </div>
@@ -530,6 +530,7 @@
                     <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                   </div>
                   <div class="profile-banner__body">
+                    <!-- после написания и отправки сообщения прячем .hidden -->
                     <div class="profile-banner__head">
                       <h3 class="profile-banner__title">It’s time to communicate!</h3>
                       <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
@@ -546,7 +547,11 @@
                           <div class="chat-item__body">
                             <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
                               normal distribution of letters, as opposed to using 'Content here.</p>
-                            <span class="readmore">Read More…</span>
+                            <span class="readmore blue">
+                                                            <svg class="my-svg readmore__icon">
+                                                                <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                            </svg>
+                                                        </span>
                           </div>
                           <div class="chat-item__footer">
                             <span class="chat-item__date">25.01.23 / 20:19</span>
@@ -556,10 +561,10 @@
                         </div>
                       </div>
                     </div>
-                    <form action="#" class="chat-form">
-                      <div class="form-field chat-form__field">
-                        <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                        <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
+                    <form action="#" class="form-chat">
+                      <div class="form-field form-chat__field">
+                        <input type="text" name="chat-message" class="form-field__input form-chat__input" id="bannerChatInput1" placeholder="Type your message here..." autocomplete="off">
+                        <button type="submit" class="btn btn-sm btn-chat form-chat__btn chat-open">
                           <span class="material-icons btn-chat__icon">send</span>
                         </button>
                       </div>
@@ -582,6 +587,7 @@
                       <img loading="lazy" src="./img/banner-chat_img.svg" width="144" height="144" alt="">
                     </div>
                     <div class="profile-banner__body">
+                      <!-- после написания и отправки сообщения прячем .hidden -->
                       <div class="profile-banner__head">
                         <h3 class="profile-banner__title">It’s time to communicate!</h3>
                         <p class="profile-banner__descr">Show your interest by sending a chat invitation!</p>
@@ -598,7 +604,11 @@
                             <div class="chat-item__body">
                               <p class="chat-item__message clamp-text2"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
                                 normal distribution of letters, as opposed to using 'Content here.</p>
-                              <span class="readmore">Read More…</span>
+                              <span class="readmore blue">
+                                                                <svg class="my-svg readmore__icon">
+                                                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                                                </svg>
+                                                            </span>
                             </div>
                             <div class="chat-item__footer">
                               <span class="chat-item__date">25.01.23 / 20:19</span>
@@ -608,10 +618,10 @@
                           </div>
                         </div>
                       </div>
-                      <form action="#" class="chat-form">
-                        <div class="form-field chat-form__field">
-                          <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                          <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
+                      <form action="#" class="form-chat">
+                        <div class="form-field form-chat__field">
+                          <input type="text" name="chat-message" class="form-field__input form-chat__input" id="bannerChatInput3" placeholder="Type your message here..." autocomplete="off">
+                          <button type="submit" class="btn btn-sm btn-chat form-chat__btn chat-open">
                             <span class="material-icons btn-chat__icon">send</span>
                           </button>
                         </div>
@@ -1111,9 +1121,9 @@
         </div>
       </div>
       <form action="#" class="chat-form live-chat__form">
-        <div class="form-field chat-form__field">
+        <div class="form-field form-chat__field">
           <textarea name="chat-message" class="form-field__textarea live-chat__textarea" placeholder="Type your message here..."></textarea>
-          <button type="submit" class="btn btn-sm btn-chat chat-form__btn">
+          <button type="submit" class="btn btn-sm btn-chat form-chat__btn">
             <span class="material-icons btn-chat__icon">arrow_upward</span>
           </button>
         </div>
@@ -1407,7 +1417,6 @@
   <script defer src="./js/libs/profile-mob.js"></script>
   <script defer src="./js/libs/my-gallery.js"></script>
   <script defer src="./js/libs/live-chat.js"></script>
-  <script defer src="./js/libs/vanillaEmojiPicker.js"></script>
 </body>
 
 </html>

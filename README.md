@@ -43,3 +43,7 @@ https://dmitriy-dev34.github.io/apericor-profile/my-profile-full.html
 # My Profile - пустой
 
 https://dmitriy-dev34.github.io/apericor-profile/my-profile-empty.html
+
+# My Account
+
+https://dmitriy-dev34.github.io/apericor-profile/my-account.html
