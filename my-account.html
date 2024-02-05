@@ -553,7 +553,7 @@
     </div>
   </div>
   <!-- modal-editFirstName -->
-  <div class="modal modal-form modal-account" data-modal="modal-editPassword">
+  <div class="modal modal-form modal-account modal-password" data-modal="modal-editPassword">
     <div class="modal__overlay">
       <div class="modal__content">
         <div class="modal__close"></div>
@@ -584,6 +584,31 @@
           </ul>
           <button type="button" class="btn modal__btn">Save new password</button>
         </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal-forgotPassword -->
+  <div class="modal modal-form forgot-password" id="forgotPassword" data-modal="modal-forgotPassword">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="forgot-password__step active" id="forgot-passwordForm">
+          <div class="modal__header text-center">
+            <h3 class="modal__title">Forgot your password!</h3>
+            <p class="modal__descr">To restore the password, specify the e-mail address specified during registration.</p>
+          </div>
+          <form action="#" class="form-account">
+            <input type="email" class="form-field__input mb-16" placeholder="Enter e-mail address" required autocomplete="off">
+            <button type="button" class="btn modal__btn" id="forgotPasswordSend">Send</button>
+          </form>
+        </div>
+        <div class="forgot-password__step" id="forgot-passwordSuccess">
+          <div class="modal__header text-center">
+            <h3 class="modal__title">Sussess!</h3>
+            <p class="modal__descr">Instructions for restoring your password have been sent to your email.</p>
+          </div>
+          <button type="button" class="btn modal__btn" id="modal-forgotOk">OK</button>
+        </div>
       </div>
     </div>
   </div>

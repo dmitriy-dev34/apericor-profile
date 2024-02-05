@@ -67,5 +67,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /* ------------------- ForgotPassword -------------------- */
+  const modalPassword = document.querySelector(".modal-password");
+  const modalForgotPassword = document.getElementById("forgotPassword");
+  const forgotPasswordLink = document.querySelector(".forgot-password__link");
+  const forgotPasswordForm = document.getElementById("forgot-passwordForm");
+  const forgotPasswordSend = document.getElementById("forgotPasswordSend");
+  const forgotPasswordSuccess = document.getElementById(
+    "forgot-passwordSuccess"
+  );
+  const forgotPasswordOk = document.getElementById("modal-forgotOk");
+
+  forgotPasswordLink.addEventListener("click", () => {
+    modalPassword.classList.remove("active");
+    modalForgotPassword.classList.add("active");
+  });
+
+  forgotPasswordSend.addEventListener("click", () => {
+    forgotPasswordForm.classList.remove("active");
+    forgotPasswordSuccess.classList.add("active");
+  });
+
+  forgotPasswordSend.addEventListener("click", () => {
+    forgotPasswordForm.classList.remove("active");
+    forgotPasswordSuccess.classList.add("active");
+  });
+
+  forgotPasswordOk.addEventListener("click", () => {
+    modalForgotPassword.classList.remove("active");
+    document.body.style.overflow = "";
+    document.body.style.width = "";
+  });
+
   //!! End Scripts
 });
