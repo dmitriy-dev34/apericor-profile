@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+  <link rel="icon" type="image/png" href="./favicon/favicon.png">
+  <title>Apericor</title>
+  <!-- Fonts -->
+  <link rel="preload" href="./fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/lato-black.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- CSS -->
+  <!-- Materials Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/libscss/datepicker.css">
+  <link rel="stylesheet" href="./css/libscss/jquery.fancybox.css">
+  <link rel="stylesheet" href="./css/libscss/swiper-bundle.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="page__body">
+  <button type="button" id="btnScrollTop" title="ScrollUp"></button>
+
+  <div class="page__wrapper">
+    <!----------- Header Page ------------->
+    <header class="header header-page">
+      <div class="container header__container">
+        <div class="header__left">
+          <a href="./" class="header__logo logo">
+            <img class="logo__img" loading="lazy" src="./img/logo.svg" width="129" height="32" alt="Apericor">
+          </a>
+        </div>
+        <!-- header__nav -->
+        <div class="nav-overlay"></div>
+        <nav class="header__nav nav">
+          <a href="./my-account.html" class="header__account account-mob hidden" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 y.o</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
+          <!-- mob-verif (.show показываем / .hide скрываем) появляется в меню мобильном -->
+          <div class="verif-msg mob-verif">
+            <div class="verif-msg__step verif-step1 active">
+              <div class="verif-msg__content">
+                <span class="material-icons verif-msg__icon">verified</span>
+                <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                  <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step2">
+              <div class=" verif-msg__content">
+                <span class="material-icons verif-msg__icon">mail</span>
+                <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                  / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                  address book to ensure delivery.
+                  <span class="verif-msg__link resend-email2">Resend Email</span> and
+                  <span class="verif-msg__link change-email">Change current email</span>
+                </p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step3">
+              <div class=" verif-msg__content">
+                <div class="box">
+                  <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                  <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+                </div>
+                <form action="#" class="verif-msg__form">
+                  <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                  <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <ul class="nav__menu menu">
+            <li class="menu__item">
+              <a href="./news-feed.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-news"></use>
+                </svg>
+                <span class="menu__link-name">News feed</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./mail.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
+                </svg>
+                <span class="menu__link-name">Mail</span>
+                <span class="noti-indicator">221</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./discover.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-discover"></use>
+                </svg>
+                <span class="menu__link-name">Discover</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./favorites.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-favorite_yes"></use>
+                </svg>
+                <span class="menu__link-name">Favorites</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./support.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-support"></use>
+                </svg>
+                <span class="menu__link-name">Support</span>
+                <span class="noti-indicator">12</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./help-center.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-help"></use>
+                </svg>
+                <span class="menu__link-name">Help center</span>
+              </a>
+            </li>
+            <li class="menu__item signout-mob">
+              <a href="#" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-signout"></use>
+                </svg>
+                <span class="menu__link-name">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <a href="./my-account.html" class="header__account" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 y.o</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
+          <button type="button" aria-label="Open Menu" class="burger header__burger">
+            <span class="burger__icon"></span>
+          </button>
+          <a href="#" class="header__signout">
+            <span class="material-icons">logout</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="photo-manager photo-manager--messaging">
+        <!-- popup-like (показывается и скрывается классом show) -->
+        <div class="popup-like">
+          <div class="popup-like__body">
+            <div class="popup-like__close"></div>
+            <div class="popup-like__icon"><span class="material-icons">favorite</span>
+            </div>
+            <div class="page-ava">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
+          </div>
+        </div>
+        <!-- verif-msg (.show показываем / .hide скрываем) -->
+        <div class="verif-msg show">
+          <div class="verif-msg__step verif-step1 active">
+            <div class="verif-msg__content">
+              <span class="material-icons verif-msg__icon">verified</span>
+              <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step2">
+            <div class=" verif-msg__content">
+              <span class="material-icons verif-msg__icon">mail</span>
+              <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                address book to ensure delivery.
+                <span class="verif-msg__link resend-email2">Resend Email</span> and
+                <span class="verif-msg__link change-email">Change current email</span>
+              </p>
+            </div>
+          </div>
+          <div class="verif-msg__step verif-step3">
+            <div class=" verif-msg__content">
+              <div class="box">
+                <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+              </div>
+              <form action="#" class="verif-msg__form">
+                <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- page-nav -->
+        <nav class="page-nav">
+          <div class="container page-nav__container">
+            <ul class="page-nav__list">
+              <li class="page-nav__item">
+                <a href="./photo-manager_public-photos.html" class="page-nav__link">Public photos</a>
+              </li>
+              <li class="page-nav__item">
+                <a href="#" class="page-nav__link active">Photos for messaging</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="page-padding container">
+          <div class="photo-manager__header">
+            <div class="photo-manager__header-left">
+              <h2 class="page-title photo-manager__title">Photo manager <span class="color-pink">/ Messaging</span></h2>
+              <p class="photo-manager__descr"><span class="material-icons">info</span>
+                Photos to send in private messages (not available in public)
+              </p>
+            </div>
+            <div class="photo-manager__navs">
+              <a href="#" class="photo-manager__navs-link active">All Photos</a>
+              <a href="./photo-manager_messaging_albums.html" class="photo-manager__navs-link">Albums</a>
+            </div>
+          </div>
+          <!-- photo-manager__options -->
+          <div class="photo-manager__options">
+            <div class="photo-manager__options-left">
+              <div class="photo-manager__move">
+                <div class="select select-sm photo-manager__move-select">
+                  <div class="form-label">Move selected photos to album:</div>
+                  <div class="select__trigger">
+                    <div class="select__label"></div>
+                    <span class="select__selected" name="param">Travel</span>
+                  </div>
+                  <ul class="select__options">
+                    <li class="select__option selected">Travel</li>
+                    <li class="select__option">Album</li>
+                    <li class="select__option">Album</li>
+                    <li class="select__option">Album</li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-sm btn-blue">Move</button>
+              </div>
+              <div class="photo-manager__other-options">
+                <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deletePhoto">Delete selected</button>
+                <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deleteAllPhotos">Delete all</button>
+                <button type="button" class="btn btn-sm btn-stroke make-private modal-open" data-modal-open="modal-makePrivate">Make it private</button>
+              </div>
+            </div>
+            <label class="check select-all">
+              <input class="check__input" type="checkbox" name="param-name">
+              <span class="check__box"></span>
+              <span class="check__label">Select all photos</span>
+            </label>
+            <div class="options-mob">
+              <span class="material-icons options-mob__btn">more_vert</span>
+              <div class="dropdown options-mob__dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item modal-open" data-modal-open="modal-movePhotoAlbum">Move to album</li>
+                  <li class="dropdown__item item-delete modal-open" data-modal-open="modal-deletePhoto">Delete selected</li>
+                  <li class="dropdown__item item-delete modal-open" data-modal-open="modal-deleteAllPhotos">Delete all</li>
+                  <li class="dropdown__item item-makeprivate modal-open" data-modal-open="modal-makePrivate">Make it private</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-photos mt-32">
+            <h4 class="profile-photos__title mb-16">All photos <span class="color-pink">(11 photos selected)</span></h4>
+
+            <div class="profile-photos__grid">
+              <!-- photo-upload -->
+              <div class="upload-file">
+                <input type="file" id="fileInput" class="upload-file__input" accept="image/*">
+                <label for="fileInput" id="fileInputLabel" class="upload-file__label">
+                  <div class="upload-file__icon"><span class="material-icons">upload</span>
+                  </div>
+                  <span class="upload-file__text">jpg, png <br> max 4MB size</span>
+                </label>
+              </div>
+
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="private-label">In a <span>private album</span>
+                </div>
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="private-label">In a <span>private album</span>
+                </div>
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <!-- photo-item -->
+              <div class="photo-item photo-manager__photo" style="background-image: url(./img/my-profile_photo.jpg);">
+                <div class="photo-item__hover">
+                  <div class="photo-item__options">
+                    <span class="material-icons photo-item__option">rotate_left</span>
+                    <span class="material-icons photo-item__option">rotate_right</span>
+                    <span class="material-icons photo-item__option modal-open" data-modal-open="modal-cropPhoto">crop</span>
+                    <span class="material-icons photo-item__option delete-icon modal-open" data-modal-open="modal-deletePhoto">delete</span>
+                  </div>
+                  <a href=""></a>
+                </div>
+                <label class="check photo-item__check">
+                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <span class="check__box"></span>
+                  <span class="check__label"></span>
+                </label>
+                <a href="./img/my-profile_photo.jpg" class="photo-manager__photo-zoom fancybox" data-fancybox="profile-photo">
+                  <span class="material-icons">zoom_in</span>
+                  <img class="hidden" loading="lazy" src="./img/my-profile_photo.jpg" width="" height="" alt="">
+                </a>
+              </div>
+            </div>
+
+            <div class="profile-photos__footer">
+              <button type="button" class="btn btn-stroke">Show more photos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!----------- Footer ------------->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container footer__container footer__top-container">
+          <a href="./" class="footer__logo logo">
+            <img class="logo__img" loading="lazy" src="./img/logo-light.svg" width="129" height="32" alt="Apericor">
+          </a>
+          <nav class="footer__nav">
+            <button type="button" aria-label="open-menu" class="footer__toggle"></button>
+            <ul class="footer__menu">
+              <li class="footer__menu-item item-help"><a href="#">Help Center</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">About Us</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">Terms and Conditions</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">Contacts US</a>
+              </li>
+              <li class="footer__menu-item"><a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="" class="footer__social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.99609 22V13.0547H7V9.5H9.99609V6.69922C9.99609 3.65625 11.8555 2 14.5703 2C15.8711 2 16.9883 2.09766 17.3125 2.14062V5.32031H15.4297C13.9531 5.32031 13.668 6.02344 13.668 7.05078V9.5H17L16.543 13.0547H13.668V22" fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="" class="footer__social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.9442 8.29744C19.9569 8.48603 19.9569 8.67467 19.9569 8.86326C19.9569 14.6156 15.8326 21.2437 8.29444 21.2437C5.97209 21.2437 3.81473 20.5297 2 19.2903C2.32996 19.3307 2.64719 19.3442 2.98985 19.3442C4.90607 19.3442 6.67006 18.6572 8.0787 17.4851C6.27666 17.4447 4.7665 16.1918 4.24618 14.4675C4.50001 14.5078 4.7538 14.5348 5.02032 14.5348C5.38833 14.5348 5.75638 14.4809 6.099 14.3866C4.22083 13.9825 2.81215 12.2312 2.81215 10.1161V10.0622C3.35782 10.3856 3.99239 10.5876 4.66493 10.6146C3.56087 9.83318 2.83754 8.49951 2.83754 6.99067C2.83754 6.18239 3.04055 5.44145 3.3959 4.79481C5.41369 7.43525 8.44671 9.15959 11.8477 9.34822C11.7843 9.0249 11.7462 8.68814 11.7462 8.35134C11.7462 5.95337 13.5736 4 15.8452 4C17.0254 4 18.0914 4.52539 18.8401 5.37411C19.7665 5.18551 20.6548 4.82176 21.4416 4.32332C21.137 5.33372 20.4898 6.18243 19.6396 6.72126C20.4645 6.627 21.264 6.38446 22 6.0477C21.4417 6.90985 20.7437 7.67771 19.9442 8.29744V8.29744Z"
+                  fill="currentColor" />
+                </svg>
+
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="" class="footer__social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3333 12C15.3333 11.0799 15.0078 10.2943 14.3568 9.64323C13.7057 8.99219 12.9201 8.66667 12 8.66667C11.0799 8.66667 10.2943 8.99219 9.64323 9.64323C8.99219 10.2943 8.66667 11.0799 8.66667 12C8.66667 12.9201 8.99219 13.7057 9.64323 14.3568C10.2943 15.0078 11.0799 15.3333 12 15.3333C12.9201 15.3333 13.7057 15.0078 14.3568 14.3568C15.0078 13.7057 15.3333 12.9201 15.3333 12ZM17.1302 12C17.1302 13.4236 16.6311 14.6345 15.6328 15.6328C14.6345 16.6311 13.4236 17.1302 12 17.1302C10.5764 17.1302 9.36545 16.6311 8.36719 15.6328C7.36892 14.6345 6.86979 13.4236 6.86979 12C6.86979 10.5764 7.36892 9.36545 8.36719 8.36719C9.36545 7.36892 10.5764 6.86979 12 6.86979C13.4236 6.86979 14.6345 7.36892 15.6328 8.36719C16.6311 9.36545 17.1302 10.5764 17.1302 12ZM18.5365 6.66146C18.5365 6.99132 18.4193 7.27344 18.1849 7.50781C17.9505 7.74219 17.6684 7.85937 17.3385 7.85937C17.0087 7.85937 16.7266 7.74219 16.4922 7.50781C16.2578 7.27344 16.1406 6.99132 16.1406 6.66146C16.1406 6.3316 16.2578 6.04948 16.4922 5.8151C16.7266 5.58073 17.0087 5.46354 17.3385 5.46354C17.6684 5.46354 17.9505 5.58073 18.1849 5.8151C18.4193 6.04948 18.5365 6.3316 18.5365 6.66146ZM12 3.79687C11.9392 3.79687 11.6072 3.7947 11.0039 3.79036C10.4006 3.78602 9.94271 3.78602 9.63021 3.79036C9.31771 3.7947 8.89887 3.80773 8.3737 3.82943C7.84852 3.85113 7.40148 3.89453 7.03255 3.95964C6.66363 4.02474 6.3533 4.10503 6.10156 4.20052C5.66753 4.37413 5.28559 4.62587 4.95573 4.95573C4.62587 5.28559 4.37413 5.66753 4.20052 6.10156C4.10503 6.3533 4.02474 6.66363 3.95964 7.03255C3.89453 7.40148 3.85113 7.84852 3.82943 8.3737C3.80773 8.89887 3.7947 9.31771 3.79036 9.63021C3.78602 9.94271 3.78602 10.4006 3.79036 11.0039C3.7947 11.6072 3.79687 11.9392 3.79687 12C3.79687 12.0608 3.7947 12.3928 3.79036 12.9961C3.78602 13.5994 3.78602 14.0573 3.79036 14.3698C3.7947 14.6823 3.80773 15.1011 3.82943 15.6263C3.85113 16.1515 3.89453 16.5985 3.95964 16.9674C4.02474 17.3364 4.10503 17.6467 4.20052 17.8984C4.37413 18.3325 4.62587 18.7144 4.95573 19.0443C5.28559 19.3741 5.66753 19.6259 6.10156 19.7995C6.3533 19.895 6.66363 19.9753 7.03255 20.0404C7.40148 20.1055 7.84852 20.1489 8.3737 20.1706C8.89887 20.1923 9.31771 20.2053 9.63021 20.2096C9.94271 20.214 10.4006 20.214 11.0039 20.2096C11.6072 20.2053 11.9392 20.2031 12 20.2031C12.0608 20.2031 12.3928 20.2053 12.9961 20.2096C13.5994 20.214 14.0573 20.214 14.3698 20.2096C14.6823 20.2053 15.1011 20.1923 15.6263 20.1706C16.1515 20.1489 16.5985 20.1055 16.9674 20.0404C17.3364 19.9753 17.6467 19.895 17.8984 19.7995C18.3325 19.6259 18.7144 19.3741 19.0443 19.0443C19.3741 18.7144 19.6259 18.3325 19.7995 17.8984C19.895 17.6467 19.9753 17.3364 20.0404 16.9674C20.1055 16.5985 20.1489 16.1515 20.1706 15.6263C20.1923 15.1011 20.2053 14.6823 20.2096 14.3698C20.214 14.0573 20.214 13.5994 20.2096 12.9961C20.2053 12.3928 20.2031 12.0608 20.2031 12C20.2031 11.9392 20.2053 11.6072 20.2096 11.0039C20.214 10.4006 20.214 9.94271 20.2096 9.63021C20.2053 9.31771 20.1923 8.89887 20.1706 8.3737C20.1489 7.84852 20.1055 7.40148 20.0404 7.03255C19.9753 6.66363 19.895 6.3533 19.7995 6.10156C19.6259 5.66753 19.3741 5.28559 19.0443 4.95573C18.7144 4.62587 18.3325 4.37413 17.8984 4.20052C17.6467 4.10503 17.3364 4.02474 16.9674 3.95964C16.5985 3.89453 16.1515 3.85113 15.6263 3.82943C15.1011 3.80773 14.6823 3.7947 14.3698 3.79036C14.0573 3.78602 13.5994 3.78602 12.9961 3.79036C12.3928 3.7947 12.0608 3.79687 12 3.79687ZM22 12C22 13.9878 21.9783 15.3637 21.9349 16.1276C21.8481 17.9332 21.3099 19.3307 20.3203 20.3203C19.3307 21.3099 17.9332 21.8481 16.1276 21.9349C15.3637 21.9783 13.9878 22 12 22C10.0122 22 8.63628 21.9783 7.8724 21.9349C6.06684 21.8481 4.66927 21.3099 3.67969 20.3203C2.6901 19.3307 2.15191 17.9332 2.0651 16.1276C2.0217 15.3637 2 13.9878 2 12C2 10.0122 2.0217 8.63628 2.0651 7.8724C2.15191 6.06684 2.6901 4.66927 3.67969 3.67969C4.66927 2.6901 6.06684 2.15191 7.8724 2.0651C8.63628 2.0217 10.0122 2 12 2C13.9878 2 15.3637 2.0217 16.1276 2.0651C17.9332 2.15191 19.3307 2.6901 20.3203 3.67969C21.3099 4.66927 21.8481 6.06684 21.9349 7.8724C21.9783 8.63628 22 10.0122 22 12Z"
+                  fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__container">
+          <div class="footer__img">
+            <img loading="lazy" src="./img/footer-img.png" width="161" height="32" alt="">
+          </div>
+          <p class="footer__copyright">© Aperiсor. All rights reserved 2024.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!----------- Modal delete-photo ------------->
+    <div class="modal modal-form modal-delete" data-modal="modal-deletePhoto">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <div class="modal__header text-center">
+            <h3 class="modal__title mb-0">Do you really want to delete the selected photo?</h3>
+          </div>
+          <div class="modal__btns">
+            <button type="button" class="btn btn-blue modal-cancel">No</button>
+            <button type="button" class="btn btn-error btn-delete">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------- Modal delete-photo ------------->
+    <div class="modal modal-form modal-delete" data-modal="modal-deleteAllPhotos">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <div class="modal__header text-center">
+            <h3 class="modal__title mb-0">Do you really want to delete all the photos?</h3>
+          </div>
+          <div class="modal__btns">
+            <button type="button" class="btn btn-blue modal-cancel">No</button>
+            <button type="button" class="btn btn-error btn-delete">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------- Modal makePrivate ------------->
+    <div class="modal modal-form modal-delete" data-modal="modal-makePrivate">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <div class="modal__header text-center">
+            <h3 class="modal__title mb-0">The selected photos will be transferred to a private album?</h3>
+          </div>
+          <div class="modal__btns">
+            <button type="button" class="btn btn-blue modal-cancel">No</button>
+            <button type="button" class="btn">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------- Modal delete-photo ------------->
+    <div class="modal modal-form modal-move-photo" data-modal="modal-movePhotoAlbum">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <div class="modal__header text-center">
+            <h3 class="modal__title mb-0">Move selected photos to album</h3>
+          </div>
+          <div class="photo-manager__move">
+            <div class="select select-sm photo-manager__move-select">
+              <div class="form-label">Select album:</div>
+              <div class="select__trigger">
+                <div class="select__label"></div>
+                <span class="select__selected" name="param">Travel</span>
+              </div>
+              <ul class="select__options">
+                <li class="select__option selected">Travel</li>
+                <li class="select__option">Album</li>
+                <li class="select__option">Album</li>
+                <li class="select__option">Album</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-sm btn-blue">Move</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Crop Photo -->
+    <div class="modal modal-cropphoto" data-modal="modal-cropPhoto">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <h3 class="textbold-3 mb-24 modal-cropphoto__title">Crop photo</h3>
+          <div class="modal-cropphoto__grid">
+            <div class="modal-cropphoto__select-area">
+              <h4 class="textbold-8">Select an area to be used for the thumbnail:</h4>
+              <div class="crop-photo">
+                <img loading="lazy" src="img/my-profile_photo.jpg" width="" height="" alt="">
+              </div>
+              <button type="button" class="btn btn-sm btn-stroke btn-crop">
+                <span class="material-icons btn-icon btn-crop__icon">crop</span> Crop photo</button>
+            </div>
+            <div class="modal-cropphoto__result">
+              <h4 class="textbold-8"><span class="color-blue">Result</span> crop photo</h4>
+              <div class="result-photo">
+                <img loading="lazy" src="img/my-profile_photo.jpg" width="" height="" alt="">
+              </div>
+              <button type="button" class="btn btn-sm btn-blue">Save photo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Libs JS -->
+  <script defer src="./js/libs/jquery3.7.1.js"></script>
+  <script defer src="./js/libs/jquery.fancybox.min.js"></script>
+  <script defer src="./js/libs/swiper-bundle.min.js"></script>
+  <script defer src="./js/libs/datepicker.js"></script>
+  <script defer src="./js/libs/datepicker.en.js"></script>
+  <script defer src="./js/libs/modal.js"></script>
+  <!-- Scripts JS -->
+  <script defer src="./js/main.min.js"></script>
+
+  <script>
+    /* ------------------- Select Photos -------------------- */
+    		const photoManagerPhoto = document.querySelectorAll(".photo-manager__photo");
+    		const SelectAllPhotos = document.querySelector(".select-all .check__input");
+    		const photoCheckbox = document.querySelectorAll(".photo-manager__photo-input");
+    
+    		photoManagerPhoto.forEach((photo) => {
+    			const checkbox = photo.querySelector(".photo-manager__photo-input");
+    
+    			checkbox.addEventListener("change", function () {
+    				const photoItem = this.closest(".photo-item");
+    				if (this.checked) {
+    					photoItem.classList.add('selected');
+    				} else {
+    					photoItem.classList.remove('selected');
+    				}
+    			});
+    		});
+    
+    		SelectAllPhotos.addEventListener("change", function () {
+    			photoCheckbox.forEach((checkbox) => {
+    				checkbox.checked = this.checked;
+    				const photoItem = checkbox.closest(".photo-item");
+    				if (this.checked) {
+    					photoItem.classList.add('selected');
+    				} else {
+    					photoItem.classList.remove('selected');
+    				}
+    			});
+    		});
+  </script>
+
+  <script>
+    /* ------------------- Photo Manager Options Mobile -------------------- */
+    		const photosOptMob = document.querySelector(".options-mob");
+    		const photosOptMobBtn = document.querySelector(".options-mob__btn");
+    		const photosOptMobDropdown = document.querySelector(".options-mob__dropdown");
+    		const photosOptMobItems = document.querySelectorAll(".dropdown__item");
+    
+    		// Функция для открытия/закрытия dropdown
+    		function toggleDropdown() {
+    			photosOptMobDropdown.classList.toggle("active");
+    		}
+    
+    		// Обработчик клика на options-mob
+    		photosOptMobBtn.addEventListener("click", () => {
+    			toggleDropdown();
+    		});
+    
+    		// Обработчик клика вне options-mob
+    		document.addEventListener("click", (event) => {
+    			if (!photosOptMob.contains(event.target)) {
+    				photosOptMobDropdown.classList.remove("active");
+    			}
+    		});
+    
+    		// Обработчик клика на элементы dropdown
+    		photosOptMobItems.forEach((item) => {
+    			item.addEventListener("click", () => {
+    				toggleDropdown();
+    				// Дополнительные действия при выборе элемента (если необходимо)
+    			});
+    		});
+  </script>
+</body>
+
+</html>

@@ -47,3 +47,27 @@ https://dmitriy-dev34.github.io/apericor-profile/my-profile-empty.html
 # My Account
 
 https://dmitriy-dev34.github.io/apericor-profile/my-account.html
+
+# Photo Manager - Public Photos
+
+https://dmitriy-dev34.github.io/apericor-profile/photo-manager_public-photos.html
+
+# Photo Manager - Public Photos / Albums
+
+https://dmitriy-dev34.github.io/apericor-profile/photo-manager_public-photos_albums.html
+
+# Photo Manager - Public Photos / Albums / Photos
+
+https://dmitriy-dev34.github.io/apericor-profile/photo-manager_public-photos_albums_private-album.html
+
+# Photo Manager - Messaging
+
+https://dmitriy-dev34.github.io/apericor-profile/photo-manager_messaging.html
+
+# Photo Manager - Messaging / Albums
+
+https://dmitriy-dev34.github.io/apericor-profile/photo-manager_messaging_albums.html
+
+# Photo Manager - Messaging / Albums / Photos
+
+https://dmitriy-dev34.github.io/apericor-profile/photo-manager_messaging_albums_album.html
