@@ -28,6 +28,146 @@
   <button type="button" id="btnScrollTop" title="ScrollUp"></button>
 
   <div class="page__wrapper">
+    <!----------- Header Page ------------->
+    <header class="header header-page">
+      <div class="container header__container">
+        <div class="header__left">
+          <a href="./" class="header__logo logo">
+            <img class="logo__img" loading="lazy" src="./img/logo.svg" width="129" height="32" alt="Apericor">
+          </a>
+        </div>
+        <!-- header__nav -->
+        <div class="nav-overlay"></div>
+        <nav class="header__nav nav">
+          <a href="./my-account.html" class="header__account account-mob hidden" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 y.o</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
+          <!-- mob-verif (.show показываем / .hide скрываем) появляется в меню мобильном -->
+          <div class="verif-msg mob-verif">
+            <div class="verif-msg__step verif-step1 active">
+              <div class="verif-msg__content">
+                <span class="material-icons verif-msg__icon">verified</span>
+                <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+                  <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step2">
+              <div class=" verif-msg__content">
+                <span class="material-icons verif-msg__icon">mail</span>
+                <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
+                  / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+                  address book to ensure delivery.
+                  <span class="verif-msg__link resend-email2">Resend Email</span> and
+                  <span class="verif-msg__link change-email">Change current email</span>
+                </p>
+              </div>
+            </div>
+            <div class="verif-msg__step verif-step3">
+              <div class=" verif-msg__content">
+                <div class="box">
+                  <span class="material-icons verif-msg__icon">outgoing_mail</span>
+                  <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
+                </div>
+                <form action="#" class="verif-msg__form">
+                  <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+                  <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <ul class="nav__menu menu">
+            <li class="menu__item">
+              <a href="./news-feed.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-news"></use>
+                </svg>
+                <span class="menu__link-name">News feed</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./mail.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
+                </svg>
+                <span class="menu__link-name">Mail</span>
+                <span class="noti-indicator">221</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./discover.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-discover"></use>
+                </svg>
+                <span class="menu__link-name">Discover</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./favorites.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-favorite_yes"></use>
+                </svg>
+                <span class="menu__link-name">Favorites</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./support.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-support"></use>
+                </svg>
+                <span class="menu__link-name">Support</span>
+                <span class="noti-indicator">12</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="./help-center.html" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-help"></use>
+                </svg>
+                <span class="menu__link-name">Help center</span>
+              </a>
+            </li>
+            <li class="menu__item signout-mob">
+              <a href="#" class="menu__link">
+                <svg class="my-svg menu__icon">
+                  <use xlink:href="img/svg-sprite.svg#ic-signout"></use>
+                </svg>
+                <span class="menu__link-name">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <a href="./my-account.html" class="header__account" title="My Account">
+            <div class="page-ava header__account-photo">
+              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            </div>
+            <div class="header__account-body">
+              <span class="header__account-name">Jerome</span>
+              <div class="header__account-data">
+                <span class="header__account-balance">45 y.o</span> /
+                <span class="header__account-city">New York</span>
+              </div>
+            </div>
+          </a>
+          <button type="button" aria-label="Open Menu" class="burger header__burger">
+            <span class="burger__icon"></span>
+          </button>
+          <a href="#" class="header__signout">
+            <span class="material-icons">logout</span>
+          </a>
+        </div>
+      </div>
+    </header>
 
     <main class="main">
       <div class="container">
@@ -45,15 +185,15 @@
           <nav class="footer__nav">
             <button type="button" aria-label="open-menu" class="footer__toggle"></button>
             <ul class="footer__menu">
-              <li class="footer__menu-item item-help"><a href="#">Help Center</a>
+              <li class="footer__menu-item item-help"><a href="./help-center.html" target="_blank">Help Center</a>
               </li>
-              <li class="footer__menu-item"><a href="#">About Us</a>
+              <li class="footer__menu-item"><a href="./about-us.html" target="_blank">About Us</a>
               </li>
-              <li class="footer__menu-item"><a href="#">Terms and Conditions</a>
+              <li class="footer__menu-item"><a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
               </li>
-              <li class="footer__menu-item"><a href="#">Contacts US</a>
+              <li class="footer__menu-item"><a href="./contacts-us.html" target="_blank">Contacts US</a>
               </li>
-              <li class="footer__menu-item"><a href="#">Privacy Policy</a>
+              <li class="footer__menu-item"><a href="./privacy-policy.html" target="_blank">Privacy Policy</a>
               </li>
             </ul>
           </nav>

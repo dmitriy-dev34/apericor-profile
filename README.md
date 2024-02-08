@@ -71,3 +71,31 @@ https://dmitriy-dev34.github.io/apericor-profile/photo-manager_messaging_albums.
 # Photo Manager - Messaging / Albums / Photos
 
 https://dmitriy-dev34.github.io/apericor-profile/photo-manager_messaging_albums_album.html
+
+# Purchase Credits
+
+https://dmitriy-dev34.github.io/apericor-profile/purchase-credits.html
+
+# Payment Status - Success
+
+https://dmitriy-dev34.github.io/apericor-profile/payment-status_success.html
+
+# Payment Status - Error
+
+https://dmitriy-dev34.github.io/apericor-profile/payment-status_error.html
+
+# Finance Statistics
+
+https://dmitriy-dev34.github.io/apericor-profile/finance-statistics.html
+
+# Finance Statistics / Full
+
+https://dmitriy-dev34.github.io/apericor-profile/finance-statistics_full.html
+
+# Finance Statistics / Received-letters
+
+https://dmitriy-dev34.github.io/apericor-profile/received-letters.html
+
+# Gifts Status
+
+https://dmitriy-dev34.github.io/apericor-profile/gifts-status.html

@@ -28,8 +28,8 @@
   <button type="button" id="btnScrollTop" title="ScrollUp"></button>
 
   <div class="page__wrapper">
-    <!----------- Header Page ------------->
-    <header class="header header-page">
+    <!----------- Header Mail ------------->
+    <header class="header header-mail">
       <div class="container header__container">
         <div class="header__left">
           <a href="./" class="header__logo logo">
@@ -95,7 +95,7 @@
               </a>
             </li>
             <li class="menu__item">
-              <a href="./mail.html" class="menu__link active">
+              <a href="./mail.html" class="menu__link">
                 <svg class="my-svg menu__icon">
                   <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                 </svg>
@@ -170,226 +170,224 @@
     </header>
 
     <main class="main">
-      <div class="mail">
-        <!-- popup-like (показывается и скрывается классом show) -->
-        <div class="popup-like">
-          <div class="popup-like__body">
-            <div class="popup-like__close"></div>
-            <div class="popup-like__icon"><span class="material-icons">favorite</span>
-            </div>
-            <div class="page-ava">
-              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
-            </div>
-            <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
+      <!-- popup-like (показывается и скрывается классом show) -->
+      <div class="popup-like">
+        <div class="popup-like__body">
+          <div class="popup-like__close"></div>
+          <div class="popup-like__icon"><span class="material-icons">favorite</span>
+          </div>
+          <div class="page-ava">
+            <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+          </div>
+          <p class="popup-like__message"><strong>Someone</strong> likes you!</p>
+        </div>
+      </div>
+      <!-- verif-msg (.show показываем / .hide скрываем) -->
+      <div class="verif-msg show">
+        <div class="verif-msg__step verif-step1 active">
+          <div class="verif-msg__content">
+            <span class="material-icons verif-msg__icon">verified</span>
+            <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
+              <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
           </div>
         </div>
-        <!-- verif-msg (.show показываем / .hide скрываем) -->
-        <div class="verif-msg show">
-          <div class="verif-msg__step verif-step1 active">
-            <div class="verif-msg__content">
-              <span class="material-icons verif-msg__icon">verified</span>
-              <p class="verif-msg__text">To get real time updates about singles, verif-msgy your email address.
-                <span class="verif-msg__link resend-email1">Resend email verification</span>.</p>
-            </div>
-          </div>
-          <div class="verif-msg__step verif-step2">
-            <div class=" verif-msg__content">
-              <span class="material-icons verif-msg__icon">mail</span>
-              <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam
-                / Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
-                address book to ensure delivery.
-                <span class="verif-msg__link resend-email2">Resend Email</span> and
-                <span class="verif-msg__link change-email">Change current email</span>
-              </p>
-            </div>
-          </div>
-          <div class="verif-msg__step verif-step3">
-            <div class=" verif-msg__content">
-              <div class="box">
-                <span class="material-icons verif-msg__icon">outgoing_mail</span>
-                <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
-              </div>
-              <form action="#" class="verif-msg__form">
-                <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
-                <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
-                </button>
-              </form>
-            </div>
+        <div class="verif-msg__step verif-step2">
+          <div class=" verif-msg__content">
+            <span class="material-icons verif-msg__icon">mail</span>
+            <p class="verif-msg__text"><strong>Do you have trouble with email delivery from Apericor?</strong> If you did not get our letter into your Inbox / Featured / Primary folders, perhaps a letter might have been concerned as undesirable. Please, checkup All Mail / Spam /
+              Junk folders and mark it as NOT SPAM. Add <a class="verif-msg__link" href="mailto:notifications@bride-forever.com">notifications@bride-forever.com</a> and <a class="verif-msg__link" href="mailto:info@bride-forever.com">info@bride-forever.com</a> to your
+              address book to ensure delivery.
+              <span class="verif-msg__link resend-email2">Resend Email</span> and
+              <span class="verif-msg__link change-email">Change current email</span>
+            </p>
           </div>
         </div>
-
-        <!-- page-nav -->
-        <nav class="page-nav">
-          <div class="container page-nav__container">
-            <ul class="page-nav__list">
-              <li class="page-nav__item">
-                <a href="./mail.html" class="page-nav__link">
-                  <span class="page-nav__link-name">Inbox</span>
-                  <span class="noti-indicator">125</span>
-                </a>
-              </li>
-              <li class="page-nav__item">
-                <a href="./mail-favorites.html" class="page-nav__link active">
-                  <span class="page-nav__link-name">Favorites</span>
-                  <span class="noti-indicator">2</span>
-                </a>
-              </li>
-              <li class="page-nav__item">
-                <a href="./mail-archive.html" class="page-nav__link">
-                  <span class="page-nav__link-name">Archive</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <div class="page-padding container">
-          <div class="correspond">
-            <div class="correspond__options">
-              <div class="correspond__option correspond-sort">
-                <button type="button" class="btn mail-option correspond-sort__btn">
-                  <span class="material-icons">swap_vert</span>
-                </button>
-                <div class="dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">New first</li>
-                    <li class="dropdown__item">Old first</li>
-                    <li class="dropdown__item">Unread first</li>
-                    <li class="dropdown__item">Sort by Inbox</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="correspond__option correspond-delete">
-                <button type="button" class="btn mail-option correspond-delete__btn">
-                  <span class="material-icons">delete</span>
-                </button>
-                <div class="dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item modal-open" data-modal-open="modal-deleteCorrespondence">Delete selected</li>
-                    <li class="dropdown__item modal-open" data-modal-open="modal-deleteAllCorrespondence">Delete All</li>
-                  </ul>
-                </div>
-              </div>
-
+        <div class="verif-msg__step verif-step3">
+          <div class=" verif-msg__content">
+            <div class="box">
+              <span class="material-icons verif-msg__icon">outgoing_mail</span>
+              <p class="verif-msg__text">If you have trouble with email delivery from Bride-Forever, we recommend you change your email to another one:</p>
             </div>
-            <div class="correspond__block">
-              <h4 class="correspond__block-title mb-16">Favorites сorrespondence: <span class="color-pink">2</span></h4>
-              <div class="correspond__list">
-                <div class="correspond-item">
-                  <a href="./profile.html" class="profile__photo">
-                    <div class="profile-status status-online"></div>
-                    <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                    <div class="profile__photo-empty photo-empty sm hide">
-                      <div class="photo-empty__center">
-                        <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
-                        <span class="photo-empty__label">No photo</span>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="correspond-item__right">
-                    <div class="correspond-item__right-top">
-                      <div class="correspond-item__header">
-                        <div class="letter-item__info correspond-item__data">
-                          <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25</div>
-                        </div>
-                        <label class="check correspond-item__check">
-                          <input class="check__input" type="checkbox" name="param-name">
-                          <span class="check__box"></span>
-                          <span class="check__label"></span>
-                        </label>
-                      </div>
-                      <div class="correspond-item__body">
-                        <div class="correspond-item__profile">
-                          <span class="correspond-item__profile-name">Anastasia, 23</span>
-                          <div class="correspond-item__profile-id">ID: <span class="text-gray">546140</span>
-                          </div>
-                        </div>
-                        <div class="profile__location flex align-center">
-                          <span class="material-icons profile__location-icon">location_on</span>
-                          <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
-                        <span>Read</span>
-                        <span class="material-icons">navigate_next</span>
-                      </a>
-                      <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
-                        <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
-                          <span class="material-icons">delete</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="correspond-item">
-                  <a href="./profile.html" class="profile__photo">
-                    <div class="profile-status status-online"></div>
-                    <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                    <div class="profile__photo-empty photo-empty sm hide">
-                      <div class="photo-empty__center">
-                        <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
-                        <span class="photo-empty__label">No photo</span>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="correspond-item__right">
-                    <div class="correspond-item__right-top">
-                      <div class="correspond-item__header">
-                        <div class="letter-item__info correspond-item__data">
-                          <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25</div>
-                        </div>
-                        <label class="check correspond-item__check">
-                          <input class="check__input" type="checkbox" name="param-name">
-                          <span class="check__box"></span>
-                          <span class="check__label"></span>
-                        </label>
-                      </div>
-                      <div class="correspond-item__body">
-                        <div class="correspond-item__profile">
-                          <span class="correspond-item__profile-name">Anastasia, 23</span>
-                          <div class="correspond-item__profile-id">ID: <span class="text-gray">546140</span>
-                          </div>
-                        </div>
-                        <div class="profile__location flex align-center">
-                          <span class="material-icons profile__location-icon">location_on</span>
-                          <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
-                        <span>Read</span>
-                        <span class="material-icons">navigate_next</span>
-                      </a>
-                      <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
-                        <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
-                          <span class="material-icons">delete</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pagination pagination-blue">
-              <div class="pagination__items">
-                <a href="#" class="pagination__link pagination__prev"><span class="material-icons">arrow_back_ios</span></a>
-                <a href="#" class="pagination__link active">1</a>
-                <a href="#" class="pagination__link">2</a>
-                <a href="#" class="pagination__link">3</a>
-                <a href="#" class="pagination__link pagination__more">…</a>
-                <a href="#" class="pagination__link pagination__next"><span class="material-icons">arrow_forward_ios</span></a>
-              </div>
-            </div>
+            <form action="#" class="verif-msg__form">
+              <input type="email" name="verif-email" class="verif-msg__form-input" placeholder="Type your new e-mail here..." required autocomplete="off">
+              <button type="submit" class="verif-msg__form-btn"><span class="material-icons">arrow_forward</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
+      <div class="mail__header">
+        <div class="container mail__header-container">
+          <div class="mail__header-left">
+            <div class="mail__header-profile">
+              <a href="./profile.html" class="mail__header-photo">
+                <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="48" height="48" alt="">
+              </a>
+              <div class="mail__header-info">
+                <p><span class="mail__header-correspondence">Correspondence with</span>  <span class="strong">Anastasia, 23</span>
+                </p>
+                <div class="profile__location flex align-center mail__header-loc">
+                  <span class="material-icons profile__location-icon">location_on</span>
+                  <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mail__header-right">
+            <div class="profile-id">ID: <span class="text-gray">546140</span>
+            </div>
+            <button type="button" class="profile-report modal-open" data-modal-open="modal-reportProfile"></button>
+            <button type="button" class="mail-delete modal-open" title="delete-correspondence" data-modal-open="modal-deleteCorrespondence">
+              <span class="material-icons">delete</span>
+            </button>
+            <button type="button" class="mail-print" title="print-correspondence">
+              <span class="material-icons">print</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <section class="received-messages">
+        <div class="page-padding container">
+          <h2 class="page-title">
+                        <span>Received messages</span>
+                        <span class="page-title__small-text">from</span>
+                        <a href="./profile.html" class="page-name page-name--pink">Anastasia <span class="page-name_id">(ID: 546140)</span></a>
+                    </h2>
+
+          <div class="mail-letters">
+            <div class="preview-letters">
+              <a href="#" class="preview-letters__link">Show the previous 10 letters</a>
+              <div class="preview-letters__date">
+                <input type="hidden" class="preview-letters__date-input input-date" placeholder="">
+                <span class="material-icons preview-letters__date-icon icon-date">calendar_month</span>
+              </div>
+            </div>
+            <!-- letter-woman -->
+            <div class="letter-item letter-woman">
+              <div class="letter-item__header">
+                <div class="letter-item__header-left">
+                  <div class="letter-item__profile color-pink">Anastasia <span class="chat-item__status read"></span>
+                  </div>
+                  <div class="letter-item__info">
+                    <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                    <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25:02</div>
+                  </div>
+                </div>
+                <div class="letter-item__header-right">
+                  <div class="letter-textsize">
+                    <span class="letter-textsize__lg">A</span>
+                    <span class="letter-textsize__sm">A</span>
+                  </div>
+                  <div class="letter-options">
+                    <label class="check letter-options__check">
+                      <input class="check__input" type="checkbox" name="param-name">
+                      <span class="check__box"></span>
+                      <span class="check__label"></span>
+                    </label>
+                    <span class="material-icons letter-options__delete modal-open" data-modal-open="modal-deleteLetter">delete</span>
+                  </div>
+                </div>
+              </div>
+              <div class="letter-item__body">
+                <div class="photo-gallery">
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox" data-fancybox="gallery-woman2">
+                    <span class="letter-item__photo-num">+2 photos</span>
+                    <img loading="lazy" src="./img/letters/letter-photo_woman.jpg" width="96" height="144" alt="">
+                  </a>
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox is-hide" data-fancybox="gallery-woman2"></a>
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox is-hide" data-fancybox="gallery-woman2"></a>
+                </div>
+                <p class="letter-item__text clamp-text">One of the most important things to me is to have a love so strong that nothing can break it! And a loving close family. I have old world values. I love family and want a very close loving family life. I believe that a man and a woman
+                  need to be totally honest with each other and trust each other for their love to bloom and grow! I am looking for a woman who wants to commit her life to me (her man) and who will be devoted her entire life as I will be to her as well.
+                  I enjoy the outdoors and nature. I love the water and everything with it. I also love the mountains and picnics. I am very interested in you, I would love to know more about you and hopefully become very close to you too! I love to cook,
+                  and barbecue. You must be able to come live here with me in this country if necessary! We can discuss that! Should you have a computer, you may write me at: ***</p>
+                <span class="readmore active"></span>
+              </div>
+            </div>
+            <!-- letter-woman -->
+            <div class="letter-item letter-woman">
+              <div class="letter-item__header">
+                <div class="letter-item__header-left">
+                  <div class="letter-item__profile color-pink">Anastasia <span class="chat-item__status read"></span>
+                  </div>
+                  <div class="letter-item__info">
+                    <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                    <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25:02</div>
+                  </div>
+                </div>
+                <div class="letter-item__header-right">
+                  <div class="letter-textsize">
+                    <span class="letter-textsize__lg">A</span>
+                    <span class="letter-textsize__sm">A</span>
+                  </div>
+                  <div class="letter-options">
+                    <label class="check letter-options__check">
+                      <input class="check__input" type="checkbox" name="param-name">
+                      <span class="check__box"></span>
+                      <span class="check__label"></span>
+                    </label>
+                    <span class="material-icons letter-options__delete modal-open" data-modal-open="modal-deleteLetter">delete</span>
+                  </div>
+                </div>
+              </div>
+              <div class="letter-item__body">
+                <div class="photo-gallery">
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox" data-fancybox="gallery-woman3">
+                    <span class="letter-item__photo-num">+2 photos</span>
+                    <img loading="lazy" src="./img/letters/letter-photo_woman.jpg" width="96" height="144" alt="">
+                  </a>
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox is-hide" data-fancybox="gallery-woman3"></a>
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox is-hide" data-fancybox="gallery-woman3"></a>
+                </div>
+                <p class="letter-item__text clamp-text">One of the most important things to me is to have a love so strong that nothing can break it! And a loving close family. I have old world values. I love family and want a very close loving family life. I believe that a man and a woman
+                  need to be totally honest with each other and trust each other for their love to bloom and grow! I am looking for a woman who wants to commit her life to me (her man) and who will be devoted her entire life as I will be to her as well.
+                  I enjoy the outdoors and nature. I love the water and everything with it. I also love the mountains and picnics. I am very interested in you, I would love to know more about you and hopefully become very close to you too! I love to cook,
+                  and barbecue. You must be able to come live here with me in this country if necessary! We can discuss that! Should you have a computer, you may write me at: ***</p>
+                <span class="readmore active"></span>
+              </div>
+            </div>
+            <!-- letter-woman -->
+            <div class="letter-item letter-woman">
+              <div class="letter-item__header">
+                <div class="letter-item__header-left">
+                  <div class="letter-item__profile color-pink">Anastasia <span class="chat-item__status read"></span>
+                  </div>
+                  <div class="letter-item__info">
+                    <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                    <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25:02</div>
+                  </div>
+                </div>
+                <div class="letter-item__header-right">
+                  <div class="letter-textsize">
+                    <span class="letter-textsize__lg">A</span>
+                    <span class="letter-textsize__sm">A</span>
+                  </div>
+                  <div class="letter-options">
+                    <label class="check letter-options__check">
+                      <input class="check__input" type="checkbox" name="param-name">
+                      <span class="check__box"></span>
+                      <span class="check__label"></span>
+                    </label>
+                    <span class="material-icons letter-options__delete modal-open" data-modal-open="modal-deleteLetter">delete</span>
+                  </div>
+                </div>
+              </div>
+              <div class="letter-item__body">
+                <div class="photo-gallery">
+                  <a href="./img/letters/letter-photo_woman.jpg" class="letter-item__photo fancybox">
+                    <img loading="lazy" src="./img/letters/letter-photo_woman.jpg" width="96" height="144" alt="">
+                  </a>
+                </div>
+                <p class="letter-item__text clamp-text">One of the most important things to me is to have a love so strong that nothing can break it! And a loving close family. I have old world values. I love family and want a very close loving family life. I believe that a man and a woman
+                  need to be totally honest with each other and trust each other for their love to bloom and grow! I am looking for a woman who wants to commit her life to me (her man) and who will be devoted her entire life as I will be to her as well.
+                  I enjoy the outdoors and nature. I love the water and everything with it. I also love the mountains and picnics. I am very interested in you, I would love to know more about you and hopefully become very close to you too! I love to cook,
+                  and barbecue. You must be able to come live here with me in this country if necessary! We can discuss that! Should you have a computer, you may write me at: ***</p>
+                <span class="readmore active"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!----------- Footer ------------->
@@ -552,21 +550,6 @@
       </div>
     </div>
   </div>
-  <!----------- Modal delete all correspondence ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteAllCorrespondence">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the all correspondence?</h3>
-        </div>
-        <div class="modal__btns">
-          <button type="button" class="btn btn-blue modal-cancel">No</button>
-          <button type="button" class="btn btn-error btn-delete">Yes</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <!----------- Modal delete-letter ------------->
   <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteLetter">
     <div class="modal__overlay">
@@ -582,66 +565,6 @@
       </div>
     </div>
   </div>
-  <!-- Modal Profile Contacts -->
-  <div class="modal modal-form modal-profile-contacts" data-modal="modal-profileContacts">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <!-- показываем классом .show -->
-        <div class="modal-profile-contacts__block show">
-          <div class="modal__header text-center">
-            <div class="modal-profile-contacts__photo">
-              <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="112" height="112" alt="">
-            </div>
-            <h3 class="modal__title">Contacts info</h3>
-            <p class="modal__descr">You are requesting a contact information of <span class="strong color-pink">Anastasia</span>
-            </p>
-          </div>
-          <div class="modal-profile-contacts__body text-center">
-            <h4 class="textbold-6 mb-4">This request costs <span class="strong color-green">200 credits</span></h4>
-            <p>Before that, you need to write at least 15 letters. You have sent no letters so far.</p>
-            <a href="#" class="btn modal__btn">OK</a>
-          </div>
-        </div>
-        <!-- показываем классом .show, а у верхнего убираем show при показе контактов -->
-        <div class="modal-profile-contacts__block">
-          <div class="modal__header text-center">
-            <div class="modal-profile-contacts__photo">
-              <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="112" height="112" alt="">
-            </div>
-            <h3 class="modal__title">Success!</h3>
-            <p class="modal__descr">Contact information of<span class="strong color-pink">Anastasia</span>
-            </p>
-          </div>
-          <div class="modal-profile-contacts__body">
-            <ul class="modal-profile-contacts__list">
-              <li>
-                <span class="material-icons">search</span>
-                <span><strong>ID:</strong> 546140</span>
-              </li>
-              <li>
-                <span class="material-icons">person</span>
-                <span><strong>Name:</strong> Anastasia</span>
-              </li>
-              <li>
-                <span class="material-icons">location_on</span>
-                <span><strong>Country / City:</strong> Ukraine, Odessa</span>
-              </li>
-              <li>
-                <span class="material-icons">phone</span>
-                <span><strong>Phone:</strong> <a href="tel:+380636494634">+380636494634</a></span>
-              </li>
-              <li>
-                <span class="material-icons">mail</span>
-                <span><strong>E-mail address:</strong> <a href="mailto:anastasia_odessa@gmail.com">anastasia_odessa@gmail.com</a></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- Libs JS -->
   <script defer src="./js/libs/jquery3.7.1.js"></script>
@@ -652,7 +575,52 @@
   <script defer src="./js/libs/modal.js"></script>
   <!-- Scripts JS -->
   <script defer src="./js/main.min.js"></script>
-  <script defer src="./js/libs/mail.js"></script>
+
+  <script>
+    /* ------------------- Resize Letter Text -------------------- */
+    		document.addEventListener("DOMContentLoaded", function () {
+    
+    			const increaseButtons = document.querySelectorAll(".letter-textsize__lg");
+    			const decreaseButtons = document.querySelectorAll(".letter-textsize__sm");
+    			const letterBlocks = document.querySelectorAll(".letter-item");
+    
+    			const minFontSize = 14;
+    			const maxFontSize = 24;
+    
+    			// Функция для увеличения размера шрифта
+    			increaseButtons.forEach((button, index) => {
+    				button.addEventListener("click", function () {
+    					let textElements =
+    						letterBlocks[index].querySelectorAll(".letter-item__text");
+    					fontSize = parseInt(getComputedStyle(textElements[0]).fontSize);
+    
+    					if (fontSize < maxFontSize) {
+    						fontSize += 2;
+    						textElements.forEach((text) => {
+    							text.style.fontSize = fontSize + "px";
+    						});
+    					}
+    				});
+    			});
+    
+    			// Функция для уменьшения размера шрифта
+    			decreaseButtons.forEach((button, index) => {
+    				button.addEventListener("click", function () {
+    					let textElements =
+    						letterBlocks[index].querySelectorAll(".letter-item__text");
+    					fontSize = parseInt(getComputedStyle(textElements[0]).fontSize);
+    
+    					if (fontSize > minFontSize) {
+    						fontSize -= 2;
+    
+    						textElements.forEach((text) => {
+    							text.style.fontSize = fontSize + "px";
+    						});
+    					}
+    				});
+    			});
+    		});
+  </script>
 </body>
 
 </html>
