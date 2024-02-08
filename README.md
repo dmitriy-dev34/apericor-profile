@@ -99,3 +99,19 @@ https://dmitriy-dev34.github.io/apericor-profile/received-letters.html
 # Gifts Status
 
 https://dmitriy-dev34.github.io/apericor-profile/gifts-status.html
+
+# Support / Empty
+
+https://dmitriy-dev34.github.io/apericor-profile/support-empty.html
+
+# Support / Inbox
+
+https://dmitriy-dev34.github.io/apericor-profile/support.html
+
+# Support / Archive
+
+https://dmitriy-dev34.github.io/apericor-profile/support-archive.html
+
+# Support / Request
+
+https://dmitriy-dev34.github.io/apericor-profile/support-request.html

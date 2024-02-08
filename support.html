@@ -95,7 +95,7 @@
               </a>
             </li>
             <li class="menu__item">
-              <a href="./mail.html" class="menu__link active">
+              <a href="./mail.html" class="menu__link">
                 <svg class="my-svg menu__icon">
                   <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
                 </svg>
@@ -120,7 +120,7 @@
               </a>
             </li>
             <li class="menu__item">
-              <a href="./support.html" class="menu__link">
+              <a href="./support.html" class="menu__link active">
                 <svg class="my-svg menu__icon">
                   <use xlink:href="img/svg-sprite.svg#ic-support"></use>
                 </svg>
@@ -223,155 +223,357 @@
           <div class="container page-nav__container">
             <ul class="page-nav__list">
               <li class="page-nav__item">
-                <a href="./mail.html" class="page-nav__link">
+                <a href="#" class="page-nav__link active">
                   <span class="page-nav__link-name">Inbox</span>
                   <span class="noti-indicator">125</span>
                 </a>
               </li>
               <li class="page-nav__item">
-                <a href="./mail-favorites.html" class="page-nav__link">
-                  <span class="page-nav__link-name">Favorites</span>
-                  <span class="noti-indicator">2</span>
-                </a>
-              </li>
-              <li class="page-nav__item">
-                <a href="./mail-archive.html" class="page-nav__link active">
+                <a href="./support-archive.html" class="page-nav__link">
                   <span class="page-nav__link-name">Archive</span>
                 </a>
               </li>
             </ul>
           </div>
         </nav>
-
         <div class="page-padding container">
-          <div class="correspond">
-            <div class="correspond__options">
-              <div class="correspond__option correspond-sort">
-                <button type="button" class="btn mail-option correspond-sort__btn">
-                  <span class="material-icons">swap_vert</span>
-                </button>
-                <div class="dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">New first</li>
-                    <li class="dropdown__item">Old first</li>
-                    <li class="dropdown__item">Unread first</li>
-                    <li class="dropdown__item">Sort by Inbox</li>
-                  </ul>
+          <div class="correspond support">
+            <div class="correspond__options support__options">
+              <a href="./support-request.html" class="btn btn-sm btn-stroke btn-blue support__new-question">
+                <span>New question</span>
+                <svg class="my-svg">
+                  <use xlink:href="img/svg-sprite.svg#ic-send-mail"></use>
+                </svg>
+              </a>
+              <div class="support__options-right">
+                <div class="correspond__option correspond-sort">
+                  <button type="button" class="btn mail-option correspond-sort__btn">
+                    <span class="material-icons">swap_vert</span>
+                  </button>
+                  <div class="dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">New first</li>
+                      <li class="dropdown__item">Old first</li>
+                      <li class="dropdown__item">Unread first</li>
+                      <li class="dropdown__item">Sort by Inbox</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="correspond__option correspond-delete">
+                  <button type="button" class="btn mail-option correspond-delete__btn">
+                    <span class="material-icons">delete</span>
+                  </button>
+                  <div class="dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item modal-open" data-modal-open="modal-deleteCorrespondence">Delete selected</li>
+                      <li class="dropdown__item modal-open" data-modal-open="modal-deleteAllCorrespondence">Delete All</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="correspond__option correspond-delete">
-                <button type="button" class="btn mail-option correspond-delete__btn">
-                  <span class="material-icons">delete</span>
-                </button>
-                <div class="dropdown">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item modal-open" data-modal-open="modal-deleteCorrespondence">Delete selected</li>
-                    <li class="dropdown__item modal-open" data-modal-open="modal-deleteAllCorrespondence">Delete All</li>
-                  </ul>
-                </div>
-              </div>
-
             </div>
             <div class="correspond__block">
-              <h4 class="correspond__block-title mb-16">Archive сorrespondence: <span class="color-red">2</span></h4>
+              <h4 class="correspond__block-title mb-16">New request: <span class="color-pink">1</span></h4>
               <div class="correspond__list">
-                <div class="correspond-item correspond-item--archive">
-                  <a href="./profile.html" class="profile__photo">
-                    <div class="profile-status status-online"></div>
-                    <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                    <div class="profile__photo-empty photo-empty sm hide">
-                      <div class="photo-empty__center">
-                        <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
-                        <span class="photo-empty__label">No photo</span>
-                      </div>
+                <!-- support-item -->
+                <div class="support-item support-item--new">
+                  <span class="support-item__badge-new">New</span>
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
                     </div>
-                  </a>
-                  <div class="correspond-item__right">
-                    <div class="correspond-item__right-top">
-                      <div class="correspond-item__header">
-                        <div class="letter-item__info correspond-item__data">
-                          <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
                         </div>
-                        <label class="check correspond-item__check">
-                          <input class="check__input" type="checkbox" name="param-name">
-                          <span class="check__box"></span>
-                          <span class="check__label"></span>
-                        </label>
-                      </div>
-                      <div class="correspond-item__body">
-                        <div class="correspond-item__profile">
-                          <span class="correspond-item__profile-name">Anastasia, 23</span>
-                          <div class="correspond-item__profile-id">ID: <span class="text-gray">546140</span>
-                          </div>
-                        </div>
-                        <div class="profile__location flex align-center">
-                          <span class="material-icons profile__location-icon">location_on</span>
-                          <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
                         </div>
                       </div>
-                    </div>
-                    <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
-                        <span>Read</span>
-                        <span class="material-icons">navigate_next</span>
-                      </a>
-                      <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
-                        <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
-                          <span class="material-icons">delete</span>
-                        </button>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
                       </div>
                     </div>
                   </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div class="correspond-item correspond-item--archive">
-                  <a href="./profile.html" class="profile__photo">
-                    <div class="profile-status status-online"></div>
-                    <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                    <div class="profile__photo-empty photo-empty sm hide">
-                      <div class="photo-empty__center">
-                        <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
-                        <span class="photo-empty__label">No photo</span>
+              </div>
+            </div>
+            <div class="correspond__block">
+              <h4 class="correspond__block-title mb-16">Total request: <span class="text-gray">7</span></h4>
+              <div class="support__grid">
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                        </div>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
+                      </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
                       </div>
                     </div>
-                  </a>
-                  <div class="correspond-item__right">
-                    <div class="correspond-item__right-top">
-                      <div class="correspond-item__header">
-                        <div class="letter-item__info correspond-item__data">
-                          <div class="letter-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="letter-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
                         </div>
-                        <label class="check correspond-item__check">
-                          <input class="check__input" type="checkbox" name="param-name">
-                          <span class="check__box"></span>
-                          <span class="check__label"></span>
-                        </label>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
                       </div>
-                      <div class="correspond-item__body">
-                        <div class="correspond-item__profile">
-                          <span class="correspond-item__profile-name">Anastasia, 23</span>
-                          <div class="correspond-item__profile-id">ID: <span class="text-gray">546140</span>
-                          </div>
-                        </div>
-                        <div class="profile__location flex align-center">
-                          <span class="material-icons profile__location-icon">location_on</span>
-                          <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
-                        </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
                       </div>
                     </div>
-                    <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
-                        <span>Read</span>
-                        <span class="material-icons">navigate_next</span>
-                      </a>
-                      <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
-                        <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
-                          <span class="material-icons">delete</span>
-                        </button>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                        </div>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
                       </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                        </div>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
+                      </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                        </div>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
+                      </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                        </div>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
+                      </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- support-item -->
+                <div class="support-item">
+                  <div class="support-item__header">
+                    <div class="support-item__ava">
+                      <!-- <span class="material-icons">support</span> -->
+                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
+                    </div>
+                    <div class="support-item__info">
+                      <div class="support-item__info-top">
+                        <div class="support-item__data">
+                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
+                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
+                        </div>
+                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
+                        </div>
+                      </div>
+                      <div class="support-item__name">From: <span class="color-blue">Support</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="support-item__footer">
+                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
+                      <span>Read the request</span>
+                      <span class="material-icons">navigate_next</span>
+                    </a>
+                    <div class="support-item__options">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                        <span class="material-icons">delete</span>
+                      </button>
+                      <label class="check support-item__check">
+                        <input class="check__input" type="checkbox" name="select-lletter">
+                        <span class="check__box"></span>
+                        <span class="check__label"></span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -581,66 +783,6 @@
           <button type="button" class="btn btn-blue modal-cancel">No</button>
           <button type="button" class="btn btn-error btn-delete">Yes</button>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Profile Contacts -->
-  <div class="modal modal-form modal-profile-contacts" data-modal="modal-profileContacts">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <!-- показываем классом .show -->
-        <div class="modal-profile-contacts__block show">
-          <div class="modal__header text-center">
-            <div class="modal-profile-contacts__photo">
-              <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="112" height="112" alt="">
-            </div>
-            <h3 class="modal__title">Contacts info</h3>
-            <p class="modal__descr">You are requesting a contact information of <span class="strong color-pink">Anastasia</span>
-            </p>
-          </div>
-          <div class="modal-profile-contacts__body text-center">
-            <h4 class="textbold-6 mb-4">This request costs <span class="strong color-green">200 credits</span></h4>
-            <p>Before that, you need to write at least 15 letters. You have sent no letters so far.</p>
-            <a href="#" class="btn modal__btn">OK</a>
-          </div>
-        </div>
-        <!-- показываем классом .show, а у верхнего убираем show при показе контактов -->
-        <div class="modal-profile-contacts__block">
-          <div class="modal__header text-center">
-            <div class="modal-profile-contacts__photo">
-              <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="112" height="112" alt="">
-            </div>
-            <h3 class="modal__title">Success!</h3>
-            <p class="modal__descr">Contact information of<span class="strong color-pink">Anastasia</span>
-            </p>
-          </div>
-          <div class="modal-profile-contacts__body">
-            <ul class="modal-profile-contacts__list">
-              <li>
-                <span class="material-icons">search</span>
-                <span><strong>ID:</strong> 546140</span>
-              </li>
-              <li>
-                <span class="material-icons">person</span>
-                <span><strong>Name:</strong> Anastasia</span>
-              </li>
-              <li>
-                <span class="material-icons">location_on</span>
-                <span><strong>Country / City:</strong> Ukraine, Odessa</span>
-              </li>
-              <li>
-                <span class="material-icons">phone</span>
-                <span><strong>Phone:</strong> <a href="tel:+380636494634">+380636494634</a></span>
-              </li>
-              <li>
-                <span class="material-icons">mail</span>
-                <span><strong>E-mail address:</strong> <a href="mailto:anastasia_odessa@gmail.com">anastasia_odessa@gmail.com</a></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>

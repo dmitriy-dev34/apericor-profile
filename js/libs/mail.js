@@ -63,5 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /* ------------------- Select .support-item -------------------- */
+  const supportCheckboxes = document.querySelectorAll(
+    ".support-item input[type='checkbox']"
+  );
+
+  supportCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const supportItem = this.closest(".support-item");
+
+      if (this.checked) {
+        supportItem.classList.add("selected");
+      } else {
+        supportItem.classList.remove("selected");
+      }
+    });
+  });
+
   //!! End Scripts
 });
