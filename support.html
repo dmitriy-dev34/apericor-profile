@@ -265,8 +265,8 @@
                   </button>
                   <div class="dropdown">
                     <ul class="dropdown__list">
-                      <li class="dropdown__item modal-open" data-modal-open="modal-deleteCorrespondence">Delete selected</li>
-                      <li class="dropdown__item modal-open" data-modal-open="modal-deleteAllCorrespondence">Delete All</li>
+                      <li class="dropdown__item modal-open" data-modal-open="modal-deleteRequest">Delete selected</li>
+                      <li class="dropdown__item modal-open" data-modal-open="modal-deleteAllRequest">Delete All</li>
                     </ul>
                   </div>
                 </div>
@@ -302,7 +302,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -344,7 +344,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -381,7 +381,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -418,7 +418,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -455,7 +455,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -492,7 +492,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -529,7 +529,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -566,7 +566,7 @@
                       <span class="material-icons">navigate_next</span>
                     </a>
                     <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteCorrespondence">
+                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
                         <span class="material-icons">delete</span>
                       </button>
                       <label class="check support-item__check">
@@ -655,98 +655,14 @@
     </footer>
   </div>
 
-  <!-- Modal Report -->
-  <div class="modal modal-form modal-report" data-modal="modal-reportProfile">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal-report__text">
-          <p>At OkCupid, we want everyone to have a safe space to connect. Thank you for reporting violations of our <a href="#">Community Guidelines</a>.</p>
-        </div>
-        <span class="textbold-7">Keep in mind:</span>
-        <ul class="modal-report__list">
-          <li>Your identity will not be shared with the person you are blocking or reporting.</li>
-          <li>Reporting could result in the person getting banned from OkCupid.</li>
-          <li>If you or someone you know is in immediate danger, please contact your local authorities.</li>
-        </ul>
-        <div class="modal-report__block">
-          <a href="#" class="modal-report__link">
-            <span>VISIT OUR RESOURCES PAGE</span>
-            <span class="material-icons">navigate_next</span>
-          </a>
-          <span class="modal-report__block-text">Hides you from each other.</span>
-        </div>
-        <div class="modal-report__block">
-          <a href="#" class="modal-report__link report-block">
-            <span class="color-red">Block</span>
-            <span class="material-icons color-red">navigate_next</span>
-          </a>
-        </div>
-        <div class="modal-report__block">
-          <a href="#" class="modal-report__link">
-            <span>Report</span>
-            <span class="material-icons">navigate_next</span>
-          </a>
-          <span class="modal-report__block-text">This person violated the community guidelines. You will be able to block them afterwards.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!----------- Modal block-profile ------------->
-  <div class="modal modal-form modal-block" data-modal="block-profile">
+  <!----------- Modal delete support-request ------------->
+  <div class="modal modal-form modal-delete modal-delete-request" data-modal="modal-deleteRequest">
     <div class="modal__overlay">
       <div class="modal__content">
         <div class="modal__close"></div>
         <div class="modal__header text-center">
-          <div class="modal__profile-photo">
-            <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="80" height="80" alt="">
-          </div>
-          <h3 class="modal__title">Block <span class="color-red">Alexsandra</span>, 23</h3>
-          <p class="modal__descr">Are you sure to block this lady?</p>
-        </div>
-        <form action="#" class="form form-block">
-          <div class="form-field">
-            <label for="blockMessage" class="form-label">State the reason:</label>
-            <textarea id="blockMessage" name="block-message" class="form-field__textarea" placeholder="Describe the reason for the blockage"></textarea>
-          </div>
-          <ul class="list-reset form-block__list">
-            <li>
-              <label class="check form-block__check">
-                <input class="check__input" type="checkbox" name="param-name">
-                <span class="check__box"></span>
-                <span class="check__label">Show this reason to Elena</span>
-              </label>
-            </li>
-            <li>
-              <label class="check form-block__check">
-                <input class="check__input" type="checkbox" name="param-name">
-                <span class="check__box"></span>
-                <span class="check__label">Block all letters</span>
-              </label>
-            </li>
-            <li>
-              <label class="check form-block__check">
-                <input class="check__input" type="checkbox" name="param-name">
-                <span class="check__box"></span>
-                <span class="check__label">Block chat</span>
-              </label>
-            </li>
-          </ul>
-          <button type="submit" class="btn btn-error form__btn">Block <span>Alexandra, 23</span>
-          </button>
-        </form>
-
-      </div>
-    </div>
-  </div>
-  <!----------- Modal delete-correspondence ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteCorrespondence">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the selected correspondence?</h3>
-          <p class="modal__descr">After deletion, the correspondence will be archived.</p>
+          <h3 class="modal__title mb-0">Do you really want <br>to delete this request?</h3>
+          <p class="modal__descr">After deletion, the request will be archived.</p>
         </div>
         <div class="modal__btns">
           <button type="button" class="btn btn-blue modal-cancel">No</button>
@@ -755,29 +671,14 @@
       </div>
     </div>
   </div>
-  <!----------- Modal delete all correspondence ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteAllCorrespondence">
+  <!----------- Modal delete support-request ------------->
+  <div class="modal modal-form modal-delete modal-delete-request" data-modal="modal-deleteAllRequest">
     <div class="modal__overlay">
       <div class="modal__content">
         <div class="modal__close"></div>
         <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the all correspondence?</h3>
-          <p class="modal__descr">After deletion, all correspondence will be archived.</p>
-        </div>
-        <div class="modal__btns">
-          <button type="button" class="btn btn-blue modal-cancel">No</button>
-          <button type="button" class="btn btn-error btn-delete">Yes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!----------- Modal delete-letter ------------->
-  <div class="modal modal-form modal-delete modal-delete-correspond" data-modal="modal-deleteLetter">
-    <div class="modal__overlay">
-      <div class="modal__content">
-        <div class="modal__close"></div>
-        <div class="modal__header text-center">
-          <h3 class="modal__title mb-0">Do you really want to delete the letter?</h3>
+          <h3 class="modal__title mb-0">Do you really want <br>to delete all request?</h3>
+          <p class="modal__descr">After deletion, all request will be archived.</p>
         </div>
         <div class="modal__btns">
           <button type="button" class="btn btn-blue modal-cancel">No</button>
