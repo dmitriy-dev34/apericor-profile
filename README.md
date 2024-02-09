@@ -115,3 +115,7 @@ https://dmitriy-dev34.github.io/apericor-profile/support-archive.html
 # Support / Request
 
 https://dmitriy-dev34.github.io/apericor-profile/support-request.html
+
+# Help Center
+
+https://dmitriy-dev34.github.io/apericor-profile/help-center.html
