@@ -187,7 +187,6 @@
             <span class="discover__tab-name">Advanced <span>search</span></span>
           </div>
         </div>
-
         <div class="discover__body">
           <!-- discover-tags -->
           <div class="discover-tags">
@@ -223,7 +222,6 @@
               </li>
             </ul>
           </div>
-
           <!-- discover-quick -->
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
@@ -764,9 +762,19 @@
           </div>
         </div>
       </div>
-      <div class="container">
 
-      </div>
+      <section class="page-padding testimonials">
+        <!-- здесь вставляем .popup-like и .verification-message -->
+        <div class="container">
+          <h2 class="page-title">Blocked Profiles</h2>
+          <div class="testimonials__grid">
+
+          </div>
+          <div class="profiles-page__more hidden">
+            <button type="button" class="btn btn-stroke news-feed__more" id="moreProfiles">Show more</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!----------- Footer ------------->
@@ -839,6 +847,13 @@
   <script defer src="./js/libs/modal.js"></script>
   <!-- Scripts JS -->
   <script defer src="./js/main.min.js"></script>
+
+  <!-- <script>
+		/* ------------------- Add favorite profile -------------------- */
+		document.addEventListener("DOMContentLoaded", function () {
+	
+		});
+	</script> -->
 </body>
 
 </html>

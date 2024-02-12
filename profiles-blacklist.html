@@ -187,7 +187,6 @@
             <span class="discover__tab-name">Advanced <span>search</span></span>
           </div>
         </div>
-
         <div class="discover__body">
           <!-- discover-tags -->
           <div class="discover-tags">
@@ -223,7 +222,6 @@
               </li>
             </ul>
           </div>
-
           <!-- discover-quick -->
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
@@ -767,10 +765,11 @@
 
       <section class="page-padding profiles-page">
         <!-- здесь вставляем .popup-like и .verification-message -->
-
         <div class="container">
-          <h2 class="page-title">Blocked Profiles <span class="num-profiles color-red">(7 profiles)</span></h2>
-
+          <div class="profiles-page__header">
+            <h2 class="page-title">Blocked Profiles <span class="num-profiles color-red">(7 profiles)</span></h2>
+            <button class="btn btn-stroke btn-sm profiles-page__header-btn modal-open" data-modal-open="modal-unblockProfilesAll">Unblock All</button>
+          </div>
           <div class="profiles-page__grid">
             <!-- profile-item (blocked) -->
             <div class="profile-item">
@@ -1029,6 +1028,21 @@
         </div>
         <button type="button" class="btn form__btn ublock-btn">Unblock <span class="block-profilename">Alexandra, 23</span>
         </button>
+      </div>
+    </div>
+  </div>
+  <!----------- Modal Unblock All Profiles ------------->
+  <div class="modal modal-form modal-delete modal-unblock-all" data-modal="modal-unblockProfilesAll">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <h3 class="modal__title mb-0">Are you sure you want to unblock all the profiles?</h3>
+        </div>
+        <div class="modal__btns">
+          <button type="button" class="btn btn-blue modal-cancel">No</button>
+          <button type="button" class="btn">Yes</button>
+        </div>
       </div>
     </div>
   </div>
