@@ -131,3 +131,11 @@ https://dmitriy-dev34.github.io/apericor-profile/profiles-favorites.html
 # Profiles Blacklist
 
 https://dmitriy-dev34.github.io/apericor-profile/profiles-blacklist.html
+
+# About Us
+
+https://dmitriy-dev34.github.io/apericor-profile/about-us.html
+
+# Testimonials
+
+https://dmitriy-dev34.github.io/apericor-profile/testimonials.html
