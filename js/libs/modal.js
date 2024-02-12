@@ -97,5 +97,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* ------------------- Проверка заполнения формы Block Profile -------------------- */
+  const formBlockTextarea = document.querySelector(".form-block__textarea");
+  const formBlockBtn = document.querySelector(".form-block__btn");
+
+  // Проверяем наличие нужных элементов на странице
+  if (formBlockTextarea && formBlockBtn) {
+    formBlockBtn.addEventListener("click", function (event) {
+      // Проверяем, заполнено ли поле
+      if (formBlockTextarea.value.trim() === "") {
+        // Если поле не заполнено, добавляем класс 'error' и меняем текст placeholder
+        formBlockTextarea.classList.add("error");
+        formBlockTextarea.placeholder =
+          "You dont! Describe the reason for the blockage!";
+        event.preventDefault(); // Отменяем стандартное действие отправки формы
+      } else {
+        // Если поле заполнено, убираем класс 'error'
+        formBlockTextarea.classList.remove("error");
+        // Здесь можете добавить код для отправки формы, например, использовать AJAX-запрос или просто разрешить отправку формы стандартным способом
+      }
+    });
+  }
+
   //!! End Scripts
 });

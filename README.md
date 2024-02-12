@@ -119,3 +119,15 @@ https://dmitriy-dev34.github.io/apericor-profile/support-request.html
 # Help Center
 
 https://dmitriy-dev34.github.io/apericor-profile/help-center.html
+
+# Profiles Search
+
+https://dmitriy-dev34.github.io/apericor-profile/search-profiles-result.html
+
+# Profiles Favorites
+
+https://dmitriy-dev34.github.io/apericor-profile/profiles-favorites.html
+
+# Profiles Blacklist
+
+https://dmitriy-dev34.github.io/apericor-profile/profiles-blacklist.html
