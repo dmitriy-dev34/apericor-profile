@@ -143,3 +143,11 @@ https://dmitriy-dev34.github.io/apericor-profile/testimonials.html
 # Contacts Us
 
 https://dmitriy-dev34.github.io/apericor-profile/contacts-us.html
+
+# Terms and Conditions
+
+https://dmitriy-dev34.github.io/apericor-profile/terms-and-conditions.html
+
+# Privacy Policy
+
+https://dmitriy-dev34.github.io/apericor-profile/privacy-policy.html
