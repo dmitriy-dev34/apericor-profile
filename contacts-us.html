@@ -762,124 +762,22 @@
           </div>
         </div>
       </div>
-      <div class="photo-manager photo-manager--albums">
+
+      <section class="page-padding contacts-us">
         <!-- здесь вставляем .popup-like и .verification-message -->
+        <div class="container">
+          <div class="contacts-us__grid">
+            <div class="contacts-us__info">
+              <h2 class="page-title">About Us</h2>
 
-        <!-- page-nav -->
-        <nav class="page-nav">
-          <div class="container page-nav__container">
-            <ul class="page-nav__list">
-              <li class="page-nav__item">
-                <a href="./photo-manager_public.html" class="page-nav__link active">Public photos</a>
-              </li>
-              <li class="page-nav__item">
-                <a href="./photo-manager_messaging.html" class="page-nav__link">Photos for messaging</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="page-padding container">
-          <div class="photo-manager__header">
-            <div class="photo-manager__header-left">
-              <h2 class="page-title photo-manager__title">Photo manager <span class="color-blue">/ Public photos / Albums</span></h2>
-              <p class="photo-manager__descr"><span class="material-icons">info</span>
-                Public photos of your profile (visible to everyone)
-              </p>
             </div>
-            <div class="photo-manager__navs">
-              <a href="./photo-manager_public-photos.html" class="photo-manager__navs-link">All Photos</a>
-              <a href="#" class="photo-manager__navs-link active">Albums</a>
+            <div class="contacts-us__feedback">
+              <h3 class="page-title contacts-us__reviews-title">Testimonials</h3>
+              <form action="" class="form-feedback"></form>
             </div>
-          </div>
-          <!-- photo-manager__options -->
-          <div class="photo-manager__options">
-            <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deletePhoto">Delete selected</button>
-            <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deleteAllPhotos">Delete all</button>
-          </div>
-
-          <div class="profile-photos mt-32">
-            <h4 class="profile-photos__title mb-16">Albums <span class="text-gray">(0 albums selected)</span></h4>
-
-            <div class="profile-photos__grid">
-              <!-- add-new-album -->
-              <div class="add-album modal-open" data-modal-open="modal-addNewAlbum">
-                <div class="add-album__icon"><span class="material-icons">add</span>
-                </div>
-                <span class="add-album__text">Add new album</span>
-              </div>
-              <!-- album-item (private-album) -->
-              <a href="./photo-manager_public-photos_albums_private-album.html" class="album-item private-album" style="background-image: url(./img/my-profile_photo.jpg);">
-                <label class="check photo-item__check">
-                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
-                  <span class="check__box"></span>
-                  <span class="check__label"></span>
-                </label>
-                <div class="private-album__icon">
-                  <span class="material-icons">visibility_off</span>
-                </div>
-                <div class="album-item__body">
-                  <div class="album-item__body-content">
-                    <span class="album-item__name">Private Album</span>
-                    <span class="album-item__numphotos">8 photos</span>
-                  </div>
-                </div>
-              </a>
-              <!-- album-item (private-album-empty) -->
-              <a href="./photo-manager_public-photos_albums_private-album.html" class="album-item private-album private-album--empty">
-                <label class="check photo-item__check">
-                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
-                  <span class="check__box"></span>
-                  <span class="check__label"></span>
-                </label>
-                <div class="private-album__icon">
-                  <span class="material-icons">visibility_off</span>
-                </div>
-                <div class="album-item__body">
-                  <div class="album-item__body-content">
-                    <span class="album-item__name">Private Album</span>
-                    <span class="album-item__numphotos">0 photos</span>
-                  </div>
-                </div>
-              </a>
-              <!-- album-item -->
-              <a href="#" class="album-item" style="background-image: url(./img/my-profile_photo.jpg);">
-                <label class="check photo-item__check">
-                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
-                  <span class="check__box"></span>
-                  <span class="check__label"></span>
-                </label>
-                <div class="album-item__body">
-                  <div class="album-item__body-content">
-                    <span class="album-item__name">My photos</span>
-                    <span class="album-item__numphotos">16 photos</span>
-                  </div>
-                </div>
-              </a>
-              <!-- album-item (private-album-empty) -->
-              <a href="#" class="album-item album-empty">
-                <div class="album-item__label new-album">New album</div>
-                <label class="check photo-item__check">
-                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
-                  <span class="check__box"></span>
-                  <span class="check__label"></span>
-                </label>
-                <div class="album-empty__icon">
-                  <span class="material-icons">add</span>
-                </div>
-                <div class="album-item__body">
-                  <div class="album-item__body-content">
-                    <span class="album-item__name">Business</span>
-                    <span class="album-item__numphotos">0 photos</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- <div class="profile-photos__footer">
-							<button type="button" class="btn btn-stroke">Show more photos</button>
-						</div> -->
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <!----------- Footer ------------->
@@ -941,53 +839,6 @@
         </div>
       </div>
     </footer>
-
-    <!----------- Modal delete-photo ------------->
-    <div class="modal modal-form modal-delete" data-modal="modal-deletePhoto">
-      <div class="modal__overlay">
-        <div class="modal__content">
-          <div class="modal__close"></div>
-          <div class="modal__header text-center">
-            <h3 class="modal__title mb-0">Do you really want to delete the selected photo?</h3>
-          </div>
-          <div class="modal__btns">
-            <button type="button" class="btn btn-blue modal-cancel">No</button>
-            <button type="button" class="btn btn-error btn-delete">Yes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!----------- Modal delete-photo ------------->
-    <div class="modal modal-form modal-delete" data-modal="modal-deleteAllPhotos">
-      <div class="modal__overlay">
-        <div class="modal__content">
-          <div class="modal__close"></div>
-          <div class="modal__header text-center">
-            <h3 class="modal__title mb-0">Do you really want to delete all the photos?</h3>
-          </div>
-          <div class="modal__btns">
-            <button type="button" class="btn btn-blue modal-cancel">No</button>
-            <button type="button" class="btn btn-error btn-delete">Yes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!----------- Modal Add New Album ------------->
-    <div class="modal modal-form modal-move-photo" data-modal="modal-addNewAlbum">
-      <div class="modal__overlay">
-        <div class="modal__content">
-          <div class="modal__close"></div>
-          <div class="modal__header text-center">
-            <h3 class="modal__title">Create a new album</h3>
-            <p class="modal__descr">Specify a name for the new album and then add new photos to it</p>
-          </div>
-          <div class="create-album">
-            <input type="text" class="form-field__input create-album__input mb-16" placeholder="Enter name new album" autocomplete="off">
-            <button type="button" class="btn btn-blue modal__btn create-album__btn">Create new album</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- Libs JS -->
@@ -1001,36 +852,23 @@
   <script defer src="./js/main.min.js"></script>
 
   <script>
-    /* ------------------- Select Photos -------------------- */
-    		const photoManagerPhoto = document.querySelectorAll(".album-item");
-    		const SelectAllAlbums = document.querySelector(".select-all .check__input");
-    		const AlbumCheckbox = document.querySelectorAll(".photo-manager__photo-input");
+    /* ------------------- Close Modal Feedback -------------------- */
+    		document.addEventListener("DOMContentLoaded", function () {
+    			const modalFeedback = document.querySelectorAll('.modal-feedback');
+    			const modalFeedbackClose = document.querySelectorAll('.feedback-close');
     
-    		photoManagerPhoto.forEach((photo) => {
-    			const checkbox = photo.querySelector(".photo-manager__photo-input");
-    
-    			checkbox.addEventListener("change", function () {
-    				const albumItem = this.closest(".album-item");
-    				if (this.checked) {
-    					albumItem.classList.add('selected');
-    				} else {
-    					albumItem.classList.remove('selected');
-    				}
-    			});
-    		});
-    
-    		SelectAllAlbums.addEventListener("change", function () {
-    			AlbumCheckbox.forEach((checkbox) => {
-    				checkbox.checked = this.checked;
-    				const albumItem = checkbox.closest(".album-item");
-    				if (this.checked) {
-    					albumItem.classList.add('selected');
-    				} else {
-    					albumItem.classList.remove('selected');
-    				}
+    			modalFeedbackClose.forEach((button) => {
+    				button.addEventListener("click", () => {
+    					modalFeedback.forEach((modal) => {
+    						modal.classList.remove("active");
+    					});
+    					document.body.style.overflow = "";
+    					document.body.style.width = "";
+    				});
     			});
     		});
   </script>
+
 </body>
 
 </html>
