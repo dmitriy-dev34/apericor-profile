@@ -148,6 +148,10 @@ https://dmitriy-dev34.github.io/apericor-profile/contacts-us.html
 
 https://dmitriy-dev34.github.io/apericor-profile/terms-and-conditions.html
 
-# Privacy Policy
+# Partners
 
-https://dmitriy-dev34.github.io/apericor-profile/privacy-policy.html
+https://dmitriy-dev34.github.io/apericor-profile/partners.html
+
+# Partners Form
+
+https://dmitriy-dev34.github.io/apericor-profile/partners-form.html
