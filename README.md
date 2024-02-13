@@ -139,3 +139,7 @@ https://dmitriy-dev34.github.io/apericor-profile/about-us.html
 # Testimonials
 
 https://dmitriy-dev34.github.io/apericor-profile/testimonials.html
+
+# Contacts Us
+
+https://dmitriy-dev34.github.io/apericor-profile/contacts-us.html
