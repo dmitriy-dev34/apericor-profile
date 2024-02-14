@@ -155,3 +155,7 @@ https://dmitriy-dev34.github.io/apericor-profile/partners.html
 # Partners Form
 
 https://dmitriy-dev34.github.io/apericor-profile/partners-form.html
+
+# Sign In / Sign Up / Forgot Password
+
+https://dmitriy-dev34.github.io/apericor-profile/login.html
