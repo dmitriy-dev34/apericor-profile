@@ -166,7 +166,7 @@ https://dmitriy-dev34.github.io/apericor-profile/blog.html
 
 # Blog Article
 
-https://dmitriy-dev34.github.io/apericor-profile/blog-aticle.html
+https://dmitriy-dev34.github.io/apericor-profile/blog-article.html
 
 # Blog Search Result
 
