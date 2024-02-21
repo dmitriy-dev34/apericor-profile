@@ -159,3 +159,23 @@ https://dmitriy-dev34.github.io/apericor-profile/partners-form.html
 # Sign In / Sign Up / Forgot Password
 
 https://dmitriy-dev34.github.io/apericor-profile/login.html
+
+# Blog
+
+https://dmitriy-dev34.github.io/apericor-profile/blog.html
+
+# Blog Article
+
+https://dmitriy-dev34.github.io/apericor-profile/blog-aticle.html
+
+# Blog Search Result
+
+https://dmitriy-dev34.github.io/apericor-profile/blog_search-result.html
+
+# Blog Category
+
+https://dmitriy-dev34.github.io/apericor-profile/blog-category.html
+
+# Blog Tag
+
+https://dmitriy-dev34.github.io/apericor-profile/blog-tag.html
