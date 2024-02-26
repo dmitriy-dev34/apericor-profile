@@ -3,6 +3,43 @@
 document.addEventListener("DOMContentLoaded", function () {
   //! Start Scripts
 
+  /* ------------------- Footer Items Show is Mobile -------------------- */
+  const footerToggle = document.querySelector(".footer__toggle");
+  const footerTopContainer = document.querySelector(".footer__top-container");
+  const footerMenuItems = document.querySelectorAll(".footer__menu-item");
+
+  footerToggle.addEventListener("click", function () {
+    footerMenuItems.forEach((item) => {
+      item.classList.toggle("show");
+    });
+    footerToggle.classList.toggle("active");
+    footerTopContainer.classList.toggle("open");
+  });
+
+  // /* ------------------- btnScrollTop -------------------- */
+  const btnScrollTop = document.getElementById("btnScrollTop");
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      btnScrollTop.classList.add("show");
+    } else {
+      btnScrollTop.classList.remove("show");
+    }
+  }
+  btnScrollTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+
   const blogBody = document.querySelector(".blog-body");
 
   /* ------------------- Header Blog Menu Mob -------------------- */

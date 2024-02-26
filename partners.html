@@ -145,31 +145,22 @@
     </footer>
   </div>
 
+  <!----------- Footer Mob ------------->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-    			// /* ------------------- btnScrollTop -------------------- */
-    			const btnScrollTop = document.getElementById("btnScrollTop");
-    			window.onscroll = function () {
-    				scrollFunction();
-    			};
+    			const footerToggle = document.querySelector(".footer__toggle");
+    			const footerTopContainer = document.querySelector(".footer__top-container");
+    			const footerMenuItems = document.querySelectorAll(".footer__menu-item");
     
-    			function scrollFunction() {
-    				if (
-    					document.body.scrollTop > 20 ||
-    					document.documentElement.scrollTop > 20
-    				) {
-    					btnScrollTop.classList.add("show");
-    				} else {
-    					btnScrollTop.classList.remove("show");
-    				}
-    			}
-    			btnScrollTop.addEventListener("click", function () {
-    				window.scrollTo({
-    					top: 0,
-    					left: 0,
-    					behavior: "smooth",
+    			if (footerToggle && footerTopContainer && footerMenuItems.length > 0) {
+    				footerToggle.addEventListener("click", function () {
+    					footerMenuItems.forEach((item) => {
+    						item.classList.toggle("show");
+    					});
+    					footerToggle.classList.toggle("active");
+    					footerTopContainer.classList.toggle("open");
     				});
-    			});
+    			}
     		});
   </script>
 </body>
