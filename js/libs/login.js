@@ -2,37 +2,37 @@
 document.addEventListener("DOMContentLoaded", function () {
   //! Start Scripts
 
-  //  Select Gender
-  const iAmRadios = document.querySelectorAll('input[name="i-am"]');
-  const lookingForRadios = document.querySelectorAll(
-    'input[name="looking-for"]'
-  );
+  //  Select Gender Old
+  // const iAmRadios = document.querySelectorAll('input[name="i-am"]');
+  // const lookingForRadios = document.querySelectorAll(
+  //   'input[name="looking-for"]'
+  // );
 
-  function setOppositeGender(source, target) {
-    source.addEventListener("change", function () {
-      if (this.checked) {
-        target.checked = true;
-      }
-    });
-  }
-  setOppositeGender(genderWoman, genderMan2);
-  setOppositeGender(genderMan, genderWoman2);
-  setOppositeGender(genderWoman2, genderMan);
-  setOppositeGender(genderMan2, genderWoman);
+  // function setOppositeGender(source, target) {
+  //   source.addEventListener("change", function () {
+  //     if (this.checked) {
+  //       target.checked = true;
+  //     }
+  //   });
+  // }
+  // setOppositeGender(genderWoman, genderMan2);
+  // setOppositeGender(genderMan, genderWoman2);
+  // setOppositeGender(genderWoman2, genderMan);
+  // setOppositeGender(genderMan2, genderWoman);
 
-  // Password Show
-  const inputsPassword = document.querySelectorAll(".input-password");
-  const passwordIcons = document.querySelectorAll(".password-icon");
+  // // Password Show
+  // const inputsPassword = document.querySelectorAll(".input-password");
+  // const passwordIcons = document.querySelectorAll(".password-icon");
 
-  if (inputsPassword.length === passwordIcons.length) {
-    passwordIcons.forEach((icon, index) => {
-      icon.addEventListener("click", function () {
-        inputsPassword[index].type =
-          inputsPassword[index].type === "password" ? "text" : "password";
-        icon.classList.toggle("password-show");
-      });
-    });
-  }
+  // if (inputsPassword.length === passwordIcons.length) {
+  //   passwordIcons.forEach((icon, index) => {
+  //     icon.addEventListener("click", function () {
+  //       inputsPassword[index].type =
+  //         inputsPassword[index].type === "password" ? "text" : "password";
+  //       icon.classList.toggle("password-show");
+  //     });
+  //   });
+  // }
 
   /* ------------------- Custom Select -------------------- */
   const customSelects = document.querySelectorAll(".select");
@@ -70,56 +70,84 @@ document.addEventListener("DOMContentLoaded", function () {
   const formSignUp = document.querySelector(".form-signup");
   const formPassword = document.querySelector(".form-password");
   const linkSignUp = document.getElementById("linkSignUp");
-  const linkSignIn = document.getElementById("linkSignIn");
+  const linkSignIn1 = document.getElementById("linkSignIn1");
   const linkSignIn2 = document.getElementById("linkSignIn2");
   const linkSignIn3 = document.getElementById("linkSignIn3");
+  const linkSignIn4 = document.getElementById("linkSignIn4");
   const forgotPassword = document.getElementById("forgotPassword");
 
   // Sign Up Steps
   const signUpFirst = document.querySelector(".form-signup__first");
+  const signUpSecond = document.querySelector(".form-signup__second");
   const signUpLast = document.querySelector(".form-signup__last");
-  const signUpNext = document.getElementById("signupNext");
-  const signUpPrev = document.getElementById("signupPrev");
+  const signUpNext1 = document.getElementById("signupNext1");
+  const signUpNext2 = document.getElementById("signupNext2");
+  const signUpPrev1 = document.getElementById("signupPrev1");
+  const signUpPrev2 = document.getElementById("signupPrev2");
 
-  // Sign Up
-  linkSignUp.addEventListener("click", () => {
-    formSignIn.classList.remove("active");
-    formSignUp.classList.add("active");
-  });
+  /* ------------------- Sign In -------------------- */
 
-  // Sign Up - first to last
-  signUpNext.addEventListener("click", () => {
-    signUpFirst.classList.remove("active");
-    signUpLast.classList.add("active");
-  });
-
-  // Sign Up - last to first
-  signUpPrev.addEventListener("click", () => {
-    signUpLast.classList.remove("active");
-    signUpFirst.classList.add("active");
-  });
-
-  // Sign Up - last to Sign In
-  linkSignIn2.addEventListener("click", () => {
-    formSignUp.classList.remove("active");
-    formSignIn.classList.add("active");
-  });
-
-  // Sign In
-  linkSignIn.addEventListener("click", () => {
-    formSignUp.classList.remove("active");
-    formSignIn.classList.add("active");
-  });
-
-  // Forgot Password
+  //! SignIn to Password
   forgotPassword.addEventListener("click", () => {
     formSignIn.classList.remove("active");
     formPassword.classList.add("active");
   });
 
-  // Forgot to Sign In
-  linkSignIn3.addEventListener("click", () => {
+  //! Password to SignIn
+  linkSignIn1.addEventListener("click", () => {
     formPassword.classList.remove("active");
+    formSignIn.classList.add("active");
+  });
+
+  /* ------------------- Sign Up -------------------- */
+
+  //! SignUp first step
+  linkSignUp.addEventListener("click", () => {
+    formSignIn.classList.remove("active");
+    formSignUp.classList.add("active");
+  });
+
+  //! SignUp - second step
+  signUpNext1.addEventListener("click", () => {
+    signUpFirst.classList.remove("active");
+    signUpSecond.classList.add("active");
+  });
+
+  //! SignUp - last step
+  signUpNext2.addEventListener("click", () => {
+    signUpSecond.classList.remove("active");
+    signUpLast.classList.add("active");
+  });
+
+  //! SignUp - second to first step
+  signUpPrev1.addEventListener("click", () => {
+    signUpSecond.classList.remove("active");
+    signUpFirst.classList.add("active");
+  });
+
+  //! SignUp - last to second step
+  signUpPrev2.addEventListener("click", () => {
+    signUpLast.classList.remove("active");
+    signUpSecond.classList.add("active");
+  });
+
+  /* ------------------- Sign Up to Sign In -------------------- */
+
+  //! SignUp - first to SignIn
+  linkSignIn2.addEventListener("click", () => {
+    formSignUp.classList.remove("active");
+    formSignIn.classList.add("active");
+  });
+
+  //! SignUp - second to SignIn
+  linkSignIn3.addEventListener("click", () => {
+    formSignUp.classList.remove("active");
+    formSignIn.classList.add("active");
+  });
+
+  //! SignUp - last to SignIn
+  linkSignIn4.addEventListener("click", () => {
+    formSignUp.classList.remove("active");
     formSignIn.classList.add("active");
   });
 

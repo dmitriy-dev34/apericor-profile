@@ -179,3 +179,7 @@ https://dmitriy-dev34.github.io/apericor-profile/blog-category.html
 # Blog Tag
 
 https://dmitriy-dev34.github.io/apericor-profile/blog-tag.html
+
+# Seo Page
+
+https://dmitriy-dev34.github.io/apericor-profile/seo-page.html
