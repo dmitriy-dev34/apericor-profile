@@ -185,3 +185,7 @@ https://dmitriy-dev34.github.io/apericor-profile/blog-tag.html
 # Seo Page
 
 https://dmitriy-dev34.github.io/apericor-profile/seo-page.html
+
+# Cooperation Success
+
+https://dmitriy-dev34.github.io/apericor-profile/cooperation-success.html
