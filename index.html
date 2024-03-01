@@ -30,7 +30,7 @@
   <div class="page__wrapper">
 
     <!----------- Header Seo ------------->
-    <header class="header-blog header-start header-seo header-blog--fixed">
+    <header class="header-blog header-start header-seo" id="top-page">
       <div class="header-blog__overlay"></div>
       <div class="header-seo__container">
         <div class="header-seo__left">
@@ -188,144 +188,306 @@
         <section class="seo-page__header home-hero">
           <div class="container">
             <div class="seo-page__header-grid">
-              <form action="#" class="seo-form" style="display: block;">
-                <div class="seo-form__header">
-                  <h3 class="seo-form__title"><span class="color-pink">F</span>ind your match</h3>
-                </div>
-                <div class="seo-form__body">
-                  <!-- Select your gender -->
-                  <div class="select-gender sm">
-                    <label class="form-label">Your gender:</label>
-                    <div class="select-gender__trigger">
-                      <!-- класс .error при ошибке, .selected выбран -->
-                      <div class="select-gender__input" name="gender">Select your gender</div>
-                    </div>
-                    <ul class="select-gender__list">
-                      <li class="select-gender__item">
-                        <img class="select-gender__icon" src="./img/icons/ic-woman.svg" alt="Woman">
-                        <span class="select-gender__name">I am woman</span>
-                      </li>
-                      <li class="select-gender__item">
-                        <img class="select-gender__icon" src="./img/icons/ic-man.svg" alt="Man">
-                        <span class="select-gender__name">I am man</span>
-                      </li>
-                      <li class="select-gender__item">
-                        <img class="select-gender__icon" src="./img/icons/ic-incognito.svg" alt="Incognito">
-                        <span class="select-gender__name">I am incognito</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Select looking for -->
-                  <div class="select-gender sm">
-                    <label class="form-label">Looking for:</label>
-                    <div class="select-gender__trigger">
-                      <span class="select-gender__input" name="looking-for">Who are you looking for?</span>
-                    </div>
-                    <ul class="select-gender__list">
-                      <li class="select-gender__item">
-                        <img class="select-gender__icon" src="./img/icons/ic-woman.svg" alt="Woman">
-                        <span class="select-gender__name">I am looking for a woman</span>
-                      </li>
-                      <li class="select-gender__item">
-                        <img class="select-gender__icon" src="./img/icons/ic-man.svg" alt="Man">
-                        <span class="select-gender__name">I am looking for a man</span>
-                      </li>
-                      <li class="select-gender__item">
-                        <div class="select-gender__icons">
-                          <img class="select-gender__icon" src="./img/icons/ic-woman.svg" alt="Woman">
-                          <img class="select-gender__icon" src="./img/icons/ic-man.svg" alt="Man">
-                        </div>
-                        <span class="select-gender__name">I am locking for both</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- form-signup__age -->
-                  <div class="seo-form__age mb-16">
-                    <!-- Age from -->
-                    <div class="select select-sm discover-form__select select-age">
-                      <div class="form-label">Age from:</div>
-                      <div class="select__trigger">
-                        <div class="select__label"></div>
-                        <span class="select__selected" name="age-from">18</span>
-                      </div>
-                      <ul class="select__options">
-                        <li class="select__option selected">18</li>
-                        <li class="select__option">20</li>
-                        <li class="select__option">25</li>
-                        <li class="select__option">30</li>
-                        <li class="select__option">35</li>
-                        <li class="select__option">40</li>
-                        <li class="select__option">45</li>
-                        <li class="select__option">50</li>
-                        <li class="select__option">55</li>
-                        <li class="select__option">60</li>
-                        <li class="select__option">65</li>
-                        <li class="select__option">70</li>
-                        <li class="select__option">75</li>
-                      </ul>
-                    </div>
-                    <!-- Age to -->
-                    <div class="select select-sm discover-form__select select-age">
-                      <div class="form-label">Age to:</div>
-                      <div class="select__trigger">
-                        <div class="select__label"></div>
-                        <span class="select__selected" name="age-to">20</span>
-                      </div>
-                      <ul class="select__options">
-                        <li class="select__option selected">20</li>
-                        <li class="select__option">25</li>
-                        <li class="select__option">30</li>
-                        <li class="select__option">35</li>
-                        <li class="select__option">40</li>
-                        <li class="select__option">45</li>
-                        <li class="select__option">50</li>
-                        <li class="select__option">55</li>
-                        <li class="select__option">60</li>
-                        <li class="select__option">65</li>
-                        <li class="select__option">70</li>
-                        <li class="select__option">75</li>
-                        <li class="select__option">80+</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="seo-form__fields hidden">
-                    <!-- Children -->
-                    <div class="select select-sm discover-form__select">
-                      <div class="form-label">Children:</div>
-                      <div class="select__trigger">
-                        <div class="select__label"></div>
-                        <span class="select__selected" name="children">Any</span>
-                      </div>
-                      <ul class="select__options">
-                        <li class="select__option selected">Any</li>
-                        <li class="select__option">No kids</li>
-                        <li class="select__option">There are children</li>
-                      </ul>
-                    </div>
-                    <!-- Marital status -->
-                    <div class="select select-sm discover-form__select">
-                      <div class="form-label">Marital status:</div>
-                      <div class="select__trigger">
-                        <div class="select__label"></div>
-                        <span class="select__selected" name="marital-status">Any</span>
-                      </div>
-                      <ul class="select__options">
-                        <li class="select__option selected">Any</li>
-                        <li class="select__option">Single</li>
-                        <li class="select__option">Married</li>
-                        <li class="select__option">Divorced</li>
-                        <li class="select__option">The widow</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="btn form__btn">Join Apericor</button>
-                </div>
-              </form>
               <div class="seo-page__header-content">
                 <h1 class="home-hero__title"><span class="color-pink">F</span>ind your Partner <br class="mob-hide"> for dating</h1>
                 <p class="home-hero__descr">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.</p>
               </div>
+              <!-- !FORM SIGNUP (сделать проверку полей)-->
+              <form action="#" class="form-authorization form-signup active">
+                <!-- form-signup__first -->
+                <div class="form-signup__step form-signup__first active">
+                  <div class="form-authorization__header">
+                    <h3 class="form-authorization__title"><span class="color-pink">F</span>ind your match</h3>
+                  </div>
+                  <div class="form-authorization__body">
+                    <!-- Select your gender -->
+                    <div class="select-gender sm">
+                      <div class="select-gender__trigger">
+                        <!-- класс .error при ошибке, .selected выбран -->
+                        <div class="select-gender__input" name="gender">Select your gender</div>
+                      </div>
+                      <ul class="select-gender__list">
+                        <li class="select-gender__item">
+                          <img class="select-gender__icon" src="./img/icons/ic-woman.svg" alt="Woman">
+                          <span class="select-gender__name">I am woman</span>
+                        </li>
+                        <li class="select-gender__item">
+                          <img class="select-gender__icon" src="./img/icons/ic-man.svg" alt="Man">
+                          <span class="select-gender__name">I am man</span>
+                        </li>
+                        <li class="select-gender__item">
+                          <img class="select-gender__icon" src="./img/icons/ic-incognito.svg" alt="Incognito">
+                          <span class="select-gender__name">I am incognito</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Select looking for -->
+                    <div class="select-gender sm select-gender--loking">
+                      <div class="select-gender__trigger">
+                        <span class="select-gender__input" name="looking-for">Who are you looking for?</span>
+                      </div>
+                      <ul class="select-gender__list">
+                        <li class="select-gender__item">
+                          <img class="select-gender__icon" src="./img/icons/ic-woman.svg" alt="Woman">
+                          <span class="select-gender__name">I am looking for a woman</span>
+                        </li>
+                        <li class="select-gender__item">
+                          <img class="select-gender__icon" src="./img/icons/ic-man.svg" alt="Man">
+                          <span class="select-gender__name">I am looking for a man</span>
+                        </li>
+                        <li class="select-gender__item">
+                          <div class="select-gender__icons">
+                            <img class="select-gender__icon" src="./img/icons/ic-woman.svg" alt="Woman">
+                            <img class="select-gender__icon" src="./img/icons/ic-man.svg" alt="Man">
+                          </div>
+                          <span class="select-gender__name">I am locking for both</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Name -->
+                    <div class="form-field form-field__icon mb-16">
+                      <input type="text" name="name" class="form-field__input input-sm" placeholder="Enter your name" required autocomplete="off">
+                      <span class="material-icons form-icon">person</span>
+                    </div>
+                    <button type="button" class="btn form__btn form-authorization__btn" id="signupNext1">Continue</button>
+                    <div class="form-authorization__or">
+                      <span class="form-authorization__or-line"></span>
+                      <span class="form-authorization__or-text">Or</span>
+                      <span class="form-authorization__or-line"></span>
+                    </div>
+                    <!-- ! signin-btns -->
+                    <div class="signin-btns">
+                      <button type="button" class="signin-btn signin-btn--facebook">
+                        <img class="signin-btn__icon" src="./img/icons/ic-facebook_signin.svg" width="20" height="20" alt="Facebook">
+                        <span class="signin-btn__name">Continue with Facebook</span>
+                      </button>
+                      <button type="button" class="signin-btn signin-btn--google">
+                        <img class="signin-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="Coogle">
+                        <span class="signin-btn__name">Sign in with Google</span>
+                      </button>
+                      <button type="button" class="signin-btn signin-btn--apple">
+                        <img class="signin-btn__icon" src="./img/icons/ic-apple.svg" width="20" height="20" alt="Apple">
+                        <span class="signin-btn__name">Sign in with Apple</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form-authorization__footer">
+                    <span class="text-gray">Already have an account?</span>
+                    <a href="./login.html" class="color-link form-link">Sign In</a>
+                  </div>
+                  <p class="form-authorization__privacy mt-24">By clicking «Join Apericor» you confirm you are 18+ years old and you agree with the
+                    <a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+                    and <a href="./privacy-policy.html">Privacy Policy</a>
+                  </p>
+                </div>
+                <!-- form-signup__second -->
+                <div class="form-signup__step form-signup__second">
+                  <div class="form-signup__step form-signup__first active">
+                    <div class="form-authorization__header">
+                      <h3 class="form-authorization__title"><span class="color-pink">F</span>ind your match</h3>
+                    </div>
+                    <div class="form-authorization__body">
+                      <!-- Email -->
+                      <div class="form-field form-field__icon mb-16">
+                        <input type="email" name="email" class="form-field__input input-sm" placeholder="Enter your e-mail address" required autocomplete="off">
+                        <span class="material-icons form-icon">mail</span>
+                      </div>
+                      <!-- !password-1 -->
+                      <div class="form-field form-field__icon mb-16">
+                        <input type="text" name="password1" class="form-field__input input-sm input-password" placeholder="Enter password" required autocomplete="off">
+                        <span class="material-icons form-icon">lock</span>
+                        <span class="password-icon password-show"></span>
+                      </div>
+                      <!-- !password-2 -->
+                      <div class="form-field form-field__icon mb-16">
+                        <input type="password" name="password2" class="form-field__input input-sm input-password" placeholder="Repeat the password" required autocomplete="off">
+                        <span class="material-icons form-icon">lock</span>
+                        <span class="password-icon"></span>
+                      </div>
+                      <div class="form-signup__btns">
+                        <button type="button" class="btn form__btn form-authorization__btn" id="signupNext2">Continue</button>
+                        <button type="button" class="btn btn-stroke form__btn signup-prev mt-16" id="signupPrev1">Previous step</button>
+                      </div>
+                      <div class="form-authorization__or">
+                        <span class="form-authorization__or-line"></span>
+                        <span class="form-authorization__or-text">Or</span>
+                        <span class="form-authorization__or-line"></span>
+                      </div>
+                      <!-- ! signin-btns -->
+                      <div class="signin-btns">
+                        <button type="button" class="signin-btn signin-btn--facebook">
+                          <img class="signin-btn__icon" src="./img/icons/ic-facebook_signin.svg" width="20" height="20" alt="Facebook">
+                          <span class="signin-btn__name">Continue with Facebook</span>
+                        </button>
+                        <button type="button" class="signin-btn signin-btn--google">
+                          <img class="signin-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="Coogle">
+                          <span class="signin-btn__name">Sign in with Google</span>
+                        </button>
+                        <button type="button" class="signin-btn signin-btn--apple">
+                          <img class="signin-btn__icon" src="./img/icons/ic-apple.svg" width="20" height="20" alt="Apple">
+                          <span class="signin-btn__name">Sign in with Apple</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-authorization__footer">
+                      <span class="text-gray">Already have an account?</span>
+                      <a href="./login.html" class="color-link form-link">Sign In</a>
+                    </div>
+                    <p class="form-authorization__privacy mt-24">By clicking «Join Apericor» you confirm you are 18+ years old and you agree with the
+                      <a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+                      and <a href="./privacy-policy.html">Privacy Policy</a>
+                    </p>
+                  </div>
+                </div>
+                <!-- form-signup__last -->
+                <div class="form-signup__step form-signup__last">
+                  <div class="form-authorization__header">
+                    <!-- <img class="form-authorization__icon" src="./img/icons/ic-success.svg" width="72" height="72" alt=""> -->
+                    <h3 class="form-authorization__title">Last step!</h3>
+                    <p class="form-authorization__descr">To complete registration, indicate your date of birth.</p>
+                  </div>
+                  <!-- form-signup__age -->
+                  <div class="form-signup__age mb-16">
+                    <!-- date -->
+                    <div class="select select-sm">
+                      <div class="select__trigger">
+                        <div class="select__label"></div>
+                        <span class="select__selected" name="date">Day</span>
+                      </div>
+                      <ul class="select__options">
+                        <li class="select__option selected">Day</li>
+                        <li class="select__option">1</li>
+                        <li class="select__option">2</li>
+                        <li class="select__option">3</li>
+                        <li class="select__option">4</li>
+                        <li class="select__option">5</li>
+                        <li class="select__option">6</li>
+                        <li class="select__option">7</li>
+                        <li class="select__option">8</li>
+                        <li class="select__option">9</li>
+                        <li class="select__option">10</li>
+                        <li class="select__option">11</li>
+                        <li class="select__option">12</li>
+                        <li class="select__option">13</li>
+                        <li class="select__option">14</li>
+                        <li class="select__option">15</li>
+                        <li class="select__option">16</li>
+                        <li class="select__option">17</li>
+                        <li class="select__option">18</li>
+                        <li class="select__option">19</li>
+                        <li class="select__option">20</li>
+                        <li class="select__option">21</li>
+                        <li class="select__option">22</li>
+                        <li class="select__option">23</li>
+                        <li class="select__option">24</li>
+                        <li class="select__option">25</li>
+                        <li class="select__option">26</li>
+                        <li class="select__option">27</li>
+                        <li class="select__option">28</li>
+                        <li class="select__option">29</li>
+                        <li class="select__option">30</li>
+                        <li class="select__option">31</li>
+                      </ul>
+                    </div>
+                    <!-- month -->
+                    <div class="select select-sm">
+                      <div class="select__trigger">
+                        <div class="select__label"></div>
+                        <span class="select__selected" name="month">Month</span>
+                      </div>
+                      <ul class="select__options">
+                        <li class="select__option selected">Month</li>
+                        <li class="select__option">1</li>
+                        <li class="select__option">2</li>
+                        <li class="select__option">3</li>
+                        <li class="select__option">4</li>
+                        <li class="select__option">5</li>
+                        <li class="select__option">6</li>
+                        <li class="select__option">7</li>
+                        <li class="select__option">8</li>
+                        <li class="select__option">9</li>
+                        <li class="select__option">10</li>
+                        <li class="select__option">11</li>
+                        <li class="select__option">12</li>
+                      </ul>
+                    </div>
+                    <!-- year -->
+                    <div class="select select-sm">
+                      <div class="select__trigger">
+                        <div class="select__label"></div>
+                        <span class="select__selected" name="year">Year</span>
+                      </div>
+                      <ul class="select__options">
+                        <li class="select__option selected">Year</li>
+                        <li class="select__option">2006</li>
+                        <li class="select__option">2005</li>
+                        <li class="select__option">2004</li>
+                        <li class="select__option">2003</li>
+                        <li class="select__option">2002</li>
+                        <li class="select__option">2001</li>
+                        <li class="select__option">2000</li>
+                        <li class="select__option">1999</li>
+                        <li class="select__option">1998</li>
+                        <li class="select__option">1997</li>
+                        <li class="select__option">1996</li>
+                        <li class="select__option">1995</li>
+                        <li class="select__option">1994</li>
+                        <li class="select__option">1993</li>
+                        <li class="select__option">1992</li>
+                        <li class="select__option">1991</li>
+                        <li class="select__option">1990</li>
+                        <li class="select__option">1989</li>
+                        <li class="select__option">1988</li>
+                        <li class="select__option">1987</li>
+                        <li class="select__option">1986</li>
+                        <li class="select__option">1985</li>
+                        <li class="select__option">1984</li>
+                        <li class="select__option">1983</li>
+                        <li class="select__option">1982</li>
+                        <li class="select__option">1981</li>
+                        <li class="select__option">1980</li>
+                        <li class="select__option">1979</li>
+                        <li class="select__option">1978</li>
+                        <li class="select__option">1977</li>
+                        <li class="select__option">1976</li>
+                        <li class="select__option">1975</li>
+                        <li class="select__option">1974</li>
+                        <li class="select__option">1973</li>
+                        <li class="select__option">1972</li>
+                        <li class="select__option">1971</li>
+                        <li class="select__option">1970</li>
+                        <li class="select__option">1969</li>
+                        <li class="select__option">1968</li>
+                        <li class="select__option">1967</li>
+                        <li class="select__option">1966</li>
+                        <li class="select__option">1965</li>
+                        <li class="select__option">1964</li>
+                        <li class="select__option">1963</li>
+                        <li class="select__option">1962</li>
+                        <li class="select__option">1961</li>
+                        <li class="select__option">1960</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- location -->
+                  <div class="form-field form-field__icon mb-16">
+                    <input type="location" name="location" class="form-field__input input-sm" placeholder="Enter your country" required autocomplete="off">
+                    <span class="material-icons form-icon">location_on</span>
+                  </div>
+                  <div class="form-signup__btns">
+                    <button type="submit" class="btn form__btn form-authorization__btn">Find your match</button>
+                    <button type="button" class="btn btn-stroke form__btn signup-prev mt-16" id="signupPrev2">Previous step</button>
+                  </div>
+                  <div class="form-authorization__footer mb-24">
+                    <span class="text-gray">Already have an account?</span>
+                    <a href="./login.html" class="color-link form-link">Sign In</a>
+                  </div>
+                  <p class="form-authorization__privacy mt-24">By clicking «Join Apericor» you confirm you are 18+ years old and you agree with the
+                    <a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+                    and <a href="./privacy-policy.html">Privacy Policy</a>
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
         </section>
@@ -937,6 +1099,7 @@
         </section>
       </div>
 
+      <!-- ! section-cta -->
       <section class="section-cta">
         <div class="section-cta__bg">
           <picture>
@@ -951,7 +1114,7 @@
             </div>
             <p class="section-cta__descr">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. Laborum magna nulla duis ullamco cillum dolor.</p>
             <div class="section-cta__btns">
-              <a href="./login.html" class="btn section-cta__btn btn-reg">Registration</a>
+              <a href="#top-page" class="btn section-cta__btn btn-reg">Registration</a>
               <a href="./login.html" class="btn btn-stroke btn-blue section-cta__btn btn-signin">Sign In</a>
             </div>
           </div>
@@ -976,7 +1139,7 @@
                   </li>
                   <li class="footer__menu-item"><a href="./privacy-policy.html" target="_blank">Privacy Policy</a>
                   </li>
-                  <li class="footer__menu-item"><a href="./partners.html">Cooperation</a>
+                  <li class="footer__menu-item"><a href="./cooperation.html">Cooperation</a>
                   </li>
                 </ul>
               </nav>
@@ -1085,6 +1248,75 @@
     					document.body.style.overflow = "";
     					document.body.style.width = "";
     				});
+    			});
+    		});
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    			/* ------------------- Registration Steps -------------------- */
+    			const signUpFirst = document.querySelector(".form-signup__first");
+    			const signUpSecond = document.querySelector(".form-signup__second");
+    			const signUpLast = document.querySelector(".form-signup__last");
+    			const signUpNext1 = document.getElementById("signupNext1");
+    			const signUpNext2 = document.getElementById("signupNext2");
+    			const signUpPrev1 = document.getElementById("signupPrev1");
+    			const signUpPrev2 = document.getElementById("signupPrev2");
+    
+    			//! SignUp - second step
+    			signUpNext1.addEventListener("click", () => {
+    				signUpFirst.classList.remove("active");
+    				signUpSecond.classList.add("active");
+    			});
+    
+    			//! SignUp - last step
+    			signUpNext2.addEventListener("click", () => {
+    				signUpSecond.classList.remove("active");
+    				signUpLast.classList.add("active");
+    			});
+    
+    			//! SignUp - second to first step
+    			signUpPrev1.addEventListener("click", () => {
+    				signUpSecond.classList.remove("active");
+    				signUpFirst.classList.add("active");
+    			});
+    
+    			//! SignUp - last to second step
+    			signUpPrev2.addEventListener("click", () => {
+    				signUpLast.classList.remove("active");
+    				signUpSecond.classList.add("active");
+    			});
+    		});
+    
+    		/* ------------------- Password Show -------------------- */
+    		const inputsPassword = document.querySelectorAll(".input-password");
+    		const passwordIcons = document.querySelectorAll(".password-icon");
+    
+    		if (inputsPassword.length === passwordIcons.length) {
+    			passwordIcons.forEach((icon, index) => {
+    				icon.addEventListener("click", function () {
+    					inputsPassword[index].type =
+    						inputsPassword[index].type === "password" ? "text" : "password";
+    					icon.classList.toggle("password-show");
+    				});
+    			});
+    		}
+    
+    		/* ------------------- Плавный скролл по якорным ссылкам -------------------- */
+    		const anchors = document.querySelectorAll('a[href*="#"]');
+    		anchors.forEach((anchor) => {
+    			anchor.addEventListener("click", (event) => {
+    				event.preventDefault();
+    
+    				const blockID = anchor.getAttribute("href").substring(1);
+    				const targetElement = document.getElementById(blockID);
+    
+    				if (targetElement) {
+    					targetElement.scrollIntoView({
+    						behavior: "smooth",
+    						block: "start",
+    					});
+    				}
     			});
     		});
   </script>

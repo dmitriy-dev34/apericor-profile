@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -770,6 +767,9 @@
           <div class="gifts__grid">
             <!-- gift-item -->
             <div class="gift-item modal-open" data-modal-open="modal-giftStatus">
+              <div class="gift-item__hover">
+                <button type="button" class="btn btn-sm">Details</button>
+              </div>
               <a href="./profile.html" class="gift-item__profile" style="background-image: url(./img/profiles/profile_1.jpg);">
                 <span class="gift-item__status gift-item__status--delivered"></span>
               </a>
@@ -785,6 +785,9 @@
             </div>
             <!-- gift-item -->
             <div class="gift-item modal-open" data-modal-open="modal-giftStatus">
+              <div class="gift-item__hover">
+                <button type="button" class="btn btn-sm">Details</button>
+              </div>
               <div class="gift-item__profile" style="background-image: url(./img/profiles/profile_2.jpg);">
                 <!-- gift-item__status--nodelivered -->
                 <span class="gift-item__status gift-item__status--delivered"></span>
@@ -801,6 +804,9 @@
             </div>
             <!-- gift-item -->
             <div class="gift-item modal-open" data-modal-open="modal-giftStatus">
+              <div class="gift-item__hover">
+                <button type="button" class="btn btn-sm">Details</button>
+              </div>
               <a href="./profile.html" class="gift-item__profile" style="background-image: url(./img/profiles/profile_3.jpg);">
                 <span class="gift-item__status gift-item__status--delivered"></span>
               </a>

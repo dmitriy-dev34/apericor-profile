@@ -75,23 +75,20 @@
                   <span class="form-authorization__or-text">Or</span>
                   <span class="form-authorization__or-line"></span>
                 </div>
-                <div class="form-authorization__social">
-                  <div class="form-authorization__social-btns mb-16">
-                    <a href="#" class="btn btn-stroke social-btn btn-facebook">
-                      <img class="social-btn__icon" src="./img/icons/ic-facebook.svg" width="20" height="20" alt="facebook">
-                      <span class="social-btn__name">Facebook</span>
-                    </a>
-                    <a href="#" class="btn btn-stroke social-btn btn-google">
-                      <img class="social-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="facebook">
-                      <span class="social-btn__name">Google</span>
-                    </a>
-                  </div>
-                  <a href="#" class="btn form__btn social-btn btn-apple">
-                    <svg class="my-svg social-btn__icon ic-apple">
-                      <use xlink:href="img/svg-sprite.svg#ic-apple"></use>
-                    </svg>
-                    <span class="social-btn__name">Sign in with Apple</span>
-                  </a>
+                <!-- ! signin-btns -->
+                <div class="signin-btns">
+                  <button type="button" class="signin-btn signin-btn--facebook">
+                    <img class="signin-btn__icon" src="./img/icons/ic-facebook_signin.svg" width="20" height="20" alt="Facebook">
+                    <span class="signin-btn__name">Continue with Facebook</span>
+                  </button>
+                  <button type="button" class="signin-btn signin-btn--google">
+                    <img class="signin-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="Coogle">
+                    <span class="signin-btn__name">Sign in with Google</span>
+                  </button>
+                  <button type="button" class="signin-btn signin-btn--apple">
+                    <img class="signin-btn__icon" src="./img/icons/ic-apple.svg" width="20" height="20" alt="Apple">
+                    <span class="signin-btn__name">Sign in with Apple</span>
+                  </button>
                 </div>
               </div>
               <div class="form-authorization__footer">
@@ -184,23 +181,20 @@
                     <span class="form-authorization__or-text">Or</span>
                     <span class="form-authorization__or-line"></span>
                   </div>
-                  <div class="form-authorization__social">
-                    <div class="form-authorization__social-btns mb-16">
-                      <a href="#" class="btn btn-stroke social-btn btn-facebook">
-                        <img class="social-btn__icon" src="./img/icons/ic-facebook.svg" width="20" height="20" alt="facebook">
-                        <span class="social-btn__name">Facebook</span>
-                      </a>
-                      <a href="#" class="btn btn-stroke social-btn btn-google">
-                        <img class="social-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="facebook">
-                        <span class="social-btn__name">Google</span>
-                      </a>
-                    </div>
-                    <a href="#" class="btn form__btn social-btn btn-apple">
-                      <svg class="my-svg social-btn__icon ic-apple">
-                        <use xlink:href="img/svg-sprite.svg#ic-apple"></use>
-                      </svg>
-                      <span class="social-btn__name">Sign in with Apple</span>
-                    </a>
+                  <!-- ! signin-btns -->
+                  <div class="signin-btns">
+                    <button type="button" class="signin-btn signin-btn--facebook">
+                      <img class="signin-btn__icon" src="./img/icons/ic-facebook_signin.svg" width="20" height="20" alt="Facebook">
+                      <span class="signin-btn__name">Continue with Facebook</span>
+                    </button>
+                    <button type="button" class="signin-btn signin-btn--google">
+                      <img class="signin-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="Coogle">
+                      <span class="signin-btn__name">Sign in with Google</span>
+                    </button>
+                    <button type="button" class="signin-btn signin-btn--apple">
+                      <img class="signin-btn__icon" src="./img/icons/ic-apple.svg" width="20" height="20" alt="Apple">
+                      <span class="signin-btn__name">Sign in with Apple</span>
+                    </button>
                   </div>
                 </div>
                 <div class="form-authorization__footer">
@@ -225,13 +219,13 @@
                       <input type="email" name="email" class="form-field__input" placeholder="Enter your e-mail address" required autocomplete="off">
                       <span class="material-icons form-icon">mail</span>
                     </div>
-                    <!-- password-1 -->
+                    <!-- !password-1 -->
                     <div class="form-field form-field__icon mb-16">
-                      <input type="password" name="password1" class="form-field__input input-password" placeholder="Enter password (min. 6 characters)" required autocomplete="off">
+                      <input type="text" name="password1" class="form-field__input input-password" placeholder="Enter password (min. 6 characters)" required autocomplete="off">
                       <span class="material-icons form-icon">lock</span>
-                      <span class="password-icon"></span>
+                      <span class="password-icon password-show"></span>
                     </div>
-                    <!-- password-2 -->
+                    <!-- !password-2 -->
                     <div class="form-field form-field__icon mb-16">
                       <input type="password" name="password2" class="form-field__input input-password" placeholder="Repeat the password" required autocomplete="off">
                       <span class="material-icons form-icon">lock</span>
@@ -246,23 +240,20 @@
                       <span class="form-authorization__or-text">Or</span>
                       <span class="form-authorization__or-line"></span>
                     </div>
-                    <div class="form-authorization__social">
-                      <div class="form-authorization__social-btns mb-16">
-                        <a href="#" class="btn btn-stroke social-btn btn-facebook">
-                          <img class="social-btn__icon" src="./img/icons/ic-facebook.svg" width="20" height="20" alt="facebook">
-                          <span class="social-btn__name">Facebook</span>
-                        </a>
-                        <a href="#" class="btn btn-stroke social-btn btn-google">
-                          <img class="social-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="facebook">
-                          <span class="social-btn__name">Google</span>
-                        </a>
-                      </div>
-                      <a href="#" class="btn form__btn social-btn btn-apple">
-                        <svg class="my-svg social-btn__icon ic-apple">
-                          <use xlink:href="img/svg-sprite.svg#ic-apple"></use>
-                        </svg>
-                        <span class="social-btn__name">Sign in with Apple</span>
-                      </a>
+                    <!-- ! signin-btns -->
+                    <div class="signin-btns">
+                      <button type="button" class="signin-btn signin-btn--facebook">
+                        <img class="signin-btn__icon" src="./img/icons/ic-facebook_signin.svg" width="20" height="20" alt="Facebook">
+                        <span class="signin-btn__name">Continue with Facebook</span>
+                      </button>
+                      <button type="button" class="signin-btn signin-btn--google">
+                        <img class="signin-btn__icon" src="./img/icons/ic-google.svg" width="20" height="20" alt="Coogle">
+                        <span class="signin-btn__name">Sign in with Google</span>
+                      </button>
+                      <button type="button" class="signin-btn signin-btn--apple">
+                        <img class="signin-btn__icon" src="./img/icons/ic-apple.svg" width="20" height="20" alt="Apple">
+                        <span class="signin-btn__name">Sign in with Apple</span>
+                      </button>
                     </div>
                   </div>
                   <div class="form-authorization__footer">
@@ -429,12 +420,24 @@
       </section>
     </main>
   </div>
+
+  <!----------- modal-passwordSuccess (показывается классом active) ------------->
+  <div class="modal modal-success" data-modal="modal-passwordSuccess">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <img class="icon-success" loading="lazy" src="img/icons/ic-success.svg" width="64" height="64" alt="">
+          <h3 class="modal__title">Done!</h3>
+          <p class="modal__descr">Instructions for password recovery have been sent to your e-mail address.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="./js/scripts/modal.js"></script>
+  <script defer src="./js/scripts/login.js"></script>
+  <script defer src="./js/scripts/select-gender.js"></script>
 </body>
-
-<script defer src="./js/scripts/login.js"></script>
-<script defer src="./js/scripts/select-gender.js"></script>
-
-<script>
-</script>
 
 </html>

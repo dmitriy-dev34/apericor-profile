@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -793,8 +790,26 @@
           </div>
           <!-- photo-manager__options -->
           <div class="photo-manager__options">
-            <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deletePhoto">Delete selected</button>
-            <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deleteAllPhotos">Delete all</button>
+            <div class="photo-manager__options-left">
+              <div class="photo-manager__other-options">
+                <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deletePhoto">Delete selected</button>
+                <button type="button" class="btn btn-sm btn-stroke delete-photo modal-open" data-modal-open="modal-deleteAllPhotos">Delete all</button>
+              </div>
+            </div>
+            <label class="check select-all" id="selectAllAlbums">
+              <input class="check__input" type="checkbox" name="param-name">
+              <span class="check__box"></span>
+              <span class="check__label">Select all photos</span>
+            </label>
+            <div class="options-mob">
+              <span class="material-icons options-mob__btn">more_vert</span>
+              <div class="dropdown options-mob__dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item item-delete modal-open" data-modal-open="modal-deletePhoto">Delete selected</li>
+                  <li class="dropdown__item item-delete modal-open" data-modal-open="modal-deleteAllPhotos">Delete all</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="profile-photos mt-32">
@@ -809,24 +824,24 @@
               </div>
 
               <!-- album-item -->
-              <a href="#" class="album-item" style="background-image: url(./img/my-profile_photo.jpg);">
+              <a href="./photo-manager_messaging_albums_album.html" class="album-item album-choose" style="background-image: url(./img/my-profile_photo.jpg);">
                 <label class="check photo-item__check">
-                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <input class="check__input album-choose__input" type="checkbox" name="param-name">
                   <span class="check__box"></span>
                   <span class="check__label"></span>
                 </label>
                 <div class="album-item__body">
                   <div class="album-item__body-content">
-                    <span class="album-item__name">My photos</span>
+                    <span class="album-item__name">My album</span>
                     <span class="album-item__numphotos">16 photos</span>
                   </div>
                 </div>
               </a>
               <!-- album-item ((album-for-letters)) -->
-              <a href="#" class="album-item album-empty for-letters">
+              <a href="./photo-manager_messaging_albums_album.html" class="album-item album-empty for-letters album-choose">
                 <div class="album-item__label for-letters__label">For letters</div>
                 <label class="check photo-item__check">
-                  <input class="check__input photo-manager__photo-input" type="checkbox" name="param-name">
+                  <input class="check__input album-choose__input" type="checkbox" name="param-name">
                   <span class="check__box"></span>
                   <span class="check__label"></span>
                 </label>
@@ -911,7 +926,7 @@
         <div class="modal__content">
           <div class="modal__close"></div>
           <div class="modal__header text-center">
-            <h3 class="modal__title mb-0">Do you really want to delete the selected photo?</h3>
+            <h3 class="modal__title mb-0">Do you really want <br> to delete the selected?</h3>
           </div>
           <div class="modal__btns">
             <button type="button" class="btn btn-blue modal-cancel">No</button>
@@ -926,7 +941,7 @@
         <div class="modal__content">
           <div class="modal__close"></div>
           <div class="modal__header text-center">
-            <h3 class="modal__title mb-0">Do you really want to delete all the photos?</h3>
+            <h3 class="modal__title mb-0">Do you really want <br> to delete all?</h3>
           </div>
           <div class="modal__btns">
             <button type="button" class="btn btn-blue modal-cancel">No</button>
@@ -964,33 +979,69 @@
   <script defer src="./js/main.min.js"></script>
 
   <script>
-    /* ------------------- Select Photos -------------------- */
-    		const photoManagerPhoto = document.querySelectorAll(".album-item");
-    		const SelectAllAlbums = document.querySelector(".select-all .check__input");
-    		const AlbumCheckbox = document.querySelectorAll(".photo-manager__photo-input");
+    /* ------------------- Выбор альбомов -------------------- */
+    		document.addEventListener("DOMContentLoaded", function () {
+    			const selectAllAlbums = document.querySelector(".select-all .check__input");
+    			const albumItems = document.querySelectorAll(".album-choose");
     
-    		photoManagerPhoto.forEach((photo) => {
-    			const checkbox = photo.querySelector(".photo-manager__photo-input");
+    			// Выбор поодиночно (не знаю в чем дело одиночно не ставится чекбокс именно в альбомах)
+    			albumItems.forEach((album) => {
+    				const checkbox = album.querySelector(".album-choose .check__input");
+    				checkbox.addEventListener("change", function () {
+    					const albumItem = this.closest(".album-choose");
+    					if (this.checked) {
+    						albumItem.classList.add('selected');
+    					} else {
+    						albumItem.classList.remove('selected');
+    					}
+    				});
+    			});
     
-    			checkbox.addEventListener("change", function () {
-    				const albumItem = this.closest(".album-item");
-    				if (this.checked) {
-    					albumItem.classList.add('selected');
-    				} else {
-    					albumItem.classList.remove('selected');
-    				}
+    			// Множественный выбор
+    			selectAllAlbums.addEventListener("change", function () {
+    				albumItems.forEach((album) => {
+    					const checkbox = album.querySelector(".album-choose .check__input");
+    					checkbox.checked = this.checked;
+    
+    					if (this.checked) {
+    						album.classList.add('selected');
+    					} else {
+    						album.classList.remove('selected');
+    					}
+    				});
     			});
     		});
+  </script>
+
+  <script>
+    /* ------------------- Photo Manager Options Mobile -------------------- */
+    		const photosOptMob = document.querySelector(".options-mob");
+    		const photosOptMobBtn = document.querySelector(".options-mob__btn");
+    		const photosOptMobDropdown = document.querySelector(".options-mob__dropdown");
+    		const photosOptMobItems = document.querySelectorAll(".dropdown__item");
     
-    		SelectAllAlbums.addEventListener("change", function () {
-    			AlbumCheckbox.forEach((checkbox) => {
-    				checkbox.checked = this.checked;
-    				const albumItem = checkbox.closest(".album-item");
-    				if (this.checked) {
-    					albumItem.classList.add('selected');
-    				} else {
-    					albumItem.classList.remove('selected');
-    				}
+    		// Функция для открытия/закрытия dropdown
+    		function toggleDropdown() {
+    			photosOptMobDropdown.classList.toggle("active");
+    		}
+    
+    		// Обработчик клика на options-mob
+    		photosOptMobBtn.addEventListener("click", () => {
+    			toggleDropdown();
+    		});
+    
+    		// Обработчик клика вне options-mob
+    		document.addEventListener("click", (event) => {
+    			if (!photosOptMob.contains(event.target)) {
+    				photosOptMobDropdown.classList.remove("active");
+    			}
+    		});
+    
+    		// Обработчик клика на элементы dropdown
+    		photosOptMobItems.forEach((item) => {
+    			item.addEventListener("click", () => {
+    				toggleDropdown();
+    				// Дополнительные действия при выборе элемента (если необходимо)
     			});
     		});
   </script>

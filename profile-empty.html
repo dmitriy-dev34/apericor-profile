@@ -35,11 +35,6 @@
           <a href="./" class="header__logo logo">
             <img class="logo__img" loading="lazy" src="./img/logo.svg" width="129" height="32" alt="Apericor">
           </a>
-          <button type="button" class="header__chat chat-open">
-            <span class="noti-indicator noti-indicator--circle">1</span>
-            <span class="header__chat-icon"></span>
-            <span>Live chat</span>
-          </button>
         </div>
         <!-- header__nav -->
         <div class="nav-overlay"></div>
@@ -236,10 +231,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -257,9 +248,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -282,7 +274,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -337,7 +329,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -2004,37 +1996,37 @@
           <ul class="popular-questions__list">
             <li class="popular-questions__item">
               <div class="radio">
-                <input type="radio" name="interview-question" id="question-1" class="radio__input" value="popular-question-1" checked>
+                <input type="radio" name="interview-question" id="question-1" class="radio__input question-radio" value="popular-question-1" checked>
                 <span class="radio__box"></span>
-                <label for="question-1" class="radio__label"><span>1.</span> What’s your favorite way to spend a lazy Sunday?</label>
+                <label for="question-1" class="radio__label popular-question"><span>1.</span> What’s your favorite way to spend a lazy Sunday?</label>
               </div>
             </li>
             <li class="popular-questions__item">
               <div class="radio">
-                <input type="radio" name="interview-question" id="question-2" class="radio__input" value="popular-question-2">
+                <input type="radio" name="interview-question" id="question-2" class="radio__input question-radio" value="popular-question-2">
                 <span class="radio__box"></span>
-                <label for="question-2" class="radio__label"><span>2.</span> Do you have a go-to comfort food?</label>
+                <label for="question-2" class="radio__label popular-question"><span>2.</span> Do you have a go-to comfort food?</label>
               </div>
             </li>
             <li class="popular-questions__item">
               <div class="radio">
-                <input type="radio" name="interview-question" id="question-3" class="radio__input" value="popular-question-3">
+                <input type="radio" name="interview-question" id="question-3" class="radio__input question-radio" value="popular-question-3">
                 <span class="radio__box"></span>
-                <label for="question-3" class="radio__label"><span>3.</span> What book or movie never fails to lift your spirits?</label>
+                <label for="question-3" class="radio__label popular-question"><span>3.</span> What book or movie never fails to lift your spirits?</label>
               </div>
             </li>
             <li class="popular-questions__item">
               <div class="radio">
-                <input type="radio" name="interview-question" id="question-4" class="radio__input" value="popular-question-4">
+                <input type="radio" name="interview-question" id="question-4" class="radio__input question-radio" value="popular-question-4">
                 <span class="radio__box"></span>
-                <label for="question-4" class="radio__label"><span>4.</span> If you could travel anywhere right now, where would you go?</label>
+                <label for="question-4" class="radio__label popular-question"><span>4.</span> If you could travel anywhere right now, where would you go?</label>
               </div>
             </li>
             <li class="popular-questions__item">
               <div class="radio">
-                <input type="radio" name="interview-question" id="question-5" class="radio__input" value="popular-question-5">
+                <input type="radio" name="interview-question" id="question-5" class="radio__input question-radio" value="popular-question-5">
                 <span class="radio__box"></span>
-                <label for="question-5" class="radio__label"><span>5.</span> What’s one hobby or activity you’ve always wanted to try?</label>
+                <label for="question-5" class="radio__label popular-question"><span>5.</span> What’s one hobby or activity you’ve always wanted to try?</label>
               </div>
             </li>
           </ul>

@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -797,7 +794,10 @@
               </div>
             </div>
             <div class="about-us__reviews">
-              <h3 class="page-title about-us__reviews-title">Testimonials</h3>
+              <div class="about-us__reviews-header">
+                <h3 class="page-title about-us__reviews-title">Testimonials</h3>
+                <span class="material-icons open-revitems">add</span>
+              </div>
               <div class="about-us__reviews-items">
                 <!-- review-item -->
                 <div class="review-item">
@@ -994,6 +994,33 @@
     					document.body.style.width = "";
     				});
     			});
+    		});
+  </script>
+
+  <script>
+    /* ------------------- Показать / Скрыть отзывы при max-width: 800px -------------------- */
+    		document.addEventListener("DOMContentLoaded", function () {
+    			const reviewsHeader = document.querySelector('.about-us__reviews-header');
+    			const reviewsHeaderArrow = document.querySelector('.open-revitems');
+    			const reviewsItems = document.querySelector('.about-us__reviews-items');
+    			const reviewsMore = document.querySelector('.about-us__reviews-more');
+    
+    			function toggleReviews() {
+    				reviewsHeaderArrow.classList.toggle('active');
+    				reviewsItems.classList.toggle('active');
+    				reviewsMore.classList.toggle('active');
+    			}
+    
+    			function handleWindowResize() {
+    				if (window.innerWidth <= 800) {
+    					reviewsHeader.addEventListener('click', toggleReviews);
+    				} else {
+    					reviewsHeader.removeEventListener('click', toggleReviews);
+    				}
+    			}
+    
+    			handleWindowResize();
+    			window.addEventListener('resize', handleWindowResize);
     		});
   </script>
 

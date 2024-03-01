@@ -2,38 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   //! Start Scripts
 
-  //  Select Gender Old
-  // const iAmRadios = document.querySelectorAll('input[name="i-am"]');
-  // const lookingForRadios = document.querySelectorAll(
-  //   'input[name="looking-for"]'
-  // );
-
-  // function setOppositeGender(source, target) {
-  //   source.addEventListener("change", function () {
-  //     if (this.checked) {
-  //       target.checked = true;
-  //     }
-  //   });
-  // }
-  // setOppositeGender(genderWoman, genderMan2);
-  // setOppositeGender(genderMan, genderWoman2);
-  // setOppositeGender(genderWoman2, genderMan);
-  // setOppositeGender(genderMan2, genderWoman);
-
-  // // Password Show
-  // const inputsPassword = document.querySelectorAll(".input-password");
-  // const passwordIcons = document.querySelectorAll(".password-icon");
-
-  // if (inputsPassword.length === passwordIcons.length) {
-  //   passwordIcons.forEach((icon, index) => {
-  //     icon.addEventListener("click", function () {
-  //       inputsPassword[index].type =
-  //         inputsPassword[index].type === "password" ? "text" : "password";
-  //       icon.classList.toggle("password-show");
-  //     });
-  //   });
-  // }
-
   /* ------------------- Custom Select -------------------- */
   const customSelects = document.querySelectorAll(".select");
 
@@ -100,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ------------------- Sign Up -------------------- */
-
   //! SignUp first step
   linkSignUp.addEventListener("click", () => {
     formSignIn.classList.remove("active");
@@ -150,6 +117,20 @@ document.addEventListener("DOMContentLoaded", function () {
     formSignUp.classList.remove("active");
     formSignIn.classList.add("active");
   });
+
+  /* ------------------- Password Show -------------------- */
+  const inputsPassword = document.querySelectorAll(".input-password");
+  const passwordIcons = document.querySelectorAll(".password-icon");
+
+  if (inputsPassword.length === passwordIcons.length) {
+    passwordIcons.forEach((icon, index) => {
+      icon.addEventListener("click", function () {
+        inputsPassword[index].type =
+          inputsPassword[index].type === "password" ? "text" : "password";
+        icon.classList.toggle("password-show");
+      });
+    });
+  }
 
   //!! End Scripts
 });

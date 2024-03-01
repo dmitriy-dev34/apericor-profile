@@ -40,8 +40,10 @@
         <div class="nav-overlay"></div>
         <nav class="header__nav nav">
           <a href="./my-account.html" class="header__account account-mob hidden" title="My Account">
-            <div class="page-ava header__account-photo">
-              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            <!-- если нет фото то скрываем img классом .hidden и диву ставим .is-man или is-woman -->
+            <div class="page-ava header__account-photo is-man">
+              <!-- скрыто -->
+              <img class="hidden" src="./img/header-ava.jpg" width="48" height="48" alt="">
             </div>
             <div class="header__account-body">
               <span class="header__account-name">Jerome</span>
@@ -148,8 +150,10 @@
         </nav>
         <div class="header__right">
           <a href="./my-account.html" class="header__account" title="My Account">
-            <div class="page-ava header__account-photo">
-              <img loading="lazy" src="./img/header-ava.jpg" width="48" height="48" alt="">
+            <!-- если нет фото то скрываем img классом .hidden и диву ставим .is-man или is-woman -->
+            <div class="page-ava header__account-photo is-man">
+              <!-- скрыто -->
+              <img class="hidden" src="./img/header-ava.jpg" width="48" height="48" alt="">
             </div>
             <div class="header__account-body">
               <span class="header__account-name">Jerome</span>
@@ -205,10 +209,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +226,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +252,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +307,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -765,42 +766,25 @@
       <div class="profile my-profile my-account">
         <!-- здесь вставляем .popup-like и .verification-message -->
 
-        <!-- Главное фото профиля на мобильных (max-widh: 992px) -->
-        <div class="mob-profilephotos">
-          <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
-          <!-- <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo-hor.jpg" alt=""> -->
-          <div class="upload-file upload-photo">
-            <input type="file" id="fileInputPhotoMob" class="upload-file__input" accept="image/*">
-            <label for="fileInputPhotoMob" class="upload-file__label">
-              <div class="upload-file__icon"><span class="material-icons">upload</span>
-              </div>
-              <span class="upload-file__text">jpg, png <br> max 4MB size</span>
-            </label>
-          </div>
-        </div>
-
         <div class="page-padding container">
           <div class="profile__body">
             <!--! profile__left -->
             <div class="profile__left">
-              <!-- profile__photo -->
-              <div class="profile__photo">
-                <div class="profile__status">
-                  <div class="profile__status-text edit-status">
-                    <input type="text" class="edit-status__input" value="I'm free, I'm looking for acquaintances:)" disabled>
-                    <span class="material-icons edit-status__btn">edit</span>
-                  </div>
-                </div>
-                <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
-                <!-- <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt=""> -->
-                <div class="upload-file upload-photo">
-                  <input type="file" id="PhotoMainMob" class="upload-file__input" accept="image/*">
-                  <label for="PhotoMainMob" class="upload-file__label">
-                    <div class="upload-file__icon"><span class="material-icons">upload</span>
-                    </div>
-                    <span class="upload-file__text">jpg, png <br> max 4MB size</span>
-                  </label>
-                </div>
+              <!-- my-account__main-photo -->
+              <!-- показывается классом .active / скрываем убирая класс .active при загрузке фото -->
+              <!-- когда загружаем фото, то в хедере меняем аватарку на фото -->
+              <div class="upload-file upload-photo my-account__upload-photo active">
+                <input type="file" id="inputMainPhoto" class="upload-file__input" accept="image/*">
+                <label for="inputMainPhoto" class="upload-file__label">
+                  <svg class="my-svg upload-file__icon">
+                    <use xlink:href="img/svg-sprite.svg#ic-man"></use>
+                  </svg>
+                  <!-- иконка женского пола #ic-woman -->
+                  <!-- <svg class="my-svg upload-file__icon">
+											<use xlink:href="img/svg-sprite.svg#ic-woman"></use>
+										</svg> -->
+                  <span class="upload-file__text">Upload my main photo</span>
+                </label>
               </div>
             </div>
 
@@ -826,6 +810,7 @@
                 </a>
               </div>
 
+              <!-- my-account__settings -->
               <div class="my-account__settings">
                 <div class="my-account__settings-header">
                   <h2 class="page-title my-account__title">My account settings</h2>
@@ -1240,6 +1225,19 @@
       </div>
     </div>
   </div>
+  <!----------- Modal Sussess change-email (показывается классом active) ------------->
+  <div class="modal modal-success modal-successEmail" data-modal="modal-changeEmail">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal__header text-center">
+          <img class="icon-success" loading="lazy" src="img/icons/ic-success.svg" width="64" height="64" alt="">
+          <h3 class="modal__title">Done!</h3>
+          <p class="modal__descr">Your e-mail address has been successfully changed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- modal-editMyprivacy -->
   <div class="modal modal-account modal-myprivacy" data-modal="modal-editMyprivacy">
     <div class="modal__overlay">
@@ -1255,9 +1253,9 @@
         <div class="myprivacy-settings">
           <div class="myprivacy-settings__header">
             <span class="myprivacy-settings__header-item text-left">Parameters</span>
-            <span class="myprivacy-settings__header-item">Open to any</span>
-            <span class="myprivacy-settings__header-item">Closed to any</span>
-            <span class="myprivacy-settings__header-item">Only for favorites</span>
+            <span class="myprivacy-settings__header-item">Open <span>to any</span></span>
+            <span class="myprivacy-settings__header-item">Closed <span>to any</span></span>
+            <span class="myprivacy-settings__header-item"><span>Only for</span> favorites</span>
           </div>
           <div class="myprivacy-settings__row">
             <span class="myprivacy-settings__param param-name">Birthday</span>
@@ -1386,7 +1384,7 @@
             </span>
           </div>
         </div>
-        <button type="button" class="btn modal__btn">Save e-mail settings</button>
+        <button type="button" class="btn modal__btn">Save my privacy</button>
       </div>
     </div>
   </div>

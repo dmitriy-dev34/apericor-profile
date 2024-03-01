@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -821,9 +818,9 @@
             </div>
             <div class="correspond__block">
               <h4 class="correspond__block-title mb-16">Favorites сorrespondence: <span class="color-pink">2</span></h4>
-              <div class="correspond__list">
-                <div class="correspond-item">
-                  <a href="./profile.html" class="profile__photo">
+              <div class="correspond__list favorites-correspondence">
+                <div class="correspond-item correspond-item--favorite">
+                  <a href="./profile.html" class="profile__photo" previewlistener="true">
                     <div class="profile-status status-online"></div>
                     <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
                     <div class="profile__photo-empty photo-empty sm hide">
@@ -859,12 +856,12 @@
                       </div>
                     </div>
                     <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
+                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read" previewlistener="true">
                         <span>Read</span>
                         <span class="material-icons">navigate_next</span>
                       </a>
                       <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
+                        <button type="button" class="btn-favorite active"></button>
                         <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
                           <span class="material-icons">delete</span>
                         </button>
@@ -872,8 +869,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="correspond-item">
-                  <a href="./profile.html" class="profile__photo">
+                <div class="correspond-item correspond-item--favorite">
+                  <a href="./profile.html" class="profile__photo" previewlistener="true">
                     <div class="profile-status status-online"></div>
                     <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
                     <div class="profile__photo-empty photo-empty sm hide">
@@ -909,12 +906,12 @@
                       </div>
                     </div>
                     <div class="correspond-item__footer">
-                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read">
+                      <a href="./send-mail.html" class="btn btn-sm btn-stroke correspond-item__read" previewlistener="true">
                         <span>Read</span>
                         <span class="material-icons">navigate_next</span>
                       </a>
                       <div class="correspond-item__options">
-                        <button type="button" class="btn-favorite profile__favorite"></button>
+                        <button type="button" class="btn-favorite active"></button>
                         <button type="button" class="btn btn-sm btn-delete btn-stroke modal-open" data-modal-open="modal-deleteCorrespondence">
                           <span class="material-icons">delete</span>
                         </button>

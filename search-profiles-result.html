@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -766,13 +763,15 @@
       <section class="page-padding profiles-page result-page">
         <!-- здесь вставляем .popup-like и .verification-message -->
         <div class="container">
-          <h2 class="page-title">Search Results <span class="num-profiles color-pink">(15 profiles)</span></h2>
-          <div class="mob-selectfilter">
-            <span class="material-icons mob-selectfilter__icon">search</span>
-            <span class="mob-selectfilter__name">Search parameters</span>
+          <div class="result-page__header">
+            <h2 class="page-title">Search <span class="mob-hide">Results</span></h2>
+            <div class="mob-selectfilter">
+              <span class="material-icons mob-selectfilter__icon">filter_alt</span>
+              <span class="mob-selectfilter__name">Parameters</span>
+            </div>
           </div>
           <!-- discover-tags -->
-          <div class="discover-tags search-parameters mb-24">
+          <div class="discover-tags search-parameters">
             <ul class="tags-list">
               <li class="tags-list__item">
                 <span class="discover-tags__param">Online</span>

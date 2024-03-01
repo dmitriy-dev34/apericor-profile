@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -952,13 +949,8 @@
                   <br>card issuer timed out</span>
                 </div>
                 <div class="table__cell">
-                  <span>Chat</span>
-                  <div class="tooltip table-transactions__tooltip">
-                    <p class="tooltip__text"><strong>Date/Time:</strong> 
-                      <br><span>23.03.2021 23:54:57/24.03.2021 00:22:23</span>
-                    </p>
-                    <span class="table-transactions__tooltip-link">view details</span>
-                  </div>
+                  <span>ChatLog</span>
+                  <span class="table-transactions__tooltip-link modal-open" data-modal-open="modalChatlog">view details</span>
                 </div>
                 <div class="table__cell">
                   <span>VideoChat</span>
@@ -1177,6 +1169,117 @@
                 <li>Phone number: <span>+4300000000</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Chatlog -->
+  <div class="modal modal-content modal-chatlog" data-modal="modalChatlog">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <div class="modal-chatlog__header">
+          <h3 class="modal__title">Chat log: <span>#36441654</span></h3>
+          <div class="modal-chatlog__profiles">
+            <a href="#" class="color-blue">Daniel <span>(ID: 839)</span></a>
+            and
+            <a href="#" class="color-pink">Tatiana <span>(ID: 839)</span></a>
+          </div>
+        </div>
+        <ul class="list-reset modal-chatlog__data">
+          <li>Chat started at: <span class="text-date">22.08.2019 00:44:34</span>
+          </li>
+          <li>Chat finished at: <span class="text-date">22.08.2019 00:50:06</span>
+          </li>
+          <li>Chat time: <span class="text-date">00:05:32</span>
+          </li>
+          <li>
+            <button class="btn-print"><span class="material-icons btn-print__icon">print</span>
+            </button>
+          </li>
+        </ul>
+        <div class="modal-chatlog__body">
+          <!-- chat-item--man -->
+          <div class="chat-item chat-item--man">
+            <div class="chat-item__wrapper">
+              <div class="chat-item__body">
+                <p class="chat-item__message clamp-text"><span class="chat-item__profile">You:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                  distribution of letters, as opposed to using 'Content here.</p>
+                <span class="read-more blue active">
+                                <svg class="my-svg read-more__icon">
+                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                </svg>
+                            </span>
+              </div>
+              <div class="chat-item__footer">
+                <span class="chat-item__date">25.01.23 / 20:19</span>
+                <!-- .unread / .read -->
+                <span class="chat-item__status read"></span>
+              </div>
+            </div>
+          </div>
+          <!-- chat-item chat-item--woman -->
+          <div class="chat-item chat-item--woman">
+            <div class="chat-item__wrapper">
+              <div class="chat-item__body">
+                <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">Anastasia:</span> Hi Jorome 🖐</p>
+                <span class="read-more pink">
+                                <svg class="my-svg read-more__icon">
+                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                </svg>
+                            </span>
+                <a href="./img/profile/profile-photo_2.jpg" class="live-chat__photo fancybox" data-fancybox="profile-photos">
+                  <img src="./img/profile/profile-photo_2.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <div class="chat-item__footer">
+                <span class="chat-item__date">25.01.23 / 20:19</span>
+                <!-- .unread / .read -->
+                <span class="chat-item__status read"></span>
+              </div>
+            </div>
+          </div>
+          <!-- chat-item--man -->
+          <div class="chat-item chat-item--man">
+            <div class="chat-item__wrapper">
+              <div class="chat-item__body">
+                <p class="chat-item__message clamp-text"><span class="chat-item__profile">You:</span> It is a long established.</p>
+                <span class="read-more blue">
+                                <svg class="my-svg read-more__icon">
+                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                </svg>
+                            </span>
+                <a href="./img/men-photo_hor.jpg" class="live-chat__photo photo-hor fancybox" data-fancybox="profile-photos">
+                  <img src="./img/men-photo_hor.jpg" width="" height="" alt="">
+                </a>
+              </div>
+              <div class="chat-item__footer">
+                <span class="chat-item__date">20:19</span>
+                <!-- .unread / .read -->
+                <span class="chat-item__status read"></span>
+              </div>
+            </div>
+          </div>
+          <!-- chat-item chat-item--woman -->
+          <div class="chat-item chat-item--woman">
+            <div class="chat-item__wrapper">
+              <div class="chat-item__body">
+                <p class="chat-item__message clamp-text"><span class="chat-item__profile profile-woman">Anastasia:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                  a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
+                  and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).🥰🔥</p>
+                <span class="read-more pink active">
+                                <svg class="my-svg read-more__icon">
+                                    <use xlink:href="img/svg-sprite.svg#ic-readmore"></use>
+                                </svg>
+                            </span>
+              </div>
+              <div class="chat-item__footer">
+                <span class="chat-item__date">25.01.23 / 20:19</span>
+                <!-- .unread / .read -->
+                <span class="chat-item__status unread"></span>
+              </div>
             </div>
           </div>
         </div>

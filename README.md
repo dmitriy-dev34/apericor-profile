@@ -150,13 +150,17 @@ https://dmitriy-dev34.github.io/apericor-profile/contacts-us.html
 
 https://dmitriy-dev34.github.io/apericor-profile/terms-and-conditions.html
 
-# Partners
+# Cooperation
 
-https://dmitriy-dev34.github.io/apericor-profile/partners.html
+https://dmitriy-dev34.github.io/apericor-profile/cooperation.html
 
-# Partners Form
+# Cooperation Form
 
-https://dmitriy-dev34.github.io/apericor-profile/partners-form.html
+https://dmitriy-dev34.github.io/apericor-profile/cooperation-form.html
+
+# Cooperation Form Success
+
+https://dmitriy-dev34.github.io/apericor-profile/cooperation-success.html
 
 # Sign In / Sign Up / Forgot Password
 

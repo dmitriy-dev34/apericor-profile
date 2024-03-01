@@ -205,10 +205,6 @@
                 <span class="material-icons tag-delete">close</span>
               </li>
               <li class="tags-list__item">
-                <span class="discover-tags__param">Ukraine</span>
-                <span class="material-icons tag-delete">close</span>
-              </li>
-              <li class="tags-list__item">
                 <span class="discover-tags__param">No kids</span>
                 <span class="material-icons tag-delete">close</span>
               </li>
@@ -226,9 +222,10 @@
           <div class="discover__tab-content discover-quick active">
             <form action="./search-profiles-result.html" class="discover-form">
               <div class="discover-form__fields fields-grid-6">
+                <!-- is-selected - это выбранный -->
                 <div class="discover-form__age">
                   <!-- Age from -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age from:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -251,7 +248,7 @@
                     </ul>
                   </div>
                   <!-- Age to -->
-                  <div class="select select-sm discover-form__select select-age">
+                  <div class="select select-sm discover-form__select select-age is-selected">
                     <div class="form-label">Age to:</div>
                     <div class="select__trigger">
                       <div class="select__label"></div>
@@ -306,7 +303,7 @@
                   </ul>
                 </div>
                 <!-- Want children -->
-                <div class="select select-sm discover-form__select">
+                <div class="select select-sm discover-form__select is-selected">
                   <div class="form-label">Want children:</div>
                   <div class="select__trigger">
                     <div class="select__label"></div>
@@ -819,14 +816,13 @@
                 </div>
               </div>
             </div>
-            <div class="correspond__block">
-              <h4 class="correspond__block-title mb-16">Archive request: <span class="text-gray">7</span></h4>
+            <div class="correspond__block archive-support">
+              <h4 class="correspond__block-title mb-16">Archive request: <span class="color-red">7</span></h4>
               <div class="support__grid">
-                <!-- support-item -->
-                <div class="support-item">
+                <!-- support-item (archive) -->
+                <div class="support-item support-item--archive">
                   <div class="support-item__header">
                     <div class="support-item__ava">
-                      <!-- <span class="material-icons">support</span> -->
                       <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
                     </div>
                     <div class="support-item__info">
@@ -859,48 +855,10 @@
                     </div>
                   </div>
                 </div>
-                <!-- support-item -->
-                <div class="support-item">
+                <!-- support-item (archive) -->
+                <div class="support-item support-item--archive">
                   <div class="support-item__header">
                     <div class="support-item__ava">
-                      <!-- <span class="material-icons">support</span> -->
-                      <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
-                    </div>
-                    <div class="support-item__info">
-                      <div class="support-item__info-top">
-                        <div class="support-item__data">
-                          <div class="support-item__data-item support-item__date"><span class="material-icons">calendar_month</span> 04.06.2020</div>
-                          <div class="support-item__data-item support-item__time"><span class="material-icons">schedule</span> 15:25</div>
-                        </div>
-                        <div class="support-item__id">ID: <span class="text-gray">546140</span>
-                        </div>
-                      </div>
-                      <div class="support-item__name">From: <span class="color-blue">Support</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="support-item__footer">
-                    <a href="./support-request.html" class="btn btn-sm btn-stroke support-item__read">
-                      <span>Read the request</span>
-                      <span class="material-icons">navigate_next</span>
-                    </a>
-                    <div class="support-item__options">
-                      <button type="button" class="support-item__delete modal-open" data-modal-open="modal-deleteRequest">
-                        <span class="material-icons">delete</span>
-                      </button>
-                      <label class="check support-item__check">
-                        <input class="check__input" type="checkbox" name="select-lletter">
-                        <span class="check__box"></span>
-                        <span class="check__label"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <!-- support-item -->
-                <div class="support-item">
-                  <div class="support-item__header">
-                    <div class="support-item__ava">
-                      <!-- <span class="material-icons">support</span> -->
                       <img src="./img/icons/ic-support_ava.svg" width="48" height="48" alt="">
                     </div>
                     <div class="support-item__info">

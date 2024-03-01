@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
   mailOption.forEach((button) => {
     button.addEventListener("click", function (event) {
       const dropdown = this.nextElementSibling;
+      mailOption.forEach((otherButton) => {
+        if (otherButton !== button) {
+          otherButton.classList.remove("active");
+          const otherDropdown = otherButton.nextElementSibling;
+          otherDropdown.classList.remove("active");
+        }
+      });
       dropdown.classList.toggle("active");
       button.classList.toggle("active");
       event.stopPropagation();
@@ -17,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mailDropdownItems.forEach((item) => {
     item.addEventListener("click", function () {
-      mailDropdownItems.forEach((item) => {
-        item.classList.remove("active");
+      mailDropdownItems.forEach((otherItem) => {
+        otherItem.classList.remove("active");
       });
       this.classList.add("active");
 
