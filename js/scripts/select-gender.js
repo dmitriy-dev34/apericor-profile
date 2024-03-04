@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectGenderItems = select.querySelectorAll(".select-gender__item");
 
     selectGenderInput.addEventListener("click", function (event) {
-      event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал document click
+      event.stopPropagation();
 
       selectsGenders.forEach((otherSelect) => {
         if (otherSelect !== select) {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     selectGenderItems.forEach((item) => {
       item.addEventListener("click", function (event) {
-        event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал document click
+        event.stopPropagation();
 
         selectGenderItems.forEach((i) => i.classList.remove("selected"));
         this.classList.add("selected");

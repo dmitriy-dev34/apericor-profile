@@ -765,8 +765,8 @@
           <h2 class="page-title">My sent gifts</h2>
 
           <div class="gifts__grid">
-            <!-- gift-item -->
-            <div class="gift-item modal-open" data-modal-open="modal-giftStatus">
+            <!-- gift-item (отправлен) -->
+            <div class="gift-item modal-open" data-modal-open="modal-giftDelivered">
               <div class="gift-item__hover">
                 <button type="button" class="btn btn-sm">Details</button>
               </div>
@@ -783,14 +783,13 @@
                 <span class="gift-item__name">Rose</span>
               </div>
             </div>
-            <!-- gift-item -->
-            <div class="gift-item modal-open" data-modal-open="modal-giftStatus">
+            <!-- gift-item (не отправлен) -->
+            <div class="gift-item modal-open" data-modal-open="modal-giftCancelled">
               <div class="gift-item__hover">
                 <button type="button" class="btn btn-sm">Details</button>
               </div>
               <div class="gift-item__profile" style="background-image: url(./img/profiles/profile_2.jpg);">
-                <!-- gift-item__status--nodelivered -->
-                <span class="gift-item__status gift-item__status--delivered"></span>
+                <span class="gift-item__status gift-item__status--cancelled"></span>
               </div>
               <div class="gift-item__header">
                 <div class="gift-item__img">
@@ -803,12 +802,12 @@
               </div>
             </div>
             <!-- gift-item -->
-            <div class="gift-item modal-open" data-modal-open="modal-giftStatus">
+            <div class="gift-item modal-open" data-modal-open="modal-giftInprocess">
               <div class="gift-item__hover">
                 <button type="button" class="btn btn-sm">Details</button>
               </div>
               <a href="./profile.html" class="gift-item__profile" style="background-image: url(./img/profiles/profile_3.jpg);">
-                <span class="gift-item__status gift-item__status--delivered"></span>
+                <span class="gift-item__status gift-item__status--inprocess"></span>
               </a>
               <div class="gift-item__header">
                 <div class="gift-item__img">
@@ -884,12 +883,96 @@
     </footer>
     </div>
     <!----------- Modal Gift Status ------------->
-    <div class="modal modal-form modal-giftstatus" data-modal="modal-giftStatus">
+    <div class="modal modal-form modal-giftstatus modal-gift-delivered" data-modal="modal-giftDelivered">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <h3 class="modal__title">
+                Gift Status
+                <div class="gift-status">
+                    <span class="gift-status__text color-green">Delivered</span>
+                    <span class="material-icons color-green">check_circle</span>
+                </div>
+            </h3>
+          <ul class="modal-giftstatus__list">
+            <li class="modal-giftstatus__list-item">
+              <strong>Gift:</strong>
+              <span class="strong color-pink gift-name">Rose:</span>
+              <span class="strong color-pink gift-price">15cr</span>
+              <br>
+              <span class="strong color-pink gift-quantity">Quantity: 5</span>
+              <span class="strong color-pink gift-color">/ Color: yellow</span>
+              <span class="strong color-pink gift-totalprice">/ Total Price: 75 cr.</span>
+            </li>
+            <li class="modal-giftstatus__list-item">
+              <strong>To:</strong>
+              <a href="./profile.html" class="strong color-pink gift-profile">Elena</a>
+              <span class="gift-profileid">(ID: 545246)</span>
+            </li>
+            <li class="modal-giftstatus__list-item">
+              <strong>Date/Time:</strong>
+              <span class="gift-date">19.03.2021/04:34:54</span>
+            </li>
+            <li class="modal-giftstatus__list-item">
+              <strong>Message:</strong>
+              <p class="gift-message">Cuddle with this sweet bear… and think about me!!!))) Your crazy master!!!</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!----------- Modal Gift Status ------------->
+    <div class="modal modal-form modal-giftstatus modal-gift-cancelled" data-modal="modal-giftCancelled">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__close"></div>
+          <h3 class="modal__title">
+                Gift Status
+                <div class="gift-status">
+                    <span class="gift-status__text color-red">Cancelled</span>
+                    <span class="material-icons color-red">info</span>
+                </div>
+            </h3>
+          <ul class="modal-giftstatus__list">
+            <li class="modal-giftstatus__list-item">
+              <strong>Gift:</strong>
+              <span class="strong color-pink gift-name">Rose:</span>
+              <span class="strong color-pink gift-price">15cr</span>
+              <br>
+              <span class="strong color-pink gift-quantity">Quantity: 5</span>
+              <span class="strong color-pink gift-color">/ Color: yellow</span>
+              <span class="strong color-pink gift-totalprice">/ Total Price: 75 cr.</span>
+            </li>
+            <li class="modal-giftstatus__list-item">
+              <strong>To:</strong>
+              <a href="./profile.html" class="strong color-pink gift-profile">Elena</a>
+              <span class="gift-profileid">(ID: 545246)</span>
+            </li>
+            <li class="modal-giftstatus__list-item">
+              <strong>Date/Time:</strong>
+              <span class="gift-date">19.03.2021/04:34:54</span>
+            </li>
+            <li class="modal-giftstatus__list-item">
+              <strong>Message:</strong>
+              <p class="gift-message">Cuddle with this sweet bear… and think about me!!!))) Your crazy master!!!</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!----------- Modal Gift Status ------------->
+    <div class="modal modal-form modal-giftstatus modal-gift-inprocess" data-modal="modal-giftInprocess">
       <div class="modal__overlay">
         <div class="modal__content">
           <div class="modal__close"></div>
           <!-- gift-status--nodelivered -->
-          <h3 class="modal__title">Gift Status <span class="gift-status gift-status--delivered">(Delivered)</span></h3>
+          <h3 class="modal__title">
+                Gift Status
+                <div class="gift-status">
+                    <span class="gift-status__text color-yellow">In process</span>
+                    <span class="material-icons color-yellow">timelapse</span>
+                </div>
+            </h3>
           <ul class="modal-giftstatus__list">
             <li class="modal-giftstatus__list-item">
               <strong>Gift:</strong>

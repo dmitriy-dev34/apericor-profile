@@ -761,6 +761,25 @@
       </div>
       <div class="container">
 
+        <form action="./about-us.html" method="get">
+          <div class="select">
+            <div class="form-label">Select label</div>
+            <div class="select__trigger">
+              <div class="select__label"></div>
+              <span class="select__selected" name="param">Any</span>
+              <!-- Скрытое поле для передачи значения в форме -->
+              <input type="hidden" name="param" id="hiddenParam" value="Any">
+            </div>
+            <ul class="select__options" id="selectOptions">
+              <li class="select__option" data-value="Any">Any</li>
+              <li class="select__option" data-value="Option1">Option1</li>
+              <li class="select__option" data-value="Option2">Option2</li>
+              <!-- Добавьте другие опции по мере необходимости -->
+            </ul>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+
       </div>
     </main>
 
@@ -833,6 +852,24 @@
   <script defer src="./js/scripts/modal.js"></script>
   <!-- Scripts JS -->
   <script defer src="./js/main.min.js"></script>
+
+  <script>
+    // Получаем элемент списка опций
+    		var selectOptions = document.getElementById('selectOptions');
+    
+    		// Добавляем обработчик события для делегирования
+    		selectOptions.addEventListener('click', function (event) {
+    			// Проверяем, что клик был на элементе списка
+    			if (event.target.classList.contains('select__option')) {
+    				// Получаем значение из атрибута data-value выбранной опции
+    				var selectedValue = event.target.getAttribute('data-value');
+    
+    				// Обновляем скрытое поле и текст в span
+    				document.getElementById('hiddenParam').value = selectedValue;
+    				document.getElementById('selectedValue').textContent = selectedValue;
+    			}
+    		});
+  </script>
 </body>
 
 </html>
