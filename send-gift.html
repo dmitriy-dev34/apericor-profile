@@ -762,83 +762,32 @@
       <div class="profile send-gifts">
         <!-- здесь вставляем .popup-like и .verification-message -->
 
-        <div class="page-padding container">
-          <!-- send-gifts__header -->
-          <div class="send-gifts__header">
-            <div class="profile-gifts__header-left">
-              <!-- profile__photo -->
-              <a href="./profile.html" class="profile__photo">
-                <div class="profile-status status-online"></div>
-                <img class="profile__photo-img" loading="lazy" src="./img/profile/profile-photo_1.jpg" width="380" height="520" alt="">
-                <div class="profile__photo-empty photo-empty hide">
-                  <div class="photo-empty__center">
-                    <img class="photo-empty__icon" loading="lazy" src="./img/icons/ic-profile_woman.svg" width="128" height="128" alt="">
-                    <span class="photo-empty__label">No photo</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="send-gifts__header-right">
-              <!-- profile__header -->
-              <div class="profile__header mb-24">
-                <ul class="profile__options">
-                  <li class="profile__options-item">
-                    <a href="./send-mail.html" class="profile__options-btn">
-                      <svg class="my-svg profile__options-icon">
-                        <use xlink:href="img/svg-sprite.svg#ic-mail"></use>
-                      </svg>
-                      <span class="profile__options-label">Mail Me</span>
-                    </a>
-                  </li>
-                  <li class="profile__options-item">
-                    <a href="./send-gift.html" class="profile__options-btn active">
-                      <svg class="my-svg profile__options-icon">
-                        <use xlink:href="img/svg-sprite.svg#ic-gift"></use>
-                      </svg>
-                      <span class="profile__options-label">Send Gift</span>
-                    </a>
-                  </li>
-                  <li class="profile__options-item modal-open" data-modal-open="modal-profileContacts">
-                    <a href="#" class="profile__options-btn">
-                      <svg class="my-svg profile__options-icon">
-                        <use xlink:href="img/svg-sprite.svg#ic-contacts"></use>
-                      </svg>
-                      <span class="profile__options-label">Contacts Me</span>
-                    </a>
-                  </li>
-                </ul>
-                <!-- добавление происходит c помощью класса active -->
-                <button type="button" class="btn-favorite profile__favorite active">
-                  <span class="btn-favorite__label">Add Favorite</span>
-                </button>
-              </div>
-              <!-- profile__top-info -->
-              <div class="profile__top-info mb-24">
-                <div class="left">
-                  <h2 class="profile__name">Anastasia, <span>23</span></h2>
-                  <div class="profile__location flex align-center">
+        <div class="mail__header send-gifts__header">
+          <div class="container mail__header-container">
+            <div class="mail__header-left">
+              <div class="mail__header-profile">
+                <a href="./profile.html" class="mail__header-photo">
+                  <img loading="lazy" src="./img/profile/profile-photo_1.jpg" width="48" height="48" alt="">
+                </a>
+                <div class="mail__header-info">
+                  <p><span class="mail__header-correspondence">Send a gift for</span>  <span class="strong">Anastasia, 23</span>
+                  </p>
+                  <div class="profile__location flex align-center mail__header-loc">
                     <span class="material-icons profile__location-icon">location_on</span>
-                    <span><span class="color-pink strong">from Ukraine</span> / Dnepropetrovsk</span>
+                    <span><span class="color-pink strong">from Ukraine</span>  <span class="city">/ Dnepropetrovsk</span></span>
                   </div>
-                </div>
-                <div class="right flex align-center">
-                  <div class="profile-id mr-8">ID: <span class="text-gray">546140</span>
-                  </div>
-                  <button type="button" class="profile-report modal-open" data-modal-open="modal-reportProfile"></button>
                 </div>
               </div>
-              <form action="#" class="chat-form send-gifts__chat-form">
-                <div class="form-field chat-form__field">
-                  <input type="text" name="chat-message" class="form-field__input chat-form__input" placeholder="Type your message here..." autocomplete="off">
-                  <button type="button" class="btn btn-sm btn-chat chat-form__btn chat-open">
-                    <span class="btn-chat__label">Chat</span>
-                    <span class="material-icons btn-chat__icon">send</span>
-                  </button>
-                </div>
-              </form>
+            </div>
+            <div class="mail__header-right">
+              <div class="profile-id">ID: <span class="text-gray">546140</span>
+              </div>
+              <button type="button" class="profile-report modal-open" data-modal-open="modal-reportProfile"></button>
             </div>
           </div>
+        </div>
 
+        <div class="page-padding container">
           <div class="send-gifts__content">
             <div class="send-gifts__content-header">
               <h2 class="page-title send-gifts__title">Send Gifts <span>(By clicking the mouse you can send a gift)</span></h2>
