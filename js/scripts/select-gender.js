@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Устанавливаем атрибут name скрытому полю из select-gender__input
     hiddenInput.name = selectGenderInput.getAttribute("name");
 
+    // Устанавливаем значение по умолчанию из span в скрытое поле
+    hiddenInput.value = selectGenderInput.textContent;
+
     selectGenderTrigger.addEventListener("click", function (event) {
       event.stopPropagation();
 

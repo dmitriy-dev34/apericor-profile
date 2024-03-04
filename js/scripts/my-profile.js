@@ -161,5 +161,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /* ------------------- Close Maodal Main Features -------------------- */
+  const cancelModalFeatures = document.getElementById("cancelModalFeatures");
+  const modalMinFeatures = document.querySelector(".modal-main-features");
+
+  cancelModalFeatures.addEventListener("click", () => {
+    modalMinFeatures.classList.remove("active");
+    document.body.style.overflow = "";
+    document.body.style.width = "";
+  });
+
   //!! End Scripts
 });

@@ -783,17 +783,31 @@
         <!-- здесь вставляем .popup-like и .verification-message -->
 
         <!-- Главное фото профиля на мобильных (max-widh: 992px) -->
-        <div class="mob-profilephotos">
-          <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
-          <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo-hor.jpg" alt="">
-          <div class="upload-file upload-photo hidden">
-            <input type="file" id="fileInputPhotoMob" class="upload-file__input" accept="image/*">
-            <label for="fileInputPhotoMob" class="upload-file__label">
-              <div class="upload-file__icon"><span class="material-icons">upload</span>
-              </div>
-              <span class="upload-file__text">jpg, png <br> max 4MB size</span>
+        <div class="mob-profilephotos" style="background-image: url(./img/my-profile_photo-hor.jpg);">
+          <div class="edit-myphoto">
+            <input type="file" id="ediMyPhotoMob" class="edit-myphoto__input" accept="image/*">
+            <label for="ediMyPhotoMob" class="edit-myphoto__label">
+              <span class="material-icons edit-myphoto__icon">edit</span>
             </label>
           </div>
+          <div class="mob-profile-photo">
+            <img class="mob-profile-photo__img" loading="lazy" src="./img/my-profile_photo-hor.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- upload-photo на мобильных активируется классом .active -->
+        <div class="upload-file upload-photo my-account__upload-photo is-mobile">
+          <input type="file" id="inputMainPhoto" class="upload-file__input" accept="image/*">
+          <label for="inputMainPhoto" class="upload-file__label">
+            <svg class="my-svg upload-file__icon">
+              <use xlink:href="img/svg-sprite.svg#ic-man"></use>
+            </svg>
+            <!-- иконка женского пола #ic-woman -->
+            <!-- <svg class="my-svg upload-file__icon">
+											<use xlink:href="img/svg-sprite.svg#ic-woman"></use>
+										</svg> -->
+            <span class="upload-file__text">Upload my main photo</span>
+          </label>
         </div>
 
         <div class="page-padding container">
@@ -802,21 +816,36 @@
             <div class="profile__left">
               <!-- profile__photo -->
               <div class="profile__photo">
+                <!-- если фото нет, то ставим класс .hidden -->
+                <div class="edit-myphoto">
+                  <input type="file" id="ediMyPhoto" class="edit-myphoto__input" accept="image/*">
+                  <label for="ediMyPhoto" class="edit-myphoto__label">
+                    <span class="material-icons edit-myphoto__icon">edit</span>
+                  </label>
+                </div>
+
+                <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
+                <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt="">
+
+                <div class="upload-file upload-photo my-account__upload-photo hidden">
+                  <input type="file" id="uploadMainPhoto" class="upload-file__input" accept="image/*">
+                  <label for="uploadMainPhoto" class="upload-file__label">
+                    <svg class="my-svg upload-file__icon">
+                      <use xlink:href="img/svg-sprite.svg#ic-man"></use>
+                    </svg>
+                    <!-- иконка женского пола #ic-woman -->
+                    <!-- <svg class="my-svg upload-file__icon">
+											<use xlink:href="img/svg-sprite.svg#ic-woman"></use>
+										</svg> -->
+                    <span class="upload-file__text">Upload my main photo</span>
+                  </label>
+                </div>
+
                 <div class="profile__status">
                   <div class="profile__status-text edit-status">
                     <input type="text" class="edit-status__input" value="I'm free, I'm looking for acquaintances:)" disabled>
                     <span class="material-icons edit-status__btn">edit</span>
                   </div>
-                </div>
-                <!-- если нет фото, то .profile__photo-img нет и у .upload-photo  убираем класс .hidden  -->
-                <img class="profile__photo-img" loading="lazy" src="./img/my-profile_photo.jpg" width="380" height="520" alt="">
-                <div class="upload-file upload-photo hidden">
-                  <input type="file" id="PhotoMainMob" class="upload-file__input" accept="image/*">
-                  <label for="PhotoMainMob" class="upload-file__label">
-                    <div class="upload-file__icon"><span class="material-icons">upload</span>
-                    </div>
-                    <span class="upload-file__text">jpg, png <br> max 4MB size</span>
-                  </label>
                 </div>
               </div>
 
@@ -2128,7 +2157,10 @@
           <div class="form-edit__footer form-features__footer">
             <p class="form-features__footer-text">To select who will see a particular parameter, click on the ellipsis next to the desired parameter. <span class="material-icons">more_vert</span>
             </p>
-            <button type="button" class="btn save-moreinfo">Save Info</button>
+            <div class="form-features__btns">
+              <button type="button" class="btn btn-stroke" id="cancelModalFeatures">Close</button>
+              <button type="button" class="btn save-moreinfo">Save Info</button>
+            </div>
           </div>
         </form>
       </div>
