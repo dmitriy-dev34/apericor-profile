@@ -1,16 +1,25 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
   //! Start Scripts
-  /* ------------------- selectsGenders -------------------- */
-
+  /* ------------------- Select Gender Custom -------------------- */
   const selectsGenders = document.querySelectorAll(".select-gender");
 
   selectsGenders.forEach((select) => {
+    const selectGenderTrigger = select.querySelector(".select-gender__trigger");
     const selectGenderInput = select.querySelector(".select-gender__input");
     const selectGenderList = select.querySelector(".select-gender__list");
     const selectGenderItems = select.querySelectorAll(".select-gender__item");
 
-    selectGenderInput.addEventListener("click", function (event) {
+    // Создаем скрытое поле внутри trigger
+    const hiddenInput = document.createElement("input");
+    hiddenInput.type = "hidden";
+    hiddenInput.className = "select-gender__hidden-input";
+    selectGenderTrigger.appendChild(hiddenInput);
+
+    // Устанавливаем атрибут name скрытому полю из select-gender__input
+    hiddenInput.name = selectGenderInput.getAttribute("name");
+
+    selectGenderTrigger.addEventListener("click", function (event) {
       event.stopPropagation();
 
       selectsGenders.forEach((otherSelect) => {
@@ -34,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemIconSrc = this.querySelector(
           ".select-gender__icon"
         ).getAttribute("src");
+
+        // Обновляем значение скрытого поля при выборе опции
+        hiddenInput.value = itemName;
 
         selectGenderInput.innerHTML = `<img class="select-gender__icon" src="${itemIconSrc}" alt="${itemName}">`;
         selectGenderInput.insertAdjacentHTML(
